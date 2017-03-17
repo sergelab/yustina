@@ -1,0 +1,12 @@
+.DS_Store
+*.pyc
+.idea/
+.installed.cfg
+buildout.cfg
+bin/
+develop-eggs/
+eggs/
+*.egg-info
+/config/buildout/bootstrap.cfg
+
+

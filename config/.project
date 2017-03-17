@@ -1,0 +1,5 @@
+PROJECT=yacht_charter
+STAGE=development
+
+setuptools_version=24.0.3
+buildout_version=2.5.3
