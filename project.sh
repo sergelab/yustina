@@ -26,6 +26,17 @@ python() {
     fi
 }
 
+npm() {
+    interp=$1
+    if [ -z $interp ]; then
+        interp=npm
+    fi
+    NPM=`which $interp`
+    if [ -z $NPM ]; then
+        error "Invalid npm $NPM"
+    fi
+}
+
 build() {
     if [ $# -lt 1 ]; then
         error "$0 build <python interpreter> <stage>"
@@ -44,9 +55,24 @@ extends = config/buildout/$STAGE.cfg" > buildout.cfg
         ./bin/buildout
 }
 
+assets() {
+    npm $1
+    if [ ! -d assets ]; then
+        mkdir -p assets
+    fi
+    if [ ! -f assets/manifest.json ]; then
+        echo '{}' > assets/manifest.json
+    fi
+    $NPM i && \
+    $NPM run assets
+}
+
 case "$1" in
     build)
         build $2 $3
+        ;;
+    assets)
+        assets $2
         ;;
         *)
             if [ $1 ]; then

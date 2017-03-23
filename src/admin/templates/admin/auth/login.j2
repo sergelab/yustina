@@ -1,0 +1,40 @@
+{% extends 'admin/common.j2' %}
+{% from 'admin/api/forms.j2' import render_field_error %}
+
+{% block title %}{{ 'Authorization page browser title' }}{% endblock %}
+
+{% block body -%}
+    <div class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle uk-text-center">
+        <div>
+            <p><img id="logo" src="{{ asset_url_for('images/logo.svg') }}" style="height:6rem;" /></p>
+            <form class="uk-form" action="{{ url_for('admin.login') }}" method="post">
+                {{ form.hidden_tag() }}
+                <div class="uk-panel uk-panel-box">
+                    <div class="uk-form-row">
+                        {{ form.username }}
+                    </div>
+                    {{ render_field_error(form.username) }}
+                    <div class="uk-form-row">
+                        {{ form.password }}
+                    </div>
+                    {{ render_field_error(form.password) }}
+                </div>
+                {% if form.errors -%}
+                    {% for error in form.errors if error == 'form' -%}
+                        <div class="uk-alert uk-alert-danger" role="alert">
+                            {% for ferr in form.errors['form'] -%}
+                                {{ ferr }}
+                            {%- endfor %}
+                        </div>
+                    {%- endfor %}
+                {%- endif %}
+                <p class="uk-form-row">
+                    <button class="uk-button uk-button-primary uk-button-large uk-width-1-1">{{ 'Login button' }}</button>
+                </p>
+                <ul class="uk-list uk-contrast1">
+                    <li><label class="uk-form">{{ form.remember_me }} {{ form.remember_me.label.text }}</label></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+{%- endblock %}

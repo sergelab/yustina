@@ -8,5 +8,7 @@ develop-eggs/
 eggs/
 *.egg-info
 /config/buildout/bootstrap.cfg
+/assets
+/node_modules
 
 
