@@ -1,0 +1,30 @@
+{% extends 'admin/common.j2' %}
+
+{% block navigation %}{% endblock %}
+
+{% block content -%}
+    {% if g.dashboard -%}
+        <div class="uk-grid uk-grid-match uk-margin-large-top" data-uk-grid-margin>
+            {% for option in g.dashboard -%}
+                <div class="uk-width-medium-1-3{% if loop.first %} uk-row-first{% endif %}">
+                    {% if 'subitems' in option -%}
+                        <span class="uk-panel uk-panel-box">
+                            <h3 class="uk-panel-title">{{ option.title }}</h3>
+                            {{ option.description }}
+                            <ul class="uk-list">
+                                {% for item in option.subitems -%}
+                                    <li><a href="{{ url_for(item.view) }}">{{ item.title }}</a></li>
+                                {%- endfor %}
+                            </ul>
+                        </span>
+                    {%- else -%}
+                        <a class="uk-panel uk-panel-box" href="{{ url_for(option.view) }}">
+                            <h3 class="uk-panel-title">{{ option.title }}</h3>
+                            {{ option.description }}
+                        </a>
+                    {%- endif %}
+                </div>
+            {%- endfor %}
+        </div>
+    {%- endif %}
+{%- endblock %}
