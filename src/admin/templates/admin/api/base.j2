@@ -1,0 +1,31 @@
+{% macro render_flash_messages() -%}
+    <div id="flash_messages" class="uk-container-overflow">
+        {% with messages = get_flashed_messages(category_filter=['danger']) -%}
+            {{ _render_messages(messages, 'danger') }}
+        {%- endwith %}
+        {% with messages = get_flashed_messages(category_filter=['info']) -%}
+            {{ _render_messages(messages, 'info') }}
+        {%- endwith %}
+        {% with messages = get_flashed_messages(category_filter=['success']) -%}
+            {{ _render_messages(messages, 'success') }}
+        {%- endwith %}
+        {% with messages = get_flashed_messages(category_filter=['warning']) -%}
+            {{ _render_messages(messages, 'warning') }}
+        {%- endwith %}
+    </div>
+{%- endmacro %}
+
+{% macro _render_messages(messages, category) -%}
+    {% if messages -%}
+        <div class="{{ 'uk-alert uk-alert-%s'|format(category) }}" role="alert">
+            {% for msg in messages -%}
+                {{ msg|safe }}
+            {%- endfor %}
+        </div>
+    {%- endif %}
+{%- endmacro %}
+
+{% macro render_bool(value) -%}
+    {%- set color_cls = 'pk-icon-circle-danger' if not value else 'pk-icon-circle-success' -%}
+    <i class="uk-icon-circle {{ color_cls }}"></i>
+{%- endmacro %}

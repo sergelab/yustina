@@ -1,0 +1,73 @@
+{% extends 'admin/base.j2' %}
+{% from 'admin/api/base.j2' import render_flash_messages %}
+
+{% block title %}{{ _('Admin panel common browser title') }}{% endblock %}
+
+{% block css -%}
+    {{ super() }}
+    {{ stylesheet_tag('admin_css') }}
+{%- endblock %}
+
+{% block js -%}
+    {{ super() }}
+    {{ javascript_tag('admin_js') }}
+{%- endblock %}
+
+{% block body -%}
+    <main class="uk-container uk-container-center">
+        <header id="header" data-uk-sticky>
+            <div class="uk-container uk-container-center">
+                <div class="uk-flex uk-flex-space-between uk-flex-middle">
+                    <div>
+                        <div class="uk-flex uk-flex-middle">
+                            <a href="{{ url_for('admin.index') }}"><img id="logo" src="{{ asset_url_for('images/logo.svg') }}" style="height:4em;"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="uk-grid uk-grid-small uk-flex-middle">
+                            <li><a href="{{ url_for('index') }}" target="_blank">{{ _('Visit site link') }}</a></li>
+                            <li class="uk-margin-small-left"><a href="{{ url_for('admin.logout') }}">{{ _('Logout link') }}</a></li>
+                            <li class="uk-margin-small-left">
+                                {{ current_user.username }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {# Навигация #}
+                {% block navigation -%}
+                    {% if g.dashboard -%}
+                        <nav class="uk-navbar uk-margin-bottom" data-uk-sticky>
+                            <ul class="uk-navbar-nav">
+                                {% for option in g.dashboard -%}
+                                    {% if 'subitems' in option -%}
+                                        <li class="uk-parent" data-uk-dropdown aria-haspopup="true">
+                                            <a href="#">{{ option.title }}&nbsp;<i class="uk-icon-caret-down"></i></a>
+                                            <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                                                <ul class="uk-nav uk-nav-navbar">
+                                                    {% for item in option.subitems -%}
+                                                        <li><a href="{{ url_for(item.view) }}">{{ item.title }}</a></li>
+                                                    {%- endfor %}
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    {%- else -%}
+                                        <li><a href="{{ url_for(option.view) }}">{{ option.title }}</a></li>
+                                    {%- endif %}
+                                {%- endfor %}
+                            </ul>
+                        </nav>
+                    {%- endif %}
+                {%- endblock %}
+            </div>
+        </header>
+
+        <div class="uk-container uk-container-center">
+            {% block flashes -%}{{ render_flash_messages() }}{%- endblock %}
+            {% block content %}{% endblock %}
+        </div>
+
+        <footer class="uk-margin-large-top">
+        </footer>
+    </main>
+{%- endblock %}
