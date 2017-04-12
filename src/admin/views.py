@@ -46,7 +46,18 @@ def admin_before_request():
     # title — используется как опция меню и как заголовок блока в dashboard
     # description — описание в dashboard
     # view — путь для построения url_for (строится в шаблоне)
-    g.dashboard = []
+    g.dashboard = [
+        dict(title=_('Persons nav option'),
+             description=_('Persons dashboard description'),
+             subitems=[
+                 dict(title=_('Positions list nav option'),
+                      description=_('Positions list dashboard description'),
+                      view='admin.persons_positions'),
+                 dict(title=_('Persons list nav option'),
+                      description=_('Persons list dashboard description'),
+                      view='admin.persons_persons')
+             ])
+    ]
 
 
 @admin.route('/')
