@@ -2,13 +2,20 @@
 from __future__ import absolute_import
 
 from admin.views import admin
+from flask import render_template
 from flask_login import login_required
+
+from yustina.models.persons import Position
 
 
 @admin.route('/persons/positions')
 @login_required
 def persons_positions():
-    pass
+    query = Position.query
+    positions = query.all()
+
+    return render_template('admin/persons/positions.j2',
+                           positions=positions)
 
 
 @admin.route('/persons/positions/add', methods=['POST'])

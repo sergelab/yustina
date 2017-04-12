@@ -5,4 +5,4 @@ from persons.admin import *
 from flask import Blueprint
 
 
-bp = Blueprint('persons', __name__, url_prefix='/persons')
+bp = Blueprint('persons', __name__, template_folder='templates', url_prefix='/persons')

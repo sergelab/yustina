@@ -1,0 +1,6 @@
+{% extends 'admin/common_layout.j2' %}
+
+{% block page_title %}{{ _('Positions list heading') }}{% endblock %}
+{% block page_buttons %}
+    <a href="{{ url_for('admin.persons_manage_position') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
+{% endblock %}
