@@ -13,7 +13,6 @@ from yustina.init import app, db, lm
 from yustina.forms.users import LoginForm
 
 
-
 admin = Blueprint('admin',
                   __name__,
                   static_folder='static',
