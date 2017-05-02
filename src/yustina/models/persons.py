@@ -4,6 +4,18 @@ from __future__ import absolute_import
 from ..init import db
 
 
+# Связь персон и должностей
+person_positions = db.Table(
+    'person_positions_association',
+    db.Column('person_id', db.Integer,
+              db.ForeignKey('persons.id'),
+              primary_key=True),
+    db.Column('position_id', db.Integer,
+              db.ForeignKey('positions.id'),
+              primary_key=True)
+)
+
+
 class Position(db.Model):
     """
     Справочник должностей.
@@ -12,13 +24,6 @@ class Position(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
-
-
-person_positions = db.Table(
-    'person_positions_association',
-    db.Column('person_id', db.Integer, db.ForeignKey('persons.id'), primary_key=True),
-    db.Column('position_id', db.Integer, db.ForeignKey('positions.id'), primary_key=True)
-)
 
 
 class Person(db.Model):
@@ -33,6 +38,7 @@ class Person(db.Model):
     middlename = db.Column(db.Text)
     bio = db.Column(db.Text)
 
-    position = db.relationship(Position,
-                               secondary=person_positions,
-                               lazy=True)
+    positions = db.relationship(Position,
+                                secondary=person_positions,
+                                lazy=True,
+                                backref=db.backref('persons'))
