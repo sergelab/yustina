@@ -2,6 +2,7 @@
 
 BEGIN;
 
--- XXX Add verifications here.
+SELECT in_trash FROM positions;
+SELECT in_trash FROM persons;
 
 ROLLBACK;
