@@ -1,13 +1,20 @@
 {% extends 'admin/common_layout.j2' %}
+{% from 'admin/api/base.j2' import render_trashed %}
 {% from 'admin/api/forms.j2' import render_field %}
 
 {% set form_action = url_for('admin.persons_manage_position', position_id=position_id) if position else url_for('admin.persons_positions') %}
 {% block page_title %}{{ _('Positions list heading') }}{% endblock %}
 {% block page_buttons %}
     {% if position %}
-        <button class="uk-button uk-button-primary" name="save">{{ _('Save button') }}</button>
+        {% if not position.in_trash -%}
+            <button class="uk-button uk-button-primary" name="save">{{ _('Save button') }}</button>
+        {%- endif %}
         {% if position and position_id %}
-            <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') }}</button>
+            {% if position.in_trash -%}
+                <span>{{ _('Object in trash string') }}</span>
+                <button class="uk-button uk-button-success" name="restore">{{ _('Restore button') }}</button>
+            {%- endif %}
+            <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') if position.in_trash else _('In trash button') }}</button>
         {% endif %}
         <a href="{{ url_for('admin.persons_positions') }}" class="uk-button">{{ _('Cancel button') }}</a>
     {% else %}
@@ -23,7 +30,7 @@
             <tbody>
                 {% if position and not position_id %}
                     <tr>
-                        <td>{{ render_field(form.name, label=False) }}</td>
+                        <td>{{ render_field(form.name, label=False, disabled=position.in_trash) }}</td>
                     </tr>
                 {% endif %}
                 {% if positions %}
@@ -31,8 +38,9 @@
                         <tr>
                             <td>
                                 {% if position_id == pos.id %}
-                                    {{ render_field(form.name, label=False) }}
+                                    {{ render_field(form.name, label=False, disabled=position.in_trash) }}
                                 {% else %}
+                                    {{ '%s&nbsp;'|format(render_trashed()) if pos.in_trash else '' }}
                                     <a href="{{ url_for('admin.persons_manage_position', position_id=pos.id) }}">{{ pos.name }}</a>
                                 {% endif %}
                             </td>
