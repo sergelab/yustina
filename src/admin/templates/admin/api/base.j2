@@ -30,6 +30,16 @@
     <i class="uk-icon-circle {{ color_cls }}"></i>
 {%- endmacro %}
 
-{% macro render_trashed() -%}
+{% macro render_trash_icon(in_trash, space_right=True) -%}
+    {% if in_trash -%}
+        {% if space_right -%}
+            {{ '%s&nbsp;'|format(_render_trashed()) if in_trash else '' }}
+        {%- else -%}
+            {{ '&nbsp;%s'|format(_render_trashed()) if in_trash else '' }}
+        {%- endif %}
+    {%- endif %}
+{%- endmacro %}
+
+{% macro _render_trashed() -%}
     <i class="uk-icon-trash uk-text-danger"></i>
 {%- endmacro %}
