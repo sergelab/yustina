@@ -100,8 +100,8 @@ def persons_persons():
                            persons=persons)
 
 
-@admin.route('/persons/add', methods=['POST'])
-@admin.route('/persons/<int:person_id>', methods=['POST'])
+@admin.route('/persons/add', methods=['GET', 'POST'])
+@admin.route('/persons/<int:person_id>', methods=['GET', 'POST'])
 @login_required
 def persons_manage_person(person_id=None):
     pass
