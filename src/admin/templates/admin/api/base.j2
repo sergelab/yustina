@@ -29,3 +29,7 @@
     {%- set color_cls = 'pk-icon-circle-danger' if not value else 'pk-icon-circle-success' -%}
     <i class="uk-icon-circle {{ color_cls }}"></i>
 {%- endmacro %}
+
+{% macro render_trashed() -%}
+    <i class="uk-icon-trash uk-text-danger"></i>
+{%- endmacro %}
