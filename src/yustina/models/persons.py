@@ -1,6 +1,7 @@
 # coding: utf-8
 from __future__ import absolute_import
 
+from .mixins import DeletableMixin
 from ..init import db
 
 
@@ -16,7 +17,7 @@ person_positions = db.Table(
 )
 
 
-class Position(db.Model):
+class Position(db.Model, DeletableMixin):
     """
     Справочник должностей.
     """
@@ -26,7 +27,7 @@ class Position(db.Model):
     name = db.Column(db.Text)
 
 
-class Person(db.Model):
+class Person(db.Model, DeletableMixin):
     """
     Персона
     """
