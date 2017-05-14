@@ -6,7 +6,7 @@ from contrib.forms.fields import RefQuerySelectMultipleField
 from flask_babel import lazy_gettext as __
 from wtforms import StringField
 from wtforms.validators import DataRequired
-from wtforms.widgets import TextInput
+from wtforms.widgets import TextArea, TextInput
 
 from ..models.persons import Position
 
@@ -58,4 +58,12 @@ class PersonForm(Form):
         __('Person positions label'),
         query_factory=lambda: Position.admin_list(),
         get_label='name',
+    )
+    bio = StringField(
+        __('Person bio label'),
+        widget=WidgetPrebind(
+            TextArea(),
+            rows=10,
+            class_='uk-width-1-1'
+        )
     )
