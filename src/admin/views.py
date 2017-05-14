@@ -6,10 +6,11 @@ from auth.models import User
 from flask import Blueprint, current_app, flash, g, redirect, render_template,\
     request, url_for
 
+from flask_babel import gettext as _, lazy_gettext as __
 from flask_login import current_user, login_required, login_user, logout_user
 from yustina.init import app, db, lm
-from yustina.forms.users import LoginForm
 
+from yustina.forms.users import LoginForm
 
 
 admin = Blueprint('admin',
@@ -36,6 +37,26 @@ def load_user(user_id):
     except (TypeError, ValueError) as e:
         current_app.logger.exception(e)
     return None
+
+
+@admin.before_request
+def admin_before_request():
+    # Опции для управления сущностями в админке
+    # title — используется как опция меню и как заголовок блока в dashboard
+    # description — описание в dashboard
+    # view — путь для построения url_for (строится в шаблоне)
+    g.dashboard = [
+        dict(title=_('Persons nav option'),
+             description=_('Persons dashboard description'),
+             subitems=[
+                 dict(title=_('Positions list nav option'),
+                      description=_('Positions list dashboard description'),
+                      view='admin.persons_positions'),
+                 dict(title=_('Persons list nav option'),
+                      description=_('Persons list dashboard description'),
+                      view='admin.persons_persons')
+             ])
+    ]
 
 
 @admin.route('/')
