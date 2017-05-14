@@ -4,7 +4,7 @@ from __future__ import absolute_import
 from cgi import escape
 from flask_babel import lazy_gettext as __
 from wtforms.compat import text_type
-from wtforms.widgets import Select
+from wtforms.widgets import ListWidget, Select
 from wtforms.widgets import html_params, HTMLString
 
 
@@ -39,4 +39,25 @@ class SelectOptGroup(object):
                 html.append(Select.render_option(val, label, selected))
 
         html.append('</select>')
+        return HTMLString(''.join(html))
+
+
+class CustomizedList(ListWidget):
+    """
+    Переопределяем ListWidget, оборачиваем в контейнер
+    """
+    def __init__(self, html_tag='ul', prefix_label=True, use_box=True, **kwargs):
+        self.use_box = use_box
+        super(CustomizedList, self).__init__(html_tag,
+                                             prefix_label,
+                                             **kwargs)
+
+    def __call__(self, *args, **kwargs):
+        html = list()
+        if self.use_box:
+            html.append('<div class="uk-scrollable-box">')
+        html.append(super(CustomizedList, self).__call__(
+            *args, **kwargs))
+        if self.use_box:
+            html.append('</div>')
         return HTMLString(''.join(html))
