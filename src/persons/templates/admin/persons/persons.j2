@@ -1,5 +1,5 @@
 {% extends 'admin/common_layout.j2' %}
-{% from 'admin/api/base.j2' import render_trashed %}
+{% from 'admin/api/base.j2' import render_trash_icon %}
 {% from 'admin/api/forms.j2' import render_field %}
 
 {% block page_title %}{{ _('Persons list heading') }}{% endblock %}
@@ -20,6 +20,7 @@
                 {% for person in persons -%}
                     <tr>
                         <td>
+                            {{ render_trash_icon(person.in_trash) }}
                             <a href="{{ url_for('admin.persons_manage_person', person_id=person.id) }}">{{ person.fullname }}</a>
                         </td>
                     </tr>

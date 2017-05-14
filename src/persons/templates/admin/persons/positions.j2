@@ -1,8 +1,9 @@
 {% extends 'admin/common_layout.j2' %}
-{% from 'admin/api/base.j2' import render_trashed %}
+{% from 'admin/api/base.j2' import render_trash_icon %}
 {% from 'admin/api/forms.j2' import render_field %}
 
 {% set form_action = url_for('admin.persons_manage_position', position_id=position_id) if position else url_for('admin.persons_positions') %}
+{% set form_not_horizontal = True %}
 {% block page_title %}{{ _('Positions list heading') }}{% endblock %}
 {% block page_buttons %}
     {% if position %}
@@ -40,7 +41,7 @@
                                 {% if position_id == pos.id %}
                                     {{ render_field(form.name, label=False, disabled=position.in_trash) }}
                                 {% else %}
-                                    {{ '%s&nbsp;'|format(render_trashed()) if pos.in_trash else '' }}
+                                    {{ render_trash_icon(pos.in_trash) }}
                                     <a href="{{ url_for('admin.persons_manage_position', position_id=pos.id) }}">{{ pos.name }}</a>
                                 {% endif %}
                             </td>
