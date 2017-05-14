@@ -61,9 +61,18 @@ class Person(db.Model, DeletableMixin):
             fio.append(self.middlename)
         return ' '.join(fio)
 
+    def positions_as_text(self):
+        if self.positions:
+            return ', '.join([p.name for p in self.positions])
+        return ''
+
     @classmethod
-    def admin_list(cls):
+    def admin_list(cls, with_positions=True):
         query = cls.query
+
+        if with_positions is True:
+            query = query.options(db.subqueryload(cls.positions))
+
         query = query.order_by(cls.surname.asc(),
                                cls.firstname.asc())
         return query
