@@ -26,6 +26,12 @@ class Position(db.Model, DeletableMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
 
+    @classmethod
+    def admin_list(cls):
+        query = cls.query
+        query = query.order_by(cls.name.asc())
+        return query
+
 
 class Person(db.Model, DeletableMixin):
     """
@@ -43,3 +49,21 @@ class Person(db.Model, DeletableMixin):
                                 secondary=person_positions,
                                 lazy=True,
                                 backref=db.backref('persons'))
+
+    @property
+    def fullname(self):
+        fio = []
+        if self.surname:
+            fio.append(self.surname)
+        if self.firstname:
+            fio.append(self.firstname)
+        if self.middlename:
+            fio.append(self.middlename)
+        return ' '.join(fio)
+
+    @classmethod
+    def admin_list(cls):
+        query = cls.query
+        query = query.order_by(cls.surname.asc(),
+                               cls.firstname.asc())
+        return query

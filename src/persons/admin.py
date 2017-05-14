@@ -7,14 +7,13 @@ from flask_babel import gettext as _
 from flask_login import login_required
 from yustina.forms.persons import PositionForm
 from yustina.init import db
-from yustina.models.persons import Position
+from yustina.models.persons import Person, Position
 
 
 @admin.route('/persons/positions')
 @login_required
 def persons_positions():
-    query = Position.query.order_by(Position.name.asc())
-    positions = query.all()
+    positions = Position.admin_list().all()
 
     return render_template('admin/persons/positions.j2',
                            positions=positions)
@@ -34,8 +33,7 @@ def persons_manage_position(position_id=None):
     else:
         position = Position()
 
-    pos_query = Position.query.order_by(Position.name.asc())
-    positions = pos_query.all()
+    positions = Position.admin_list().all()
     form = PositionForm(obj=position)
     keep_location = 'save_and_continue' in request.form
 
@@ -96,7 +94,10 @@ def persons_manage_position(position_id=None):
 @admin.route('/persons')
 @login_required
 def persons_persons():
-    pass
+    persons = Person.admin_list().all()
+
+    return render_template('admin/persons/persons.j2',
+                           persons=persons)
 
 
 @admin.route('/persons/add', methods=['POST'])
