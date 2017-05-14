@@ -2,10 +2,13 @@
 from __future__ import absolute_import
 
 from contrib.forms import Form, WidgetPrebind
+from contrib.forms.fields import RefQuerySelectMultipleField
 from flask_babel import lazy_gettext as __
-from wtforms import BooleanField, StringField
+from wtforms import StringField
 from wtforms.validators import DataRequired
 from wtforms.widgets import TextInput
+
+from ..models.persons import Position
 
 
 class PositionForm(Form):
@@ -50,4 +53,9 @@ class PersonForm(Form):
             TextInput(),
             class_='uk-width-1-2'
         )
+    )
+    positions = RefQuerySelectMultipleField(
+        __('Person positions label'),
+        query_factory=lambda: Position.admin_list(),
+        get_label='name',
     )
