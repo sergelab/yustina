@@ -13,7 +13,7 @@ from yustina.models.persons import Position
 @admin.route('/persons/positions')
 @login_required
 def persons_positions():
-    query = Position.query
+    query = Position.query.order_by(Position.name.asc())
     positions = query.all()
 
     return render_template('admin/persons/positions.j2',
@@ -34,26 +34,42 @@ def persons_manage_position(position_id=None):
     else:
         position = Position()
 
-    query = Position.query
-    positions = query.all()
+    pos_query = Position.query.order_by(Position.name.asc())
+    positions = pos_query.all()
     form = PositionForm(obj=position)
     keep_location = 'save_and_continue' in request.form
 
     if request.method == 'POST':
-        if 'delete' in request.form and position_id:
-            try:
-                db.session.delete(position)
-                db.session.commit()
-            except Exception as e:
-                db.session.rollback()
-                current_app.logger.exception(e)
-                flash(_('Error then delete object message'), 'danger')
-            else:
-                flash(_('Delete object successfully message'), 'success')
+        if position_id:
+            if 'delete' in request.form:
+                try:
+                    position.delete()
+                    db.session.commit()
+                except Exception as e:
+                    db.session.rollback()
+                    current_app.logger.exception(e)
+                    flash(_('Error then delete object message'), 'danger')
+                else:
+                    flash(_('Delete object successfully message'), 'success')
 
-                return redirect(url_for('admin.persons_positions'))
+                    return redirect(url_for('admin.persons_positions'))
+            elif 'restore' in request.form:
+                try:
+                    position.restore()
+                    db.session.commit()
+                except Exception as e:
+                    db.session.rollback()
+                    current_app.logger.exception(e)
+                    flash(_('Error then restore object message'), 'danger')
+                else:
+                    flash(_('Restore object successfully message'), 'success')
+                    return redirect(url_for('admin.persons_manage_position',
+                                            position_id=position_id))
 
     if form.validate_on_submit():
+        if position_id and position.in_trash is True:
+            return redirect(url_for('admin.persons_positions'))
+
         try:
             form.populate_obj(position)
             db.session.add(position)
