@@ -2,7 +2,7 @@
 
 BEGIN;
 
-DROP TABLE book_person_assocation;
+DROP TABLE book_person_association;
 DROP TABLE books;
 DROP TABLE books_series;
 
