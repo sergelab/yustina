@@ -1,0 +1,31 @@
+{% extends 'admin/common_layout.j2' %}
+{% from 'admin/api/base.j2' import render_trashed %}
+{% from 'admin/api/forms.j2' import render_field %}
+
+{% set form_action = url_for('admin.books_manage_series', series_id=series_id) %}
+{% block page_title %}{{ _('Add books series heading') if not series_id else series.name }}{% endblock %}
+
+{% block page_buttons %}
+    {% if not series.in_trash -%}
+        <button class="uk-button uk-button-primary" name="save">{{ _('Save button') }}</button>
+        <button class="uk-button uk-button-primary" name="save_and_continue">{{ _('Save and continue button') }}</button>
+    {%- endif %}
+    {% if series and series_id %}
+        {% if series.in_trash -%}
+            <span>{{ _('Object in trash string') }}</span>
+            <button class="uk-button uk-button-success" name="restore">{{ _('Restore button') }}</button>
+        {%- endif %}
+        <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') if series.in_trash else _('In trash button') }}</button>
+    {% endif %}
+    <a href="{{ url_for('admin.persons_persons') }}" class="uk-button">{{ _('Cancel button') }}</a>
+{% endblock %}
+
+{% block page_content %}
+    {{ form.hidden_tag() }}
+
+    {% for field in form if field.widget.input_type != 'hidden' -%}
+        <div class="uk-form-row">
+            {{ render_field(field, disabled=series.in_trash) }}
+        </div>
+    {%- endfor %}
+{% endblock %}
