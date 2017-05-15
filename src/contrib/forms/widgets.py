@@ -42,7 +42,31 @@ class SelectOptGroup(object):
         return HTMLString(''.join(html))
 
 
-class CustomizedList(ListWidget):
+class CustomizedListWidget(ListWidget):
+    """
+    Переопределенный виджет для списка с возможностью
+    проброса дополнительных параметров в subfield.
+    """
+    def __call__(self, field, **kwargs):
+        kwargs.setdefault('id', field.id)
+
+        # Для subfield необходимо прокидывать параметр виджета disabled
+        disabled = kwargs.get('disabled')
+        subfield_kwargs = dict()
+        if disabled is not None:
+            subfield_kwargs.setdefault('disabled', disabled)
+
+        html = ['<%s %s>' % (self.html_tag, html_params(**kwargs))]
+        for subfield in field:
+            if self.prefix_label:
+                html.append('<li>%s %s</li>' % (subfield.label, subfield(**subfield_kwargs)))
+            else:
+                html.append('<li>%s %s</li>' % (subfield(**subfield_kwargs), subfield.label))
+        html.append('</%s>' % self.html_tag)
+        return HTMLString(''.join(html))
+
+
+class CustomizedList(CustomizedListWidget):
     """
     Переопределяем ListWidget, оборачиваем в контейнер
     """
