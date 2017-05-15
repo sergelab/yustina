@@ -47,3 +47,24 @@ class Book(db.Model, DeletableMixin):
     persons = db.relationship('Person',
                               secondary=book_persons_association,
                               lazy=True)
+
+    @classmethod
+    def admin_list(cls, with_persons=True):
+        query = cls.query
+
+        if with_persons:
+            query = query.options(db.subqueryload(cls.persons))
+
+        query = query.order_by(cls.title.asc())
+
+        return query
+
+    def authors_list(self):
+        persons = [p.fullname for p in self.persons]
+        authors = []
+
+        if self.authors:
+            authors = [p.strip() for p in self.authors.split(',') if p]
+
+        result = persons + authors
+        return ', '.join(sorted(result))
