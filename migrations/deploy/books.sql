@@ -19,7 +19,7 @@ CREATE TABLE books (
     authors TEXT
 );
 
-CREATE TABLE book_person_assocation (
+CREATE TABLE book_person_association (
     person_id INTEGER REFERENCES persons(id),
     book_id INTEGER REFERENCES books(id),
     PRIMARY KEY (person_id, book_id)
