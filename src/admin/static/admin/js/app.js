@@ -5,4 +5,4 @@ global.jQuery = jQuery;
 global.$ = global.jQuery;
 
 import 'uikit';
-
+import 'uikit/dist/js/components/datepicker.min';

@@ -9,3 +9,4 @@ persons_deletable 2017-05-14T19:15:13Z Sergei <serge@Serges-Mac-Pro.local> # Ф�
 books 2017-05-15T19:50:44Z Sergei <serge@Serges-Mac-Pro.local> # Книги и серии
 analytics 2017-05-16T19:57:04Z Sergei <serge@Serges-Mac-Pro.local> # Аналитика и темы аналитики
 persons_1 2017-05-16T20:59:14Z Sergei <serge@Serges-Mac-Pro.local> # Название должности NOT NULL
+news 2017-05-16T21:18:44Z Sergei <serge@Serges-Mac-Pro.local> # Новости

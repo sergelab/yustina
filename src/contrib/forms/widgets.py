@@ -8,7 +8,7 @@ from wtforms.widgets import ListWidget, Select
 from wtforms.widgets import html_params, HTMLString
 
 
-date_widget_params = {'data-uk-datepicker': "{format:'DD-MM-YYYY'}",
+date_widget_params = {'data-uk-datepicker': "{format:'DD.MM.YYYY'}",
                       'placeholder': __('Date field placeholder')}
 
 
