@@ -65,6 +65,16 @@ def admin_before_request():
                  dict(title=_('Books list nav option'),
                       description=_('Books list dashboard description'),
                       view='admin.books_books')
+             ]),
+        dict(title=_('Analytics nav option'),
+             description=_('Analytics dashboard description'),
+             subitems=[
+                 dict(title=_('Analytics themes list nav option'),
+                      description=_('Analytics themes list dashboard description'),
+                      view='admin.analytics_themes'),
+                 dict(title=_('Analytics list nav option'),
+                      description=_('Analytics list dashboard description'),
+                      view='admin.analytics_analytics')
              ])
     ]
 

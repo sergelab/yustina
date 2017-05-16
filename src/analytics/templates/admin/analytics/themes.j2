@@ -1,0 +1,56 @@
+{% extends 'admin/common_layout.j2' %}
+{% from 'admin/api/base.j2' import render_trash_icon %}
+{% from 'admin/api/forms.j2' import render_field %}
+
+{% set form_action = url_for('admin.analytics_manage_theme', theme_id=theme_id) if theme else url_for('admin.analytics_themes') %}
+{% set form_not_horizontal = True %}
+{% block page_title %}{{ _('Themes list heading') }}{% endblock %}
+{% block page_buttons %}
+    {% if theme %}
+        {% if not theme.in_trash -%}
+            <button class="uk-button uk-button-primary" name="save">{{ _('Save button') }}</button>
+        {%- endif %}
+        {% if theme and theme_id %}
+            {% if theme.in_trash -%}
+                <span>{{ _('Object in trash string') }}</span>
+                <button class="uk-button uk-button-success" name="restore">{{ _('Restore button') }}</button>
+            {%- endif %}
+            <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') if theme.in_trash else _('In trash button') }}</button>
+        {% endif %}
+        <a href="{{ url_for('admin.analytics_themes') }}" class="uk-button">{{ _('Cancel button') }}</a>
+    {% else %}
+        <a href="{{ url_for('admin.analytics_manage_theme') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
+    {% endif %}
+{% endblock %}
+{% block page_content %}
+    {% if theme %}
+        {{ form.hidden_tag() }}
+    {% endif %}
+
+        <table class="uk-table uk-table-hover">
+            <tbody>
+                {% if theme and not theme_id %}
+                    <tr>
+                        <td>{{ render_field(form.name, label=False, disabled=theme.in_trash) }}</td>
+                    </tr>
+                {% endif %}
+                {% if themes %}
+                    {% for th in themes -%}
+                        <tr>
+                            <td>
+                                {% if theme_id == th.id %}
+                                    {{ render_field(form.name, label=False, disabled=theme.in_trash) }}
+                                {% else %}
+                                    {{ render_trash_icon(th.in_trash) }}
+                                    <a href="{{ url_for('admin.analytics_manage_theme', theme_id=th.id) }}">{{ th.name }}</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr><td><h3 class="uk-text-center uk-text-muted">{{ _('No themes found string') }}</h3></td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+
+{% endblock %}
