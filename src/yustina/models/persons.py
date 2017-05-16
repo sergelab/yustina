@@ -24,7 +24,7 @@ class Position(db.Model, DeletableMixin):
     __tablename__ = 'positions'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.Text)  # TODO: Make nullable = False
+    name = db.Column(db.Text, nullable=False)
 
     @classmethod
     def admin_list(cls):
