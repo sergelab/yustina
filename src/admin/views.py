@@ -75,7 +75,10 @@ def admin_before_request():
                  dict(title=_('Analytics list nav option'),
                       description=_('Analytics list dashboard description'),
                       view='admin.analytics_analytics')
-             ])
+             ]),
+        dict(title=_('Press nav option'),
+             description=_('Press dashboard description'),
+             view='admin.press_news')
     ]
 
 
