@@ -23,7 +23,7 @@ class BookSeries(db.Model, DeletableMixin):
 
 """ Ассоциация книги и авторов (персон)
 """
-book_persons_association = db.Table(
+book_person_association = db.Table(
     'book_person_association',
     db.Column('person_id', db.Integer, db.ForeignKey('persons.id'), primary_key=True),
     db.Column('book_id', db.Integer, db.ForeignKey('books.id'), primary_key=True)
@@ -45,7 +45,7 @@ class Book(db.Model, DeletableMixin):
 
     series = db.relationship(BookSeries, lazy='joined')
     persons = db.relationship('Person',
-                              secondary=book_persons_association,
+                              secondary=book_person_association,
                               lazy=True)
 
     @classmethod
