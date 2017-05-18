@@ -4,6 +4,6 @@ BEGIN;
 
 SELECT * FROM books_series;
 SELECT * FROM books;
-SELECT * FROM book_person_assocation;
+SELECT * FROM book_person_association;
 
 ROLLBACK;
