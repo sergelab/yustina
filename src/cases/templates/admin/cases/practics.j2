@@ -1,0 +1,55 @@
+{% extends 'admin/common_layout.j2' %}
+{% from 'admin/api/base.j2' import render_trash_icon %}
+{% from 'admin/api/forms.j2' import render_field %}
+
+{% set form_action = url_for('admin.cases_manage_practic', practic_id=practic_id) if practic else url_for('admin.cases_practics') %}
+{% set form_not_horizontal = True %}
+{% block page_title %}{{ _('Practics list heading') }}{% endblock %}
+{% block page_buttons %}
+    {% if practic %}
+        {% if not practic.in_trash -%}
+            <button class="uk-button uk-button-primary" name="save">{{ _('Save button') }}</button>
+        {%- endif %}
+        {% if practic and practic_id %}
+            {% if practic.in_trash -%}
+                <span>{{ _('Object in trash string') }}</span>
+                <button class="uk-button uk-button-success" name="restore">{{ _('Restore button') }}</button>
+            {%- endif %}
+            <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') if practic.in_trash else _('In trash button') }}</button>
+        {% endif %}
+        <a href="{{ url_for('admin.cases_practics') }}" class="uk-button">{{ _('Cancel button') }}</a>
+    {% else %}
+        <a href="{{ url_for('admin.cases_manage_practic') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
+    {% endif %}
+{% endblock %}
+{% block page_content %}
+    {% if practic %}
+        {{ form.hidden_tag() }}
+    {% endif %}
+
+    <table class="uk-table uk-table-hover">
+        <tbody>
+            {% if practic and not practic_id %}
+                <tr>
+                    <td>{{ render_field(form.title, label=False, disabled=practic.in_trash) }}</td>
+                </tr>
+            {% endif %}
+            {% if practics_list %}
+                {% for pr in practics_list %}
+                    <tr>
+                        <td>
+                            {% if practic_id == pr.id %}
+                                {{ render_field(form.title, label=False, disabled=practic.in_trash) }}
+                            {% else %}
+                                {{ render_trash_icon(pr.in_trash) }}
+                                <a href="{{ url_for('admin.cases_manage_practic', practic_id=pr.id) }}">{{ pr.title }}</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr><td><h3 class="uk-text-center uk-text-muted">{{ _('No practics found string') }}</h3></td></tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}

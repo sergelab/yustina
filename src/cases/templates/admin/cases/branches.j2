@@ -1,0 +1,71 @@
+{% extends 'admin/common_layout.j2' %}
+{% from 'admin/api/base.j2' import render_trash_icon %}
+{% from 'admin/api/forms.j2' import render_field %}
+
+{% set form_action = url_for('admin.cases_manage_branch', branch_id=branch_id) if branch else url_for('admin.cases_branches') %}
+{% set form_not_horizontal = True %}
+{% block page_title %}{{ _('Branches list heading') }}{% endblock %}
+{% block page_buttons %}
+    {% if branch %}
+        {% if not branch.in_trash -%}
+            <button class="uk-button uk-button-primary" name="save">{{ _('Save button') }}</button>
+        {%- endif %}
+        {% if branch and branch_id %}
+            {% if branch.in_trash -%}
+                <span>{{ _('Object in trash string') }}</span>
+                <button class="uk-button uk-button-success" name="restore">{{ _('Restore button') }}</button>
+            {%- endif %}
+            <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') if branch.in_trash else _('In trash button') }}</button>
+        {% endif %}
+        <a href="{{ url_for('admin.cases_branches') }}" class="uk-button">{{ _('Cancel button') }}</a>
+    {% else %}
+        <a href="{{ url_for('admin.cases_manage_branch') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
+    {% endif %}
+{% endblock %}
+{% block page_content %}
+    {% if branch %}
+        {{ form.hidden_tag() }}
+    {% endif %}
+
+    <table class="uk-table uk-table-hover">
+        <thead>
+            <tr>
+                <th>{{ _('Branch title column') }}</th>
+                <th>{{ _('Branch practic column') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if branch and not branch_id %}
+                <tr>
+                    <td>{{ render_field(form.title, label=False, disabled=branch.in_trash) }}</td>
+                    <td>{{ render_field(form.practic, label=False, disabled=branch.in_trash) }}</td>
+                </tr>
+            {% endif %}
+            {% if branches_list %}
+                {% for br in branches_list %}
+                    <tr>
+                        <td>
+                            {% if branch_id == br.id %}
+                                {{ render_field(form.title, label=False, disabled=branch.in_trash) }}
+                            {% else %}
+                                {{ render_trash_icon(br.in_trash) }}
+                                <a href="{{ url_for('admin.cases_manage_branch', branch_id=br.id) }}">{{ br.title }}</a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if branch_id == br.id -%}
+                                {{ render_field(form.practic, label=False, disabled=branch.in_trash) }}
+                            {%- else -%}
+                                {% if br.practic -%}
+                                    {{ br.practic.title }}
+                                {%- endif %}
+                            {%- endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr><td colspan="2"><h3 class="uk-text-center uk-text-muted">{{ _('No branchs found string') }}</h3></td></tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
