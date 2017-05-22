@@ -79,6 +79,9 @@ def admin_before_request():
         dict(title=_('Press nav option'),
              description=_('Press dashboard description'),
              view='admin.press_news'),
+        dict(title=_('Content nav option'),
+             description=_('Content dashboard description'),
+             view='admin.articles_articles'),
         dict(title=_('Workcases nav option'),
              description=_('Workcases dashboard description'),
              subitems=[
