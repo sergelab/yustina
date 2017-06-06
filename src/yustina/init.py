@@ -61,3 +61,4 @@ with app.app_context():
     register_blueprints(app)
 
     from . import views
+    from . import manage
