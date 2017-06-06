@@ -7,21 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-06 19:39+0300\n"
-"PO-Revision-Date: 2017-06-06 19:39+0300\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2017-06-06 19:59+0300\n"
+"PO-Revision-Date: 2017-06-07 02:34+0300\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: src/admin/views.py:49
 msgid "Persons nav option"
-msgstr ""
+msgstr "Персоны"
 
 #: src/admin/views.py:50
 msgid "Persons dashboard description"
@@ -29,7 +30,7 @@ msgstr ""
 
 #: src/admin/views.py:52
 msgid "Positions list nav option"
-msgstr ""
+msgstr "Должности"
 
 #: src/admin/views.py:53
 msgid "Positions list dashboard description"
@@ -37,7 +38,7 @@ msgstr ""
 
 #: src/admin/views.py:55
 msgid "Persons list nav option"
-msgstr ""
+msgstr "Персоны"
 
 #: src/admin/views.py:56
 msgid "Persons list dashboard description"
@@ -45,7 +46,7 @@ msgstr ""
 
 #: src/admin/views.py:59
 msgid "Books nav option"
-msgstr ""
+msgstr "Книги"
 
 #: src/admin/views.py:60
 msgid "Books dashboard description"
@@ -53,7 +54,7 @@ msgstr ""
 
 #: src/admin/views.py:62
 msgid "Books series list nav option"
-msgstr ""
+msgstr "Серии книг"
 
 #: src/admin/views.py:63
 msgid "Books series list dashboard description"
@@ -61,7 +62,7 @@ msgstr ""
 
 #: src/admin/views.py:65
 msgid "Books list nav option"
-msgstr ""
+msgstr "Книги"
 
 #: src/admin/views.py:66
 msgid "Books list dashboard description"
@@ -69,15 +70,15 @@ msgstr ""
 
 #: src/admin/views.py:69
 msgid "Analytics nav option"
-msgstr ""
+msgstr "Аналитика"
 
 #: src/admin/views.py:70
 msgid "Analytics dashboard description"
-msgstr ""
+msgstr " "
 
 #: src/admin/views.py:72
 msgid "Analytics themes list nav option"
-msgstr ""
+msgstr "Темы аналитических материалов"
 
 #: src/admin/views.py:73
 msgid "Analytics themes list dashboard description"
@@ -85,7 +86,7 @@ msgstr ""
 
 #: src/admin/views.py:75
 msgid "Analytics list nav option"
-msgstr ""
+msgstr "Аналитические материалы"
 
 #: src/admin/views.py:76
 msgid "Analytics list dashboard description"
@@ -93,7 +94,7 @@ msgstr ""
 
 #: src/admin/views.py:79
 msgid "Press nav option"
-msgstr ""
+msgstr "Пресс-центр"
 
 #: src/admin/views.py:80
 msgid "Press dashboard description"
@@ -101,7 +102,7 @@ msgstr ""
 
 #: src/admin/views.py:82
 msgid "Content nav option"
-msgstr ""
+msgstr "Статьи"
 
 #: src/admin/views.py:83
 msgid "Content dashboard description"
@@ -109,7 +110,7 @@ msgstr ""
 
 #: src/admin/views.py:85
 msgid "Workcases nav option"
-msgstr ""
+msgstr "Дела"
 
 #: src/admin/views.py:86
 msgid "Workcases dashboard description"
@@ -117,7 +118,7 @@ msgstr ""
 
 #: src/admin/views.py:88
 msgid "Practics list nav option"
-msgstr ""
+msgstr "Практики"
 
 #: src/admin/views.py:89
 msgid "Practics list dashboard description"
@@ -125,7 +126,7 @@ msgstr ""
 
 #: src/admin/views.py:91
 msgid "Branches list nav option"
-msgstr ""
+msgstr "Отрасли"
 
 #: src/admin/views.py:92
 msgid "Branches list dashboard description"
@@ -133,7 +134,7 @@ msgstr ""
 
 #: src/admin/views.py:94
 msgid "Workcases list nav option"
-msgstr ""
+msgstr "Дела"
 
 #: src/admin/views.py:95
 msgid "Workcases list dashboard description"
@@ -141,96 +142,96 @@ msgstr ""
 
 #: src/admin/templates/admin/common.j2:4
 msgid "Admin panel common browser title"
-msgstr ""
+msgstr "Администрирование сайта адвокатской фирмы «Юстина»"
 
 #: src/admin/templates/admin/common.j2:28
 msgid "Visit site link"
-msgstr ""
+msgstr "Перейти на сайт"
 
 #: src/admin/templates/admin/common.j2:29
 msgid "Logout link"
-msgstr ""
+msgstr "Выйти"
 
 #: src/admin/templates/admin/api/forms.j2:26
 msgid "Show"
-msgstr ""
+msgstr "Показать"
 
 #: src/admin/templates/admin/api/forms.j2:26
 msgid "Hide"
-msgstr ""
+msgstr "Скрыть"
 
 #: src/analytics/admin.py:40 src/articles/admin.py:40 src/cases/admin.py:37
 #: src/cases/admin.py:119 src/persons/admin.py:31 src/press/admin.py:40
 msgid "Object not found message"
-msgstr ""
+msgstr "Объект не найден."
 
 #: src/analytics/admin.py:58 src/analytics/admin.py:144
 #: src/articles/admin.py:58 src/books/admin.py:55 src/books/admin.py:135
 #: src/cases/admin.py:55 src/cases/admin.py:137 src/persons/admin.py:49
 #: src/persons/admin.py:129 src/press/admin.py:58
 msgid "Error then delete object message"
-msgstr ""
+msgstr "Не удалось удалить объект."
 
 #: src/analytics/admin.py:60 src/analytics/admin.py:146
 #: src/articles/admin.py:60 src/books/admin.py:57 src/books/admin.py:137
 #: src/cases/admin.py:57 src/cases/admin.py:139 src/persons/admin.py:51
 #: src/persons/admin.py:131 src/press/admin.py:60
 msgid "Delete object successfully message"
-msgstr ""
+msgstr "Объект удален."
 
 #: src/analytics/admin.py:70 src/analytics/admin.py:156
 #: src/articles/admin.py:70 src/books/admin.py:67 src/books/admin.py:147
 #: src/cases/admin.py:67 src/cases/admin.py:149 src/persons/admin.py:61
 #: src/persons/admin.py:141 src/press/admin.py:70
 msgid "Error then restore object message"
-msgstr ""
+msgstr "Не удалось восстановить объект."
 
 #: src/analytics/admin.py:72 src/analytics/admin.py:158
 #: src/articles/admin.py:72 src/books/admin.py:69 src/books/admin.py:149
 #: src/cases/admin.py:69 src/cases/admin.py:151 src/persons/admin.py:63
 #: src/persons/admin.py:143 src/press/admin.py:72
 msgid "Restore object successfully message"
-msgstr ""
+msgstr "Объект восстановлен"
 
 #: src/analytics/admin.py:87
 msgid "Error then add new theme message"
-msgstr ""
+msgstr "Не удалось добавить тему."
 
 #: src/analytics/admin.py:88
 msgid "Error then edit existing theme message"
-msgstr ""
+msgstr "Не удалось отредактировать тему."
 
 #: src/analytics/admin.py:90
 msgid "Add successful new theme message"
-msgstr ""
+msgstr "Тема добавлена."
 
 #: src/analytics/admin.py:91
 msgid "Safe successful existing theme message"
-msgstr ""
+msgstr "Тема сохранена"
 
 #: src/analytics/admin.py:127
 msgid "Analytics not found message"
-msgstr ""
+msgstr "Аналитический материал не найден."
 
 #: src/analytics/admin.py:173
 msgid "Error then create analytics message"
-msgstr ""
+msgstr "Не удалось создать аналитический материал."
 
 #: src/analytics/admin.py:174
 msgid "Error then save analytics message"
-msgstr ""
+msgstr "Не удалось сохранить аналитический материал."
 
 #: src/analytics/admin.py:176
 msgid "Analytics created successfully message"
-msgstr ""
+msgstr "Аналитический материал создан."
 
 #: src/analytics/admin.py:177
 msgid "Analytics saved successfully message"
-msgstr ""
+msgstr "Аналитический материал сохранен."
 
 #: src/analytics/templates/admin/analytics/analytics.j2:5
 msgid "Analytics list heading"
-msgstr ""
+msgstr "Аналитические материалы"
 
 #: src/analytics/templates/admin/analytics/analytics.j2:8
 #: src/analytics/templates/admin/analytics/themes.j2:22
@@ -243,23 +244,23 @@ msgstr ""
 #: src/persons/templates/admin/persons/positions.j2:22
 #: src/press/templates/admin/press/news.j2:8
 msgid "Add button"
-msgstr ""
+msgstr "Добавить"
 
 #: src/analytics/templates/admin/analytics/analytics.j2:15
 msgid "Analytics title column"
-msgstr ""
+msgstr "Название"
 
 #: src/analytics/templates/admin/analytics/analytics.j2:16
 msgid "Analytics theme column"
-msgstr ""
+msgstr "Тема"
 
 #: src/analytics/templates/admin/analytics/analytics.j2:36
 msgid "No analytics found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:6
 msgid "Add analytics heading"
-msgstr ""
+msgstr "Добавление аналитического материала"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:10
 #: src/analytics/templates/admin/analytics/themes.j2:11
@@ -272,7 +273,7 @@ msgstr ""
 #: src/persons/templates/admin/persons/positions.j2:11
 #: src/press/templates/admin/press/manage_news_article.j2:10
 msgid "Save button"
-msgstr ""
+msgstr "Сохранить"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:11
 #: src/articles/templates/admin/articles/manage_article.j2:11
@@ -281,7 +282,7 @@ msgstr ""
 #: src/persons/templates/admin/persons/manage_person.j2:11
 #: src/press/templates/admin/press/manage_news_article.j2:11
 msgid "Save and continue button"
-msgstr ""
+msgstr "Сохранить и продолжить"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:15
 #: src/analytics/templates/admin/analytics/themes.j2:15
@@ -294,7 +295,7 @@ msgstr ""
 #: src/persons/templates/admin/persons/positions.j2:15
 #: src/press/templates/admin/press/manage_news_article.j2:15
 msgid "Object in trash string"
-msgstr ""
+msgstr "Объект в корзине"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:16
 #: src/analytics/templates/admin/analytics/themes.j2:16
@@ -307,7 +308,7 @@ msgstr ""
 #: src/persons/templates/admin/persons/positions.j2:16
 #: src/press/templates/admin/press/manage_news_article.j2:16
 msgid "Restore button"
-msgstr ""
+msgstr "Восстановить"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:18
 #: src/analytics/templates/admin/analytics/themes.j2:18
@@ -320,7 +321,7 @@ msgstr ""
 #: src/persons/templates/admin/persons/positions.j2:18
 #: src/press/templates/admin/press/manage_news_article.j2:18
 msgid "Delete button"
-msgstr ""
+msgstr "Удалить"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:18
 #: src/analytics/templates/admin/analytics/themes.j2:18
@@ -333,7 +334,7 @@ msgstr ""
 #: src/persons/templates/admin/persons/positions.j2:18
 #: src/press/templates/admin/press/manage_news_article.j2:18
 msgid "In trash button"
-msgstr ""
+msgstr "В корзину"
 
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:20
 #: src/analytics/templates/admin/analytics/themes.j2:20
@@ -346,167 +347,167 @@ msgstr ""
 #: src/persons/templates/admin/persons/positions.j2:20
 #: src/press/templates/admin/press/manage_news_article.j2:20
 msgid "Cancel button"
-msgstr ""
+msgstr "Отменить"
 
 #: src/analytics/templates/admin/analytics/themes.j2:7
 msgid "Themes list heading"
-msgstr ""
+msgstr "Темы"
 
 #: src/analytics/templates/admin/analytics/themes.j2:51
 msgid "No themes found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/articles/admin.py:87 src/press/admin.py:87
 msgid "Error then add new article message"
-msgstr ""
+msgstr "Не удалось добавить статью."
 
 #: src/articles/admin.py:88 src/press/admin.py:88
 msgid "Error then edit existing article message"
-msgstr ""
+msgstr "Не удалось отредактировать статью."
 
 #: src/articles/admin.py:90 src/press/admin.py:90
 msgid "Add successful new article message"
-msgstr ""
+msgstr "Статья добавлена."
 
 #: src/articles/admin.py:91 src/press/admin.py:91
 msgid "Safe successful existing article message"
-msgstr ""
+msgstr "Статья сохранена"
 
 #: src/articles/templates/admin/articles/articles.j2:5
 msgid "Articles list heading"
-msgstr ""
+msgstr "Список статей"
 
 #: src/articles/templates/admin/articles/articles.j2:15
 msgid "Article title column"
-msgstr ""
+msgstr "Название статьи"
 
 #: src/articles/templates/admin/articles/articles.j2:29
 msgid "No articles found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/articles/templates/admin/articles/manage_article.j2:6
 msgid "Add article heading"
-msgstr ""
+msgstr "Добавление статьи"
 
 #: src/books/admin.py:38
 msgid "No books series found message"
-msgstr ""
+msgstr "Пусто"
 
 #: src/books/admin.py:84
 msgid "Error then create books series message"
-msgstr ""
+msgstr "Не удалось создать серию книг."
 
 #: src/books/admin.py:85
 msgid "Error then save books series message"
-msgstr ""
+msgstr "Не удалось сохранить серию книг."
 
 #: src/books/admin.py:87
 msgid "Books series created successfully message"
-msgstr ""
+msgstr "Серия книг создана."
 
 #: src/books/admin.py:88
 msgid "Books series saved successfully message"
-msgstr ""
+msgstr "Серия книг сохранена."
 
 #: src/books/admin.py:118
 msgid "Book not found message"
-msgstr ""
+msgstr "Книга не найдена."
 
 #: src/books/admin.py:164
 msgid "Error then create book message"
-msgstr ""
+msgstr "Не удалось создать книгу."
 
 #: src/books/admin.py:165
 msgid "Error then save book message"
-msgstr ""
+msgstr "Не удалось сохранить книгу."
 
 #: src/books/admin.py:167
 msgid "Book created successfully message"
-msgstr ""
+msgstr "Книга создана."
 
 #: src/books/admin.py:168
 msgid "Book saved successfully message"
-msgstr ""
+msgstr "Книга сохранена."
 
 #: src/books/templates/admin/books/books.j2:5
 msgid "Books list heading"
-msgstr ""
+msgstr "Книги"
 
 #: src/books/templates/admin/books/books.j2:15
 msgid "Book title column"
-msgstr ""
+msgstr "Название книги"
 
 #: src/books/templates/admin/books/books.j2:16
 msgid "Book series column"
-msgstr ""
+msgstr "Серия книг"
 
 #: src/books/templates/admin/books/books.j2:36
 msgid "No books found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/books/templates/admin/books/books_series.j2:5
 msgid "Books series list heading"
-msgstr ""
+msgstr "Серии книг"
 
 #: src/books/templates/admin/books/books_series.j2:15
 msgid "Series name column"
-msgstr ""
+msgstr "Название серии"
 
 #: src/books/templates/admin/books/books_series.j2:16
 msgid "Series annotation column"
-msgstr ""
+msgstr "Аннотация к серии"
 
 #: src/books/templates/admin/books/books_series.j2:33
 msgid "No books series found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/books/templates/admin/books/manage_book.j2:6
 msgid "Add book heading"
-msgstr ""
+msgstr "Добавление книги"
 
 #: src/books/templates/admin/books/manage_series.j2:6
 msgid "Add books series heading"
-msgstr ""
+msgstr "Добавление серии книг"
 
 #: src/cases/admin.py:84
 msgid "Error then add new practic message"
-msgstr ""
+msgstr "Не удалось добавить практику."
 
 #: src/cases/admin.py:85
 msgid "Error then edit existing practic message"
-msgstr ""
+msgstr "Не удалось отредактировать практику."
 
 #: src/cases/admin.py:87
 msgid "Add successful new practic message"
-msgstr ""
+msgstr "Практика добавлена."
 
 #: src/cases/admin.py:88
 msgid "Safe successful existing practic message"
-msgstr ""
+msgstr "Практика сохранена"
 
 #: src/cases/admin.py:166
 msgid "Error then add new branch message"
-msgstr ""
+msgstr "Не удалось добавить отрасль."
 
 #: src/cases/admin.py:167
 msgid "Error then edit existing branch message"
-msgstr ""
+msgstr "Не удалось отредактировать направление."
 
 #: src/cases/admin.py:169
 msgid "Add successful new branch message"
-msgstr ""
+msgstr "Отрасль добавлена."
 
 #: src/cases/admin.py:170
 msgid "Safe successful existing branch message"
-msgstr ""
+msgstr "Отрасль сохранена"
 
 #: src/cases/templates/admin/cases/branches.j2:7
 msgid "Branches list heading"
-msgstr ""
+msgstr "Отрасли"
 
 #: src/cases/templates/admin/cases/branches.j2:33
 msgid "Branch title column"
-msgstr ""
+msgstr "Название отрасли"
 
 #: src/cases/templates/admin/cases/branches.j2:34
 msgid "Branch practic column"
@@ -514,132 +515,132 @@ msgstr ""
 
 #: src/cases/templates/admin/cases/branches.j2:67
 msgid "No branchs found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/cases/templates/admin/cases/practics.j2:7
 msgid "Practics list heading"
-msgstr ""
+msgstr "Практики"
 
 #: src/cases/templates/admin/cases/practics.j2:51
 msgid "No practics found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/contrib/forms/fields.py:41
 #, python-format
 msgid "'%(value)s' is not a valid choice for this field"
-msgstr ""
+msgstr "«%(value)s» не является допустимым значением для этого поля."
 
 #: src/contrib/forms/widgets.py:12
 msgid "Date field placeholder"
-msgstr ""
+msgstr "Дата"
 
 #: src/persons/admin.py:78
 msgid "Error then add new position message"
-msgstr ""
+msgstr "Не удалось добавить должность."
 
 #: src/persons/admin.py:79
 msgid "Error then edit existing position message"
-msgstr ""
+msgstr "Не удалось отредактировать должность."
 
 #: src/persons/admin.py:81
 msgid "Add successful new position message"
-msgstr ""
+msgstr "Должность добавлена."
 
 #: src/persons/admin.py:82
 msgid "Safe successful existing position message"
-msgstr ""
+msgstr "Должность сохранена"
 
 #: src/persons/admin.py:112
 msgid "Person not found message"
-msgstr ""
+msgstr "Персона не найдена."
 
 #: src/persons/admin.py:158
 msgid "Error then add person message"
-msgstr ""
+msgstr "Не удалось добавить персону."
 
 #: src/persons/admin.py:159
 msgid "Error then modify person message"
-msgstr ""
+msgstr "Не удалось отредактировать персону."
 
 #: src/persons/admin.py:161
 msgid "Person added successfully message"
-msgstr ""
+msgstr "Персона добавлена."
 
 #: src/persons/admin.py:162
 msgid "Person saved successfully message"
-msgstr ""
+msgstr "Персона сохранена."
 
 #: src/persons/templates/admin/persons/manage_person.j2:6
 msgid "Add person heading"
-msgstr ""
+msgstr "Добавление персоны"
 
 #: src/persons/templates/admin/persons/persons.j2:5
 msgid "Persons list heading"
-msgstr ""
+msgstr "Персоны"
 
 #: src/persons/templates/admin/persons/persons.j2:15
 msgid "Fullname column"
-msgstr ""
+msgstr "Полное имя"
 
 #: src/persons/templates/admin/persons/persons.j2:30
 msgid "No persons found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/persons/templates/admin/persons/positions.j2:7
 msgid "Positions list heading"
-msgstr ""
+msgstr "Должности"
 
 #: src/persons/templates/admin/persons/positions.j2:51
 msgid "No positions found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/press/templates/admin/press/manage_news_article.j2:6
 msgid "Add news article heading"
-msgstr ""
+msgstr "Добавление новости"
 
 #: src/press/templates/admin/press/news.j2:5
 msgid "News list heading"
-msgstr ""
+msgstr "Новости"
 
 #: src/press/templates/admin/press/news.j2:15
 msgid "News article title column"
-msgstr ""
+msgstr "Заголовок новости"
 
 #: src/press/templates/admin/press/news.j2:16
 msgid "News article date column"
-msgstr ""
+msgstr "Дата новости"
 
 #: src/press/templates/admin/press/news.j2:17
 msgid "News article annotation column"
-msgstr ""
+msgstr "Аннотация новости"
 
 #: src/press/templates/admin/press/news.j2:35
 msgid "No news articles found string"
-msgstr ""
+msgstr "Пусто"
 
 #: src/yustina/forms/analytics.py:20
 msgid "Theme name label"
-msgstr ""
+msgstr "Название темы"
 
 #: src/yustina/forms/analytics.py:34
 msgid "Analytics title label"
-msgstr ""
+msgstr "Название"
 
 #: src/yustina/forms/analytics.py:42
 msgid "Analytics theme label"
-msgstr ""
+msgstr "Тема"
 
 #: src/yustina/forms/analytics.py:45
 msgid "Select analytics theme option"
-msgstr ""
+msgstr "Выберите тему аналитики"
 
 #: src/yustina/forms/analytics.py:50
 msgid "Analytics annotation label"
-msgstr ""
+msgstr "Аннотация"
 
 #: src/yustina/forms/analytics.py:58
 msgid "Analytics content label"
-msgstr ""
+msgstr "Содержание"
 
 #: src/yustina/forms/analytics.py:66 src/yustina/forms/books.py:50
 msgid "Authors as text label"
@@ -648,43 +649,43 @@ msgstr ""
 #: src/yustina/forms/analytics.py:74 src/yustina/forms/books.py:58
 #: src/yustina/forms/cases.py:65 src/yustina/forms/persons.py:58
 msgid "Person positions label"
-msgstr ""
+msgstr "Должности"
 
 #: src/yustina/forms/articles.py:14
 msgid "Article title label"
-msgstr ""
+msgstr "Название статьи"
 
 #: src/yustina/forms/articles.py:22
 msgid "Article content label"
-msgstr ""
+msgstr "Содержание статьи"
 
 #: src/yustina/forms/books.py:18
 msgid "Book title label"
-msgstr ""
+msgstr "Название книги"
 
 #: src/yustina/forms/books.py:26 src/yustina/forms/books.py:68
 msgid "Book series label"
-msgstr ""
+msgstr "Серия книг"
 
 #: src/yustina/forms/books.py:29
 msgid "Select book series option"
-msgstr ""
+msgstr "Выберите серию книг"
 
 #: src/yustina/forms/books.py:34
 msgid "Book annotation label"
-msgstr ""
+msgstr "Аннотация"
 
 #: src/yustina/forms/books.py:42
 msgid "Book publisher info label"
-msgstr ""
+msgstr "Выходные данные"
 
 #: src/yustina/forms/books.py:76
 msgid "Book series annotation label"
-msgstr ""
+msgstr "Аннотация к серии книг"
 
 #: src/yustina/forms/cases.py:18
 msgid "Practic title label"
-msgstr ""
+msgstr "Название практики"
 
 #: src/yustina/forms/cases.py:29
 msgid "Branch practic label"
@@ -692,11 +693,11 @@ msgstr ""
 
 #: src/yustina/forms/cases.py:44
 msgid "Workcase title label"
-msgstr ""
+msgstr "Название дела"
 
 #: src/yustina/forms/cases.py:52
 msgid "Workcase description label"
-msgstr ""
+msgstr "Описание дела"
 
 #: src/yustina/forms/cases.py:60
 msgid "Workcase branches positions label"
@@ -704,73 +705,72 @@ msgstr ""
 
 #: src/yustina/forms/persons.py:18
 msgid "Position name label"
-msgstr ""
+msgstr "Название должности"
 
 #: src/yustina/forms/persons.py:34
 msgid "Person surname label"
-msgstr ""
+msgstr "Фамилия"
 
 #: src/yustina/forms/persons.py:43
 msgid "Person firstname label"
-msgstr ""
+msgstr "Имя"
 
 #: src/yustina/forms/persons.py:51
 msgid "Person middlename label"
-msgstr ""
+msgstr "Отчество"
 
 #: src/yustina/forms/persons.py:63
 msgid "Person bio label"
-msgstr ""
+msgstr "Биография"
 
 #: src/yustina/forms/press.py:14
 msgid "News article title label"
-msgstr ""
+msgstr "Заголовок новости"
 
 #: src/yustina/forms/press.py:22
 msgid "News article subtitle label"
-msgstr ""
+msgstr "Подзаголовок новости"
 
 #: src/yustina/forms/press.py:29
 msgid "News article date label"
-msgstr ""
+msgstr "Дата новости"
 
 #: src/yustina/forms/press.py:38
 msgid "News article annotation label"
-msgstr ""
+msgstr "Аннотация новости"
 
 #: src/yustina/forms/press.py:47
 msgid "News article content label"
-msgstr ""
+msgstr "Содержание новости"
 
 #: src/yustina/forms/press.py:56
 msgid "News article source label"
-msgstr ""
+msgstr "Источник"
 
 #: src/yustina/forms/press.py:63
 msgid "News article source link label"
-msgstr ""
+msgstr "Источник"
 
 #: src/yustina/forms/users.py:15
 msgid "Please, provide your username validation message"
-msgstr ""
+msgstr "Пожалуйста, введите имя пользователя."
 
 #: src/yustina/forms/users.py:20
 msgid "Username placeholder"
-msgstr ""
+msgstr "Имя пользователя"
 
 #: src/yustina/forms/users.py:27
 msgid "Please, provide your password validation message"
-msgstr ""
+msgstr "Пожалуйста, введите пароль."
 
 #: src/yustina/forms/users.py:32
 msgid "Password placeholder"
-msgstr ""
+msgstr "Пароль"
 
 #: src/yustina/forms/users.py:38
 msgid "Remember me label"
-msgstr ""
+msgstr "Запомнить меня"
 
 #: src/yustina/forms/users.py:55
 msgid "Invalid username or password validation message"
-msgstr ""
-
+msgstr "Неверное сочетание имени пользователя и пароля."
