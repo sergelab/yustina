@@ -1,0 +1,776 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-06-06 19:39+0300\n"
+"PO-Revision-Date: 2017-06-06 19:39+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: src/admin/views.py:49
+msgid "Persons nav option"
+msgstr ""
+
+#: src/admin/views.py:50
+msgid "Persons dashboard description"
+msgstr ""
+
+#: src/admin/views.py:52
+msgid "Positions list nav option"
+msgstr ""
+
+#: src/admin/views.py:53
+msgid "Positions list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:55
+msgid "Persons list nav option"
+msgstr ""
+
+#: src/admin/views.py:56
+msgid "Persons list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:59
+msgid "Books nav option"
+msgstr ""
+
+#: src/admin/views.py:60
+msgid "Books dashboard description"
+msgstr ""
+
+#: src/admin/views.py:62
+msgid "Books series list nav option"
+msgstr ""
+
+#: src/admin/views.py:63
+msgid "Books series list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:65
+msgid "Books list nav option"
+msgstr ""
+
+#: src/admin/views.py:66
+msgid "Books list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:69
+msgid "Analytics nav option"
+msgstr ""
+
+#: src/admin/views.py:70
+msgid "Analytics dashboard description"
+msgstr ""
+
+#: src/admin/views.py:72
+msgid "Analytics themes list nav option"
+msgstr ""
+
+#: src/admin/views.py:73
+msgid "Analytics themes list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:75
+msgid "Analytics list nav option"
+msgstr ""
+
+#: src/admin/views.py:76
+msgid "Analytics list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:79
+msgid "Press nav option"
+msgstr ""
+
+#: src/admin/views.py:80
+msgid "Press dashboard description"
+msgstr ""
+
+#: src/admin/views.py:82
+msgid "Content nav option"
+msgstr ""
+
+#: src/admin/views.py:83
+msgid "Content dashboard description"
+msgstr ""
+
+#: src/admin/views.py:85
+msgid "Workcases nav option"
+msgstr ""
+
+#: src/admin/views.py:86
+msgid "Workcases dashboard description"
+msgstr ""
+
+#: src/admin/views.py:88
+msgid "Practics list nav option"
+msgstr ""
+
+#: src/admin/views.py:89
+msgid "Practics list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:91
+msgid "Branches list nav option"
+msgstr ""
+
+#: src/admin/views.py:92
+msgid "Branches list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:94
+msgid "Workcases list nav option"
+msgstr ""
+
+#: src/admin/views.py:95
+msgid "Workcases list dashboard description"
+msgstr ""
+
+#: src/admin/templates/admin/common.j2:4
+msgid "Admin panel common browser title"
+msgstr ""
+
+#: src/admin/templates/admin/common.j2:28
+msgid "Visit site link"
+msgstr ""
+
+#: src/admin/templates/admin/common.j2:29
+msgid "Logout link"
+msgstr ""
+
+#: src/admin/templates/admin/api/forms.j2:26
+msgid "Show"
+msgstr ""
+
+#: src/admin/templates/admin/api/forms.j2:26
+msgid "Hide"
+msgstr ""
+
+#: src/analytics/admin.py:40 src/articles/admin.py:40 src/cases/admin.py:37
+#: src/cases/admin.py:119 src/persons/admin.py:31 src/press/admin.py:40
+msgid "Object not found message"
+msgstr ""
+
+#: src/analytics/admin.py:58 src/analytics/admin.py:144
+#: src/articles/admin.py:58 src/books/admin.py:55 src/books/admin.py:135
+#: src/cases/admin.py:55 src/cases/admin.py:137 src/persons/admin.py:49
+#: src/persons/admin.py:129 src/press/admin.py:58
+msgid "Error then delete object message"
+msgstr ""
+
+#: src/analytics/admin.py:60 src/analytics/admin.py:146
+#: src/articles/admin.py:60 src/books/admin.py:57 src/books/admin.py:137
+#: src/cases/admin.py:57 src/cases/admin.py:139 src/persons/admin.py:51
+#: src/persons/admin.py:131 src/press/admin.py:60
+msgid "Delete object successfully message"
+msgstr ""
+
+#: src/analytics/admin.py:70 src/analytics/admin.py:156
+#: src/articles/admin.py:70 src/books/admin.py:67 src/books/admin.py:147
+#: src/cases/admin.py:67 src/cases/admin.py:149 src/persons/admin.py:61
+#: src/persons/admin.py:141 src/press/admin.py:70
+msgid "Error then restore object message"
+msgstr ""
+
+#: src/analytics/admin.py:72 src/analytics/admin.py:158
+#: src/articles/admin.py:72 src/books/admin.py:69 src/books/admin.py:149
+#: src/cases/admin.py:69 src/cases/admin.py:151 src/persons/admin.py:63
+#: src/persons/admin.py:143 src/press/admin.py:72
+msgid "Restore object successfully message"
+msgstr ""
+
+#: src/analytics/admin.py:87
+msgid "Error then add new theme message"
+msgstr ""
+
+#: src/analytics/admin.py:88
+msgid "Error then edit existing theme message"
+msgstr ""
+
+#: src/analytics/admin.py:90
+msgid "Add successful new theme message"
+msgstr ""
+
+#: src/analytics/admin.py:91
+msgid "Safe successful existing theme message"
+msgstr ""
+
+#: src/analytics/admin.py:127
+msgid "Analytics not found message"
+msgstr ""
+
+#: src/analytics/admin.py:173
+msgid "Error then create analytics message"
+msgstr ""
+
+#: src/analytics/admin.py:174
+msgid "Error then save analytics message"
+msgstr ""
+
+#: src/analytics/admin.py:176
+msgid "Analytics created successfully message"
+msgstr ""
+
+#: src/analytics/admin.py:177
+msgid "Analytics saved successfully message"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/analytics.j2:5
+msgid "Analytics list heading"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/analytics.j2:8
+#: src/analytics/templates/admin/analytics/themes.j2:22
+#: src/articles/templates/admin/articles/articles.j2:8
+#: src/books/templates/admin/books/books.j2:8
+#: src/books/templates/admin/books/books_series.j2:8
+#: src/cases/templates/admin/cases/branches.j2:22
+#: src/cases/templates/admin/cases/practics.j2:22
+#: src/persons/templates/admin/persons/persons.j2:8
+#: src/persons/templates/admin/persons/positions.j2:22
+#: src/press/templates/admin/press/news.j2:8
+msgid "Add button"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/analytics.j2:15
+msgid "Analytics title column"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/analytics.j2:16
+msgid "Analytics theme column"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/analytics.j2:36
+msgid "No analytics found string"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:6
+msgid "Add analytics heading"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:10
+#: src/analytics/templates/admin/analytics/themes.j2:11
+#: src/articles/templates/admin/articles/manage_article.j2:10
+#: src/books/templates/admin/books/manage_book.j2:10
+#: src/books/templates/admin/books/manage_series.j2:10
+#: src/cases/templates/admin/cases/branches.j2:11
+#: src/cases/templates/admin/cases/practics.j2:11
+#: src/persons/templates/admin/persons/manage_person.j2:10
+#: src/persons/templates/admin/persons/positions.j2:11
+#: src/press/templates/admin/press/manage_news_article.j2:10
+msgid "Save button"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:11
+#: src/articles/templates/admin/articles/manage_article.j2:11
+#: src/books/templates/admin/books/manage_book.j2:11
+#: src/books/templates/admin/books/manage_series.j2:11
+#: src/persons/templates/admin/persons/manage_person.j2:11
+#: src/press/templates/admin/press/manage_news_article.j2:11
+msgid "Save and continue button"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:15
+#: src/analytics/templates/admin/analytics/themes.j2:15
+#: src/articles/templates/admin/articles/manage_article.j2:15
+#: src/books/templates/admin/books/manage_book.j2:15
+#: src/books/templates/admin/books/manage_series.j2:15
+#: src/cases/templates/admin/cases/branches.j2:15
+#: src/cases/templates/admin/cases/practics.j2:15
+#: src/persons/templates/admin/persons/manage_person.j2:15
+#: src/persons/templates/admin/persons/positions.j2:15
+#: src/press/templates/admin/press/manage_news_article.j2:15
+msgid "Object in trash string"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:16
+#: src/analytics/templates/admin/analytics/themes.j2:16
+#: src/articles/templates/admin/articles/manage_article.j2:16
+#: src/books/templates/admin/books/manage_book.j2:16
+#: src/books/templates/admin/books/manage_series.j2:16
+#: src/cases/templates/admin/cases/branches.j2:16
+#: src/cases/templates/admin/cases/practics.j2:16
+#: src/persons/templates/admin/persons/manage_person.j2:16
+#: src/persons/templates/admin/persons/positions.j2:16
+#: src/press/templates/admin/press/manage_news_article.j2:16
+msgid "Restore button"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:18
+#: src/analytics/templates/admin/analytics/themes.j2:18
+#: src/articles/templates/admin/articles/manage_article.j2:18
+#: src/books/templates/admin/books/manage_book.j2:18
+#: src/books/templates/admin/books/manage_series.j2:18
+#: src/cases/templates/admin/cases/branches.j2:18
+#: src/cases/templates/admin/cases/practics.j2:18
+#: src/persons/templates/admin/persons/manage_person.j2:18
+#: src/persons/templates/admin/persons/positions.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:18
+msgid "Delete button"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:18
+#: src/analytics/templates/admin/analytics/themes.j2:18
+#: src/articles/templates/admin/articles/manage_article.j2:18
+#: src/books/templates/admin/books/manage_book.j2:18
+#: src/books/templates/admin/books/manage_series.j2:18
+#: src/cases/templates/admin/cases/branches.j2:18
+#: src/cases/templates/admin/cases/practics.j2:18
+#: src/persons/templates/admin/persons/manage_person.j2:18
+#: src/persons/templates/admin/persons/positions.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:18
+msgid "In trash button"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:20
+#: src/analytics/templates/admin/analytics/themes.j2:20
+#: src/articles/templates/admin/articles/manage_article.j2:20
+#: src/books/templates/admin/books/manage_book.j2:20
+#: src/books/templates/admin/books/manage_series.j2:20
+#: src/cases/templates/admin/cases/branches.j2:20
+#: src/cases/templates/admin/cases/practics.j2:20
+#: src/persons/templates/admin/persons/manage_person.j2:20
+#: src/persons/templates/admin/persons/positions.j2:20
+#: src/press/templates/admin/press/manage_news_article.j2:20
+msgid "Cancel button"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/themes.j2:7
+msgid "Themes list heading"
+msgstr ""
+
+#: src/analytics/templates/admin/analytics/themes.j2:51
+msgid "No themes found string"
+msgstr ""
+
+#: src/articles/admin.py:87 src/press/admin.py:87
+msgid "Error then add new article message"
+msgstr ""
+
+#: src/articles/admin.py:88 src/press/admin.py:88
+msgid "Error then edit existing article message"
+msgstr ""
+
+#: src/articles/admin.py:90 src/press/admin.py:90
+msgid "Add successful new article message"
+msgstr ""
+
+#: src/articles/admin.py:91 src/press/admin.py:91
+msgid "Safe successful existing article message"
+msgstr ""
+
+#: src/articles/templates/admin/articles/articles.j2:5
+msgid "Articles list heading"
+msgstr ""
+
+#: src/articles/templates/admin/articles/articles.j2:15
+msgid "Article title column"
+msgstr ""
+
+#: src/articles/templates/admin/articles/articles.j2:29
+msgid "No articles found string"
+msgstr ""
+
+#: src/articles/templates/admin/articles/manage_article.j2:6
+msgid "Add article heading"
+msgstr ""
+
+#: src/books/admin.py:38
+msgid "No books series found message"
+msgstr ""
+
+#: src/books/admin.py:84
+msgid "Error then create books series message"
+msgstr ""
+
+#: src/books/admin.py:85
+msgid "Error then save books series message"
+msgstr ""
+
+#: src/books/admin.py:87
+msgid "Books series created successfully message"
+msgstr ""
+
+#: src/books/admin.py:88
+msgid "Books series saved successfully message"
+msgstr ""
+
+#: src/books/admin.py:118
+msgid "Book not found message"
+msgstr ""
+
+#: src/books/admin.py:164
+msgid "Error then create book message"
+msgstr ""
+
+#: src/books/admin.py:165
+msgid "Error then save book message"
+msgstr ""
+
+#: src/books/admin.py:167
+msgid "Book created successfully message"
+msgstr ""
+
+#: src/books/admin.py:168
+msgid "Book saved successfully message"
+msgstr ""
+
+#: src/books/templates/admin/books/books.j2:5
+msgid "Books list heading"
+msgstr ""
+
+#: src/books/templates/admin/books/books.j2:15
+msgid "Book title column"
+msgstr ""
+
+#: src/books/templates/admin/books/books.j2:16
+msgid "Book series column"
+msgstr ""
+
+#: src/books/templates/admin/books/books.j2:36
+msgid "No books found string"
+msgstr ""
+
+#: src/books/templates/admin/books/books_series.j2:5
+msgid "Books series list heading"
+msgstr ""
+
+#: src/books/templates/admin/books/books_series.j2:15
+msgid "Series name column"
+msgstr ""
+
+#: src/books/templates/admin/books/books_series.j2:16
+msgid "Series annotation column"
+msgstr ""
+
+#: src/books/templates/admin/books/books_series.j2:33
+msgid "No books series found string"
+msgstr ""
+
+#: src/books/templates/admin/books/manage_book.j2:6
+msgid "Add book heading"
+msgstr ""
+
+#: src/books/templates/admin/books/manage_series.j2:6
+msgid "Add books series heading"
+msgstr ""
+
+#: src/cases/admin.py:84
+msgid "Error then add new practic message"
+msgstr ""
+
+#: src/cases/admin.py:85
+msgid "Error then edit existing practic message"
+msgstr ""
+
+#: src/cases/admin.py:87
+msgid "Add successful new practic message"
+msgstr ""
+
+#: src/cases/admin.py:88
+msgid "Safe successful existing practic message"
+msgstr ""
+
+#: src/cases/admin.py:166
+msgid "Error then add new branch message"
+msgstr ""
+
+#: src/cases/admin.py:167
+msgid "Error then edit existing branch message"
+msgstr ""
+
+#: src/cases/admin.py:169
+msgid "Add successful new branch message"
+msgstr ""
+
+#: src/cases/admin.py:170
+msgid "Safe successful existing branch message"
+msgstr ""
+
+#: src/cases/templates/admin/cases/branches.j2:7
+msgid "Branches list heading"
+msgstr ""
+
+#: src/cases/templates/admin/cases/branches.j2:33
+msgid "Branch title column"
+msgstr ""
+
+#: src/cases/templates/admin/cases/branches.j2:34
+msgid "Branch practic column"
+msgstr ""
+
+#: src/cases/templates/admin/cases/branches.j2:67
+msgid "No branchs found string"
+msgstr ""
+
+#: src/cases/templates/admin/cases/practics.j2:7
+msgid "Practics list heading"
+msgstr ""
+
+#: src/cases/templates/admin/cases/practics.j2:51
+msgid "No practics found string"
+msgstr ""
+
+#: src/contrib/forms/fields.py:41
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr ""
+
+#: src/contrib/forms/widgets.py:12
+msgid "Date field placeholder"
+msgstr ""
+
+#: src/persons/admin.py:78
+msgid "Error then add new position message"
+msgstr ""
+
+#: src/persons/admin.py:79
+msgid "Error then edit existing position message"
+msgstr ""
+
+#: src/persons/admin.py:81
+msgid "Add successful new position message"
+msgstr ""
+
+#: src/persons/admin.py:82
+msgid "Safe successful existing position message"
+msgstr ""
+
+#: src/persons/admin.py:112
+msgid "Person not found message"
+msgstr ""
+
+#: src/persons/admin.py:158
+msgid "Error then add person message"
+msgstr ""
+
+#: src/persons/admin.py:159
+msgid "Error then modify person message"
+msgstr ""
+
+#: src/persons/admin.py:161
+msgid "Person added successfully message"
+msgstr ""
+
+#: src/persons/admin.py:162
+msgid "Person saved successfully message"
+msgstr ""
+
+#: src/persons/templates/admin/persons/manage_person.j2:6
+msgid "Add person heading"
+msgstr ""
+
+#: src/persons/templates/admin/persons/persons.j2:5
+msgid "Persons list heading"
+msgstr ""
+
+#: src/persons/templates/admin/persons/persons.j2:15
+msgid "Fullname column"
+msgstr ""
+
+#: src/persons/templates/admin/persons/persons.j2:30
+msgid "No persons found string"
+msgstr ""
+
+#: src/persons/templates/admin/persons/positions.j2:7
+msgid "Positions list heading"
+msgstr ""
+
+#: src/persons/templates/admin/persons/positions.j2:51
+msgid "No positions found string"
+msgstr ""
+
+#: src/press/templates/admin/press/manage_news_article.j2:6
+msgid "Add news article heading"
+msgstr ""
+
+#: src/press/templates/admin/press/news.j2:5
+msgid "News list heading"
+msgstr ""
+
+#: src/press/templates/admin/press/news.j2:15
+msgid "News article title column"
+msgstr ""
+
+#: src/press/templates/admin/press/news.j2:16
+msgid "News article date column"
+msgstr ""
+
+#: src/press/templates/admin/press/news.j2:17
+msgid "News article annotation column"
+msgstr ""
+
+#: src/press/templates/admin/press/news.j2:35
+msgid "No news articles found string"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:20
+msgid "Theme name label"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:34
+msgid "Analytics title label"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:42
+msgid "Analytics theme label"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:45
+msgid "Select analytics theme option"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:50
+msgid "Analytics annotation label"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:58
+msgid "Analytics content label"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:66 src/yustina/forms/books.py:50
+msgid "Authors as text label"
+msgstr ""
+
+#: src/yustina/forms/analytics.py:74 src/yustina/forms/books.py:58
+#: src/yustina/forms/cases.py:65 src/yustina/forms/persons.py:58
+msgid "Person positions label"
+msgstr ""
+
+#: src/yustina/forms/articles.py:14
+msgid "Article title label"
+msgstr ""
+
+#: src/yustina/forms/articles.py:22
+msgid "Article content label"
+msgstr ""
+
+#: src/yustina/forms/books.py:18
+msgid "Book title label"
+msgstr ""
+
+#: src/yustina/forms/books.py:26 src/yustina/forms/books.py:68
+msgid "Book series label"
+msgstr ""
+
+#: src/yustina/forms/books.py:29
+msgid "Select book series option"
+msgstr ""
+
+#: src/yustina/forms/books.py:34
+msgid "Book annotation label"
+msgstr ""
+
+#: src/yustina/forms/books.py:42
+msgid "Book publisher info label"
+msgstr ""
+
+#: src/yustina/forms/books.py:76
+msgid "Book series annotation label"
+msgstr ""
+
+#: src/yustina/forms/cases.py:18
+msgid "Practic title label"
+msgstr ""
+
+#: src/yustina/forms/cases.py:29
+msgid "Branch practic label"
+msgstr ""
+
+#: src/yustina/forms/cases.py:44
+msgid "Workcase title label"
+msgstr ""
+
+#: src/yustina/forms/cases.py:52
+msgid "Workcase description label"
+msgstr ""
+
+#: src/yustina/forms/cases.py:60
+msgid "Workcase branches positions label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:18
+msgid "Position name label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:34
+msgid "Person surname label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:43
+msgid "Person firstname label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:51
+msgid "Person middlename label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:63
+msgid "Person bio label"
+msgstr ""
+
+#: src/yustina/forms/press.py:14
+msgid "News article title label"
+msgstr ""
+
+#: src/yustina/forms/press.py:22
+msgid "News article subtitle label"
+msgstr ""
+
+#: src/yustina/forms/press.py:29
+msgid "News article date label"
+msgstr ""
+
+#: src/yustina/forms/press.py:38
+msgid "News article annotation label"
+msgstr ""
+
+#: src/yustina/forms/press.py:47
+msgid "News article content label"
+msgstr ""
+
+#: src/yustina/forms/press.py:56
+msgid "News article source label"
+msgstr ""
+
+#: src/yustina/forms/press.py:63
+msgid "News article source link label"
+msgstr ""
+
+#: src/yustina/forms/users.py:15
+msgid "Please, provide your username validation message"
+msgstr ""
+
+#: src/yustina/forms/users.py:20
+msgid "Username placeholder"
+msgstr ""
+
+#: src/yustina/forms/users.py:27
+msgid "Please, provide your password validation message"
+msgstr ""
+
+#: src/yustina/forms/users.py:32
+msgid "Password placeholder"
+msgstr ""
+
+#: src/yustina/forms/users.py:38
+msgid "Remember me label"
+msgstr ""
+
+#: src/yustina/forms/users.py:55
+msgid "Invalid username or password validation message"
+msgstr ""
+
