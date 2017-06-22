@@ -71,3 +71,8 @@ class Workcase(db.Model, DeletableMixin):
                               secondary=workcase_person_association,
                               lazy=True,
                               backref=db.backref('workcases'))
+
+    @classmethod
+    def admin_list(cls):
+        query = cls.query
+        return query

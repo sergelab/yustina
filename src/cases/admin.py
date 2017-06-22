@@ -179,14 +179,84 @@ def cases_manage_branch(branch_id=None):
                            branches_list=branches_list)
 
 
-@admin.route('/')
+@admin.route('/cases')
 @login_required
 def cases_cases():
-    pass
+    casees_list = Practic.cases_admin_list().all()
+
+    return render_template('admin/cases/cases.j2',
+                           branches_list=branches_list)
 
 
-@admin.route('/add', methods=['GET', 'POST'])
-@admin.route('/<int:case_id>', methods=['GET', 'POST'])
+@admin.route('/cases/add', methods=['GET', 'POST'])
+@admin.route('/cases/<int:case_id>', methods=['GET', 'POST'])
 @login_required
 def cases_manage_case(case_id=None):
-    pass
+    if case_id:
+        case = Practic.cases_admin_list().filter(
+            Practic.id.__eq__(case_id)
+        ).first()
+
+        if not case:
+            flash(_('Object not found message'), 'warning')
+            return redirect(url_for('admin.cases_cases'))
+    else:
+        case = Practic()
+
+    cases_list = Practic.cases_admin_list().all()
+    form = CaseForm(obj=case)
+    keep_location = 'save_and_continue' in request.form
+
+    if request.method == 'POST':
+        if case_id:
+            if 'delete' in request.form:
+                try:
+                    case.delete()
+                    db.session.commit()
+                except Exception as e:
+                    db.session.rollback()
+                    current_app.logger.exception(e)
+                    flash(_('Error then delete object message'), 'danger')
+                else:
+                    flash(_('Delete object successfully message'), 'success')
+
+                    return redirect(url_for('admin.cases_cases'))
+            elif 'restore' in request.form:
+                try:
+                    case.restore()
+                    db.session.commit()
+                except Exception as e:
+                    db.session.rollback()
+                    current_app.logger.exception(e)
+                    flash(_('Error then restore object message'), 'danger')
+                else:
+                    flash(_('Restore object successfully message'), 'success')
+                    return redirect(url_for('admin.cases_manage_case',
+                                            case_id=case_id))
+
+        if case_id and case.in_trash is True:
+            return redirect(url_for('admin.cases_cases'))
+
+    if form.validate_on_submit():
+        try:
+            form.populate_obj(case)
+            db.session.add(case)
+            db.session.commit()
+        except Exception as e:
+            db.session.rollback()
+            current_app.logger.exception(e)
+            flash(_('Error then add new case message') if not case_id
+                  else _('Error then edit existing case message'), 'danger')
+        else:
+            flash(_('Add successful new case message') if not case_id
+                  else _('Safe successful existing case message'), 'success')
+
+            return redirect(url_for('admin.cases_manage_case', case_id=case.id) if keep_location
+                            else url_for('admin.cases_cases'))
+
+    return render_template('admin/cases/cases.j2',
+                           case=case,
+                           case_id=case_id,
+                           form=form,
+                           cases_list=cases_list)
+
