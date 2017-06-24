@@ -8,7 +8,7 @@ CREATE TABLE news (
     title TEXT NOT NULL,
     subtitle TEXT,
     date_publishing DATE NOT NULL,
-    annotation TEXT NOT NULL,
+    annotation TEXT,
     content TEXT NOT NULL,
     source TEXT,
     source_link TEXT
