@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-06 19:39+0300\n"
+"POT-Creation-Date: 2017-06-28 00:43+0300\n"
 "PO-Revision-Date: 2017-06-06 19:39+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -160,35 +160,36 @@ msgid "Hide"
 msgstr ""
 
 #: src/analytics/admin.py:40 src/articles/admin.py:40 src/cases/admin.py:37
-#: src/cases/admin.py:119 src/persons/admin.py:31 src/press/admin.py:40
+#: src/cases/admin.py:119 src/cases/admin.py:201 src/persons/admin.py:31
+#: src/press/admin.py:40
 msgid "Object not found message"
 msgstr ""
 
 #: src/analytics/admin.py:58 src/analytics/admin.py:144
 #: src/articles/admin.py:58 src/books/admin.py:55 src/books/admin.py:135
-#: src/cases/admin.py:55 src/cases/admin.py:137 src/persons/admin.py:49
-#: src/persons/admin.py:129 src/press/admin.py:58
+#: src/cases/admin.py:55 src/cases/admin.py:137 src/cases/admin.py:218
+#: src/persons/admin.py:49 src/persons/admin.py:129 src/press/admin.py:58
 msgid "Error then delete object message"
 msgstr ""
 
 #: src/analytics/admin.py:60 src/analytics/admin.py:146
 #: src/articles/admin.py:60 src/books/admin.py:57 src/books/admin.py:137
-#: src/cases/admin.py:57 src/cases/admin.py:139 src/persons/admin.py:51
-#: src/persons/admin.py:131 src/press/admin.py:60
+#: src/cases/admin.py:57 src/cases/admin.py:139 src/cases/admin.py:220
+#: src/persons/admin.py:51 src/persons/admin.py:131 src/press/admin.py:60
 msgid "Delete object successfully message"
 msgstr ""
 
 #: src/analytics/admin.py:70 src/analytics/admin.py:156
 #: src/articles/admin.py:70 src/books/admin.py:67 src/books/admin.py:147
-#: src/cases/admin.py:67 src/cases/admin.py:149 src/persons/admin.py:61
-#: src/persons/admin.py:141 src/press/admin.py:70
+#: src/cases/admin.py:67 src/cases/admin.py:149 src/cases/admin.py:230
+#: src/persons/admin.py:61 src/persons/admin.py:141 src/press/admin.py:70
 msgid "Error then restore object message"
 msgstr ""
 
 #: src/analytics/admin.py:72 src/analytics/admin.py:158
 #: src/articles/admin.py:72 src/books/admin.py:69 src/books/admin.py:149
-#: src/cases/admin.py:69 src/cases/admin.py:151 src/persons/admin.py:63
-#: src/persons/admin.py:143 src/press/admin.py:72
+#: src/cases/admin.py:69 src/cases/admin.py:151 src/cases/admin.py:232
+#: src/persons/admin.py:63 src/persons/admin.py:143 src/press/admin.py:72
 msgid "Restore object successfully message"
 msgstr ""
 
@@ -238,6 +239,7 @@ msgstr ""
 #: src/books/templates/admin/books/books.j2:8
 #: src/books/templates/admin/books/books_series.j2:8
 #: src/cases/templates/admin/cases/branches.j2:22
+#: src/cases/templates/admin/cases/cases.j2:8
 #: src/cases/templates/admin/cases/practics.j2:22
 #: src/persons/templates/admin/persons/persons.j2:8
 #: src/persons/templates/admin/persons/positions.j2:22
@@ -267,6 +269,7 @@ msgstr ""
 #: src/books/templates/admin/books/manage_book.j2:10
 #: src/books/templates/admin/books/manage_series.j2:10
 #: src/cases/templates/admin/cases/branches.j2:11
+#: src/cases/templates/admin/cases/manage_case.j2:10
 #: src/cases/templates/admin/cases/practics.j2:11
 #: src/persons/templates/admin/persons/manage_person.j2:10
 #: src/persons/templates/admin/persons/positions.j2:11
@@ -278,6 +281,7 @@ msgstr ""
 #: src/articles/templates/admin/articles/manage_article.j2:11
 #: src/books/templates/admin/books/manage_book.j2:11
 #: src/books/templates/admin/books/manage_series.j2:11
+#: src/cases/templates/admin/cases/manage_case.j2:11
 #: src/persons/templates/admin/persons/manage_person.j2:11
 #: src/press/templates/admin/press/manage_news_article.j2:11
 msgid "Save and continue button"
@@ -289,6 +293,7 @@ msgstr ""
 #: src/books/templates/admin/books/manage_book.j2:15
 #: src/books/templates/admin/books/manage_series.j2:15
 #: src/cases/templates/admin/cases/branches.j2:15
+#: src/cases/templates/admin/cases/manage_case.j2:15
 #: src/cases/templates/admin/cases/practics.j2:15
 #: src/persons/templates/admin/persons/manage_person.j2:15
 #: src/persons/templates/admin/persons/positions.j2:15
@@ -302,6 +307,7 @@ msgstr ""
 #: src/books/templates/admin/books/manage_book.j2:16
 #: src/books/templates/admin/books/manage_series.j2:16
 #: src/cases/templates/admin/cases/branches.j2:16
+#: src/cases/templates/admin/cases/manage_case.j2:16
 #: src/cases/templates/admin/cases/practics.j2:16
 #: src/persons/templates/admin/persons/manage_person.j2:16
 #: src/persons/templates/admin/persons/positions.j2:16
@@ -315,6 +321,7 @@ msgstr ""
 #: src/books/templates/admin/books/manage_book.j2:18
 #: src/books/templates/admin/books/manage_series.j2:18
 #: src/cases/templates/admin/cases/branches.j2:18
+#: src/cases/templates/admin/cases/manage_case.j2:18
 #: src/cases/templates/admin/cases/practics.j2:18
 #: src/persons/templates/admin/persons/manage_person.j2:18
 #: src/persons/templates/admin/persons/positions.j2:18
@@ -328,6 +335,7 @@ msgstr ""
 #: src/books/templates/admin/books/manage_book.j2:18
 #: src/books/templates/admin/books/manage_series.j2:18
 #: src/cases/templates/admin/cases/branches.j2:18
+#: src/cases/templates/admin/cases/manage_case.j2:18
 #: src/cases/templates/admin/cases/practics.j2:18
 #: src/persons/templates/admin/persons/manage_person.j2:18
 #: src/persons/templates/admin/persons/positions.j2:18
@@ -341,6 +349,7 @@ msgstr ""
 #: src/books/templates/admin/books/manage_book.j2:20
 #: src/books/templates/admin/books/manage_series.j2:20
 #: src/cases/templates/admin/cases/branches.j2:20
+#: src/cases/templates/admin/cases/manage_case.j2:20
 #: src/cases/templates/admin/cases/practics.j2:20
 #: src/persons/templates/admin/persons/manage_person.j2:20
 #: src/persons/templates/admin/persons/positions.j2:20
@@ -500,6 +509,22 @@ msgstr ""
 msgid "Safe successful existing branch message"
 msgstr ""
 
+#: src/cases/admin.py:247
+msgid "Error then add new case message"
+msgstr ""
+
+#: src/cases/admin.py:248
+msgid "Error then edit existing case message"
+msgstr ""
+
+#: src/cases/admin.py:250
+msgid "Add successful new case message"
+msgstr ""
+
+#: src/cases/admin.py:251
+msgid "Safe successful existing case message"
+msgstr ""
+
 #: src/cases/templates/admin/cases/branches.j2:7
 msgid "Branches list heading"
 msgstr ""
@@ -514,6 +539,26 @@ msgstr ""
 
 #: src/cases/templates/admin/cases/branches.j2:67
 msgid "No branchs found string"
+msgstr ""
+
+#: src/cases/templates/admin/cases/cases.j2:5
+msgid "Workcases list heading"
+msgstr ""
+
+#: src/cases/templates/admin/cases/cases.j2:15
+msgid "Workcase title column"
+msgstr ""
+
+#: src/cases/templates/admin/cases/cases.j2:16
+msgid "Workcase description column"
+msgstr ""
+
+#: src/cases/templates/admin/cases/cases.j2:33
+msgid "No workcases found string"
+msgstr ""
+
+#: src/cases/templates/admin/cases/manage_case.j2:6
+msgid "Add workcase heading"
 msgstr ""
 
 #: src/cases/templates/admin/cases/practics.j2:7
@@ -645,8 +690,8 @@ msgstr ""
 msgid "Authors as text label"
 msgstr ""
 
-#: src/yustina/forms/analytics.py:74 src/yustina/forms/books.py:58
-#: src/yustina/forms/cases.py:65 src/yustina/forms/persons.py:58
+#: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
+#: src/yustina/forms/persons.py:58
 msgid "Person positions label"
 msgstr ""
 
@@ -678,6 +723,10 @@ msgstr ""
 msgid "Book publisher info label"
 msgstr ""
 
+#: src/yustina/forms/books.py:58
+msgid "Authors label"
+msgstr ""
+
 #: src/yustina/forms/books.py:76
 msgid "Book series annotation label"
 msgstr ""
@@ -686,19 +735,19 @@ msgstr ""
 msgid "Practic title label"
 msgstr ""
 
-#: src/yustina/forms/cases.py:29
+#: src/yustina/forms/cases.py:30
 msgid "Branch practic label"
 msgstr ""
 
-#: src/yustina/forms/cases.py:44
+#: src/yustina/forms/cases.py:45
 msgid "Workcase title label"
 msgstr ""
 
-#: src/yustina/forms/cases.py:52
+#: src/yustina/forms/cases.py:53
 msgid "Workcase description label"
 msgstr ""
 
-#: src/yustina/forms/cases.py:60
+#: src/yustina/forms/cases.py:61
 msgid "Workcase branches positions label"
 msgstr ""
 
@@ -722,6 +771,14 @@ msgstr ""
 msgid "Person bio label"
 msgstr ""
 
+#: src/yustina/forms/persons.py:71
+msgid "Person registry no label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:78
+msgid "Person specialty label"
+msgstr ""
+
 #: src/yustina/forms/press.py:14
 msgid "News article title label"
 msgstr ""
@@ -738,15 +795,15 @@ msgstr ""
 msgid "News article annotation label"
 msgstr ""
 
-#: src/yustina/forms/press.py:47
+#: src/yustina/forms/press.py:46
 msgid "News article content label"
 msgstr ""
 
-#: src/yustina/forms/press.py:56
+#: src/yustina/forms/press.py:54
 msgid "News article source label"
 msgstr ""
 
-#: src/yustina/forms/press.py:63
+#: src/yustina/forms/press.py:61
 msgid "News article source link label"
 msgstr ""
 
