@@ -1,0 +1,40 @@
+{% extends 'admin/common_layout.j2' %}
+{% from 'admin/api/base.j2' import render_trash_icon %}
+{% from 'admin/api/forms.j2' import render_field %}
+
+{% block page_title %}{{ _('Cases list heading') }}{% endblock %}
+
+{% block page_buttons %}
+    <a href="{{ url_for('admin.cases_manage_case') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
+{% endblock %}
+
+{% block page_content %}
+    <table class="uk-table uk-table-hover">
+        <thead>
+            <tr>
+                <th>{{ _('Case title column') }}</th>
+                <th>{{ _('Case series column') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if cases -%}
+                {% for case in cases -%}
+                    <tr>
+                        <td>
+                            {{ render_trash_icon(book.in_trash) }}
+                            <a href="{{ url_for('admin.cases_manage_case', case_id=case.id) }}">{{ case.title }}</a>
+                            <br /><span class="uk-text-small uk-text-muted">{{ book.authors_list() }}</span>
+                        </td>
+                        <td>
+                            {% if book.series -%}
+                                {{ book.series.name }}
+                            {%- endif %}
+                        </td>
+                    </tr>
+                {%- endfor %}
+            {%- else -%}
+                <tr><td colspan="2"><h3 class="uk-text-center uk-text-muted">{{ _('No books found string') }}</h3></td></tr>
+            {%- endif %}
+        </tbody>
+    </table>
+{% endblock %}
