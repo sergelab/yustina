@@ -15,7 +15,7 @@ class NewsArticle(db.Model, DeletableMixin):
     title = db.Column(db.Text, nullable=False)
     subtitle = db.Column(db.Text)
     date_publishing = db.Column(db.Date, nullable=False)
-    annotation = db.Column(db.Text, nullable=False)
+    annotation = db.Column(db.Text)
     content = db.Column(db.Text, nullable=False)
     source = db.Column(db.Text)
     source_link = db.Column(db.Text)

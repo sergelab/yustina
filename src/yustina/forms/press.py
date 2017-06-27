@@ -36,7 +36,6 @@ class NewsArticleForm(Form):
     )
     annotation = StringField(
         __('News article annotation label'),
-        validators=[DataRequired()],
         widget=WidgetPrebind(
             TextArea(),
             rows=3,
