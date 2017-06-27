@@ -19,7 +19,8 @@ class PracticForm(Form):
         validators=[DataRequired()],
         widget=WidgetPrebind(
             TextInput(),
-            class_='uk-width-1-1'
+            class_='uk-width-1-1',
+            autofocus=True
         )
     )
 
@@ -59,10 +60,12 @@ class WorkcaseForm(Form):
     branches = RefQuerySelectMultipleField(
         __('Workcase branches positions label'),
         query_factory=lambda: Practic.branches_admin_list(),
-        get_label='title',
+        allow_blank=True,
+        get_label='title'
     )
     persons = RefQuerySelectMultipleField(
         __('Person positions label'),
         query_factory=lambda: Person.admin_list(with_positions=False),
-        get_label='fullname',
+        allow_blank=True,
+        get_label='fullname'
     )
