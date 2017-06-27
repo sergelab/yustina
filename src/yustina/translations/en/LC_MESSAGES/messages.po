@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-28 00:43+0300\n"
+"POT-Creation-Date: 2017-06-28 00:44+0300\n"
 "PO-Revision-Date: 2017-06-06 19:39+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -689,8 +689,8 @@ msgstr ""
 msgid "Authors as text label"
 msgstr ""
 
-#: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
-#: src/yustina/forms/persons.py:58
+#: src/yustina/forms/analytics.py:74 src/yustina/forms/books.py:58
+#: src/yustina/forms/cases.py:67 src/yustina/forms/persons.py:58
 msgid "Person positions label"
 msgstr ""
 
@@ -798,11 +798,11 @@ msgstr ""
 msgid "News article content label"
 msgstr ""
 
-#: src/yustina/forms/press.py:54
+#: src/yustina/forms/press.py:55
 msgid "News article source label"
 msgstr ""
 
-#: src/yustina/forms/press.py:61
+#: src/yustina/forms/press.py:62
 msgid "News article source link label"
 msgstr ""
 
