@@ -55,7 +55,7 @@ class BookForm(Form):
         )
     )
     persons = RefQuerySelectMultipleField(
-        __('Person positions label'),
+        __('Authors label'),
         query_factory=lambda: Person.admin_list(with_positions=False),
         get_label='fullname',
     )
