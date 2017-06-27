@@ -182,7 +182,7 @@ def cases_manage_branch(branch_id=None):
 @admin.route('/cases')
 @login_required
 def cases_cases():
-    casees_list = Practic.cases_admin_list().all()
+    cases_list = Workcase.admin_list().all()
 
     return render_template('admin/cases/cases.j2',
                            branches_list=branches_list)
