@@ -67,3 +67,18 @@ class PersonForm(Form):
             class_='uk-width-1-1'
         )
     )
+    registry_no = StringField(
+        __('Person registry no label'),
+        widget=WidgetPrebind(
+            TextInput(),
+            class_='uk-width-1-1'
+        )
+    )
+    specialty = StringField(
+        __('Person specialty label'),
+        widget=WidgetPrebind(
+            TextArea(),
+            rows=5,
+            class_='uk-width-1-1'
+        )
+    )

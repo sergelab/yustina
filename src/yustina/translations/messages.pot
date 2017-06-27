@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-28 00:44+0300\n"
+"POT-Creation-Date: 2017-06-28 00:45+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -688,8 +688,8 @@ msgstr ""
 msgid "Authors as text label"
 msgstr ""
 
-#: src/yustina/forms/analytics.py:74 src/yustina/forms/books.py:58
-#: src/yustina/forms/cases.py:67 src/yustina/forms/persons.py:58
+#: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
+#: src/yustina/forms/persons.py:58
 msgid "Person positions label"
 msgstr ""
 
@@ -719,6 +719,10 @@ msgstr ""
 
 #: src/yustina/forms/books.py:42
 msgid "Book publisher info label"
+msgstr ""
+
+#: src/yustina/forms/books.py:58
+msgid "Authors label"
 msgstr ""
 
 #: src/yustina/forms/books.py:76
@@ -765,6 +769,14 @@ msgstr ""
 msgid "Person bio label"
 msgstr ""
 
+#: src/yustina/forms/persons.py:71
+msgid "Person registry no label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:78
+msgid "Person specialty label"
+msgstr ""
+
 #: src/yustina/forms/press.py:14
 msgid "News article title label"
 msgstr ""
@@ -785,11 +797,11 @@ msgstr ""
 msgid "News article content label"
 msgstr ""
 
-#: src/yustina/forms/press.py:55
+#: src/yustina/forms/press.py:54
 msgid "News article source label"
 msgstr ""
 
-#: src/yustina/forms/press.py:62
+#: src/yustina/forms/press.py:61
 msgid "News article source link label"
 msgstr ""
 

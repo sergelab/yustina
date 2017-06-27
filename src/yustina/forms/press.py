@@ -44,7 +44,6 @@ class NewsArticleForm(Form):
     )
     content = StringField(
         __('News article content label'),
-        validators=[DataRequired()],
         widget=WidgetPrebind(
             TextArea(),
             rows=10,

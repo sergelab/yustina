@@ -44,6 +44,8 @@ class Person(db.Model, DeletableMixin):
     firstname = db.Column(db.Text)
     middlename = db.Column(db.Text)
     bio = db.Column(db.Text)
+    registry_no = db.Column(db.Text)
+    specialty = db.Column(db.Text)
 
     positions = db.relationship(Position,
                                 secondary=person_positions,
