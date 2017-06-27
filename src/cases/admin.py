@@ -185,7 +185,7 @@ def cases_cases():
     cases_list = Workcase.admin_list().all()
 
     return render_template('admin/cases/cases.j2',
-                           branches_list=branches_list)
+                           cases_list=cases_list)
 
 
 @admin.route('/cases/add', methods=['GET', 'POST'])
