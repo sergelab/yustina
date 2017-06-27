@@ -14,3 +14,4 @@ cases_deletable 2017-05-18T19:37:12Z Sergei <serge@Serges-Mac-Pro.local> # Delet
 cases_1 2017-05-18T19:58:00Z Sergei <serge@Serges-Mac-Pro.local> # Описание дела
 cases_2 2017-05-18T20:14:13Z Sergei <serge@Serges-Mac-Pro.local> # переименование связи дела с отраслью
 articles 2017-05-22T19:39:20Z Akimov Alexander <sashaall@me.com> # articles model
+cases_fix 2017-06-27T21:24:59Z Sergey <serge@Sergeis-MacBook-Pro.local> # Исправление для связки персон и дел
