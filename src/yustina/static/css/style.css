@@ -19,7 +19,7 @@ footer img { margin-right: 1em; }
 
 #logo { height: 48px; }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'PT Serif', serif; font-weight: normal; }
+h1, h2, h3, h4, h5, h6 { font-family: 'PT Serif', serif; font-weight: normal; margin: 2em 0 0.5em 0; }
 
 a { color: #3cafff; }
 header a, footer a { font-size: 9pt; }
@@ -37,7 +37,11 @@ nav a:last-child { margin: 0 0 0 .5em; }
 
 .nav-search input { border: 1px solid #000; /* TODO: fix border */ }
 
-.person-list-person { margin: 1em; }
+.person-list-person { margin: 1em 0; }
 
-.person-list-person { display: block; border: 1px solid #ccc; }
-.person-list-name { font-weight: bold; }
+.person-list-person { display: block; min-height: 300px; background-size: 300px; background-position: 100% 0%; background-repeat: no-repeat; }
+.clear { clear: both; }
+.person-list-name { margin: 0; }
+.person-list-position { color: #005b7f; margin-bottom: 0.5em; font-family: 'PT Serif', serif; }
+
+.person-list-person div { margin-right: 320px; }
