@@ -60,6 +60,7 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
     surname = db.Column(db.Text)
     firstname = db.Column(db.Text)
     middlename = db.Column(db.Text)
+    short_bio = db.Column(db.Text)
     bio = db.Column(db.Text)
     registry_no = db.Column(db.Text)
     specialty = db.Column(db.Text)
