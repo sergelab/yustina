@@ -30,13 +30,22 @@ class PositionForm(Form):
 class PersonForm(Form):
     """ Карточка персоны
     """
-    surname = StringField(
-        __('Person surname label'),
+    slug = StringField(
+        __('Slug label'),
         validators=[DataRequired()],
         widget=WidgetPrebind(
             TextInput(),
             class_='uk-width-1-2',
             autofocus=True
+        ),
+        description=__('Slug description')
+    )
+    surname = StringField(
+        __('Person surname label'),
+        validators=[DataRequired()],
+        widget=WidgetPrebind(
+            TextInput(),
+            class_='uk-width-1-2'
         )
     )
     firstname = StringField(
