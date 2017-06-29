@@ -1,0 +1,21 @@
+{% extends 'common.j2' %}
+
+{% block content -%}
+    <h1>Персоны</h1>
+
+    <h2>Юристы</h2>
+
+    {% for person in persons -%}
+        <a href="{{ url_for('persons.person_card', slug=person.slug) }}" class="person-list-person">
+            <div class="person-list-photo">
+                <img src="person-small.jpg" />
+            </div>
+            <div class="person-list-name">
+                {{ person.fullname }}
+            </div>
+            <div class="person-list-position">
+                {{ person.positions_as_text() }}
+            </div>
+        </a>
+    {%- endfor %}
+{%- endblock %}
