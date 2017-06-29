@@ -18,3 +18,4 @@ cases_fix 2017-06-27T21:24:59Z Sergey <serge@Sergeis-MacBook-Pro.local> # Исп
 persons_2 2017-06-27T21:33:02Z Sergey <serge@Sergeis-MacBook-Pro.local> # поля в модель персоны
 news_1 2017-06-27T21:39:44Z Sergey <serge@Sergeis-MacBook-Pro.local> # необязательные поля
 persons_slug 2017-06-28T22:07:34Z Sergey <serge@Sergeis-MacBook-Pro.local> # slug в Person
+press_slug 2017-06-29T20:19:16Z Sergey <serge@Sergeis-MacBook-Pro.local> # slug в новости
