@@ -11,7 +11,7 @@
         <span class="uk-form-label"></span>
         <div class="uk-form-controls uk-form-controls-text">
             {{ field(disabled="disabled") if disabled else field() }}
-            {% if field.label.text -%}{{ render_required(field.flags.required) }}<label for="{{ field.id }}">{{ field.label.text }}</label>{%- endif %}
+            {% if field.label.text and label -%}{{ render_required(field.flags.required) }}<label for="{{ field.id }}">{{ field.label.text }}</label>{%- endif %}
         </div>
     {%- else -%}
         {% if label and field.label.text -%}
