@@ -59,6 +59,14 @@ class Book(db.Model, DeletableMixin):
 
         return query
 
+    @classmethod
+    def available_list(cls, with_persons=True):
+        query = cls.admin_list(with_persons=with_persons)
+        query = query.filter(
+            cls.in_trash.is_(False)
+        )
+        return query
+
     def authors_list(self):
         persons = [p.fullname for p in self.persons]
         authors = []
