@@ -1,0 +1,20 @@
+<header>
+    <nav class="nav-upper">
+        <a href="article.html">О фирме</a>
+        <a href="">Услуги</a>
+        <a class="current" href="person-list.html">Партнеры</a>
+        <a href="press-center.html">Пресс-центр</a>
+        <a href="">Аналитика</a>
+        <a href="book-list.html">Книги</a>
+        <a href="">English</a>
+    </nav>
+    <nav class="nav-search">
+        <img class="search-icon" src="search-icon.svg"><input type="search" name="search" placeholder="поиск" />
+    </nav>
+    <nav class="nav-main">
+        <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logo.svg') }}" /></a>
+        <a href="person-list.html"><img class="head-icon" src="{{ asset_url_for('images/persons-icon.svg') }}" />Адвокаты</a>
+        <a href=""><img class="head-icon" src="{{ asset_url_for('images/practices-icon.svg') }}" />Практики</a>
+        <a href=""><img class="head-icon" src="{{ asset_url_for('images/branches-icon.svg') }}" />Отрасли</a>
+    </nav>
+</header>

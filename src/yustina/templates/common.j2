@@ -1,0 +1,19 @@
+{% extends 'base.j2' %}
+
+{% block css -%}
+    {{ super() }}
+    {{ stylesheet_tag('yustina_css') }}
+{%- endblock %}
+
+{% block js -%}
+    {{ super() }}
+    {{ javascript_tag('tabi_js') }}
+{%- endblock %}
+
+{% block body -%}
+    {% include 'head.j2' %}
+    <article>
+        {% block content %}{% endblock %}
+    </article>
+    {% include 'foot.j2' %}
+{%- endblock %}
