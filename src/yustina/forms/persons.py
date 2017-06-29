@@ -72,6 +72,14 @@ class PersonForm(Form):
         query_factory=lambda: Position.admin_list(),
         get_label='name',
     )
+    short_bio = StringField(
+        __('Person short bio label'),
+        widget=WidgetPrebind(
+            TextileWidget(),
+            class_='uk-width-1-1',
+            rows=20
+        )
+    )
     bio = StringField(
         __('Person bio label'),
         widget=WidgetPrebind(
