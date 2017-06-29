@@ -17,6 +17,9 @@
                 <div class="person-list-position">
                     {{ person.positions_as_text() }}
                 </div>
+                {% if person.short_bio -%}
+                    {{ person.short_bio|textile }}
+                {%- endif %}
             </a>
         {%- endfor %}
     {%- endfor %}
