@@ -3,6 +3,7 @@ from __future__ import absolute_import
 
 from contrib.forms import Form, WidgetPrebind
 from contrib.forms.fields import RefQuerySelectMultipleField
+from contrib.forms.widgets import TextileWidget
 from flask_babel import lazy_gettext as __
 from wtforms import BooleanField, StringField
 from wtforms.validators import DataRequired
@@ -74,9 +75,9 @@ class PersonForm(Form):
     bio = StringField(
         __('Person bio label'),
         widget=WidgetPrebind(
-            TextArea(),
-            rows=10,
-            class_='uk-width-1-1'
+            TextileWidget(),
+            class_='uk-width-1-1',
+            rows=20
         )
     )
     registry_no = StringField(
