@@ -1,6 +1,7 @@
 # coding: utf-8
 from __future__ import absolute_import
 
+from collections import OrderedDict
 from flask import (abort,
                    Blueprint,
                    render_template)
@@ -13,10 +14,42 @@ bp = Blueprint('persons', __name__, template_folder='templates', url_prefix='/pe
 
 @bp.route('/')
 def persons():
+    positions = Position.available_list().all()
+    if not positions:
+        abort(404)
+
     persons = Person.available_list().all()
+    if not persons:
+        abort(404)
+
+    grouped_persons = OrderedDict()
+    already_added_persons_ids = list()
+
+    """
+    {'pos.id': {
+        'position': pos,
+        'persons': [person, person, ...]
+     },
+     {pos.id': {
+        'position': pos,
+        'persons': [person, ...]
+    }}
+    """
+
+    for position in positions:
+        grouped_persons.setdefault(position.id, dict(
+            position=position,
+            persons=list()
+        ))
+        for person in persons:
+            if position in person.positions:
+                if person.id not in already_added_persons_ids:
+                    grouped_persons[position.id]['persons'].append(person)
+                    already_added_persons_ids.append(person.id)
 
     return render_template('persons_list.j2',
-                           persons=persons)
+                           persons=persons,
+                           grouped_persons=grouped_persons)
 
 
 @bp.route('/<path:slug>')

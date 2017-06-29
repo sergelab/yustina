@@ -40,6 +40,15 @@ class Position(db.Model, DeletableMixin):
         query = cls.query
         return query
 
+    @classmethod
+    def available_list(cls):
+        query = cls.admin_list()
+        query = query.filter(
+            cls.in_trash.is_(False),
+            cls.public_group.is_(True)
+        )
+        return query
+
 
 class Person(db.Model, DeletableMixin, SlugifyMixin):
     """
