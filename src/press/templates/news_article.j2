@@ -1,0 +1,15 @@
+{% extends 'common.j2' %}
+
+{% block content -%}
+    <div class="press-card-date">
+		{{ article.date_publishing }}
+	</div>
+	<h1>{{ article.title }}</h1>
+	<img src="image.jpg" />
+    {% if article.annotation -%}
+	    <p class="press-card-announce">{{ article.annotation|safe }}</p>
+    {%- endif %}
+    {% if article.content -%}
+	    <p class="press-card-text">{{ article.content|safe }}</p>
+    {%- endif %}
+{%- endblock %}
