@@ -2,14 +2,16 @@
 from __future__ import absolute_import
 
 from contrib.utils.datetime import date_filter
-from flask import current_app, send_from_directory
+from flask import (current_app,
+                   render_template,
+                   send_from_directory)
 
 from .init import app
 
 
 @app.route('/')
 def index():
-    return 'OK'
+    return render_template('index.j2')
 
 
 @app.route('/assets/<path:filename>')

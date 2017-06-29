@@ -1,0 +1,26 @@
+{% extends 'common.j2' %}
+
+{% block content -%}
+    <h1>Пресс-центр</h1>
+
+    {% for news_article in news -%}
+        <div class="press-list-item">
+            <div class="press-list-date">
+                {{ news_article.date_publishing }}
+            </div>
+            {% if not news_article.content -%}
+                <span>
+                    <h2>{{ news_article.title }}</h2>
+                </span>
+            {%- else -%}
+                <a href="{{ url_for('press.news_article', slug=news_article.slug) }}">
+                    {# <img src="image.jpg" /> #}
+                    <h2>{{ news_article.title }}</h2>
+                </a>
+            {%- endif %}
+            {% if news_article -%}
+                <p>{{ news_article.annotation|safe }}</p>
+            {%- endif %}
+        </div>
+    {%- endfor %}
+{%- endblock %}

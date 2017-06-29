@@ -10,6 +10,16 @@ from wtforms.widgets import TextArea, TextInput
 
 
 class NewsArticleForm(Form):
+    slug = StringField(
+        __('Slug label'),
+        validators=[DataRequired()],
+        widget=WidgetPrebind(
+            TextInput(),
+            class_='uk-width-1-2',
+            autofocus=True
+        ),
+        description=__('Slug description')
+    )
     title = StringField(
         __('News article title label'),
         validators=[DataRequired()],

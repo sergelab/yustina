@@ -1,11 +1,11 @@
 # coding: utf-8
 from __future__ import absolute_import
 
-from .mixins import DeletableMixin
+from .mixins import DeletableMixin, SlugifyMixin
 from ..init import db
 
 
-class NewsArticle(db.Model, DeletableMixin):
+class NewsArticle(db.Model, DeletableMixin, SlugifyMixin):
     """
     Новость.
     """
@@ -24,4 +24,10 @@ class NewsArticle(db.Model, DeletableMixin):
     def admin_list(cls):
         query = cls.query
         query = query.order_by(cls.date_publishing.desc())
+        return query
+
+    @classmethod
+    def available_list(cls):
+        query = cls.admin_list()
+        query = query.filter(cls.in_trash.is_(False))
         return query
