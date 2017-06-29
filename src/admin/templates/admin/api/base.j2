@@ -26,7 +26,7 @@
 {%- endmacro %}
 
 {% macro render_bool(value) -%}
-    {%- set color_cls = 'pk-icon-circle-danger' if not value else 'pk-icon-circle-success' -%}
+    {%- set color_cls = 'uk-text-danger' if not value else 'uk-text-success' -%}
     <i class="uk-icon-circle {{ color_cls }}"></i>
 {%- endmacro %}
 
