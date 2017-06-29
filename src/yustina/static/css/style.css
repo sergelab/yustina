@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; font: 12pt/1.5 'PT Sans', sans-serif; font-weight: 300; background: #fff; color: #000; }
+body { top: 0; left: 0; position: relative; margin: 0 auto; padding: 0 1em; max-width: 1024px; }
+header { width: 100%; padding-top: 1em; background: url(/top-shade.png) 50% 0 no-repeat; background-size: contain; }
+
+.head-icon { height: 21px; padding-right: 0.3333em; }
+.search-icon { height: 15px; padding-right: 0.3333em; vertical-align: middle; }
+
+article { /*display: flex; flex-flow: row wrap; height: 100%;*/ clear: both; }
+footer { padding: 1.16667em 0; font-size: 12pt; width: 100%; border-top: 1px solid #005b7f; font-family: 'PT Serif', serif; line-height: 1; background: url(/bottom-shade.png) 50% 100% no-repeat; padding-bottom: 2em; background-size: contain; }
+footer ul { list-style-type: none; -webkit-margin-before: 0; -webkit-padding-start: 0; padding: 0; display: flex; flex-flow: row wrap; }
+footer ul li { width: 25%; margin: 0; padding: 0 1em 1em 0; }
+footer h2 { color: #314b5e; font-size: 14pt; }
+footer img { margin-right: 1em; }
+
+.foot-copyright { font-size: 8pt; color: #7d7d7d; margin-top: 1em; }
+.foot-address { font-size: 9pt; color: #bfbfbf; margin-top: 1em; }
+.foot-phone a { font-size: 11pt; color: #000; text-decoration: none; margin-top: 1em; display: inline-block; }
+
+#logo { height: 48px; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'PT Serif', serif; font-weight: normal; }
+
+a { color: #3cafff; }
+header a, footer a { font-size: 9pt; }
+a.current { color: #000; text-decoration: none; }
+
+nav { font-family: 'PT Serif', serif; }
+nav a { margin: 0 .5em; }
+nav a:first-child { margin: 0 .5em 0 0; }
+nav a:last-child { margin: 0 0 0 .5em; }
+.nav-upper a:last-child { float: right; }
+.nav-search { text-align: right; }
+.nav-main { text-align: right; }
+.nav-main a { color: #314b5e; text-decoration: none; font-size: 12pt; position: relative; top: 22px; }
+.nav-main a:first-child { float: left; top: 0; }
+
+.nav-search input { border: 1px solid #000; /* TODO: fix border */ }
+
+.person-list-person { margin: 1em; }
+
+.person-list-person { display: block; border: 1px solid #ccc; }
+.person-list-name { font-weight: bold; }
