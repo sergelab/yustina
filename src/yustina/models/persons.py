@@ -28,11 +28,16 @@ class Position(db.Model, DeletableMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
+    priority = db.Column(db.Integer, default=1)
+    public_group = db.Column(db.Boolean, default=True)
+
+    __mapper_args__ = {
+        'order_by': priority.asc()
+    }
 
     @classmethod
     def admin_list(cls):
         query = cls.query
-        query = query.order_by(cls.name.asc())
         return query
 
 
@@ -52,6 +57,7 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
 
     positions = db.relationship(Position,
                                 secondary=person_positions,
+                                order_by=Position.priority.asc(),
                                 lazy=True,
                                 backref=db.backref('persons'))
 
