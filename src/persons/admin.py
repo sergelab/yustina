@@ -10,10 +10,30 @@ from yustina.init import db
 from yustina.models.persons import Person, Position
 
 
-@admin.route('/persons/positions')
+@admin.route('/persons/positions', methods=['GET', 'POST'])
 @login_required
 def persons_positions():
     positions = Position.admin_list().all()
+
+    if request.method == 'POST':
+        if 'save_order' in request.form:
+            priorities = request.form.getlist('priority', type=int)
+            pos_priorities = {p.id: p for p in positions}
+
+            for idx, priority in enumerate(priorities):
+                obj = pos_priorities.get(priority)
+                if obj:
+                    obj.priority = idx + 1
+
+            try:
+                db.session.commit()
+                flash(_('Order saved successfully message'), 'success')
+            except Exception as e:
+                db.session.rollback()
+                current_app.logger.exception(e)
+                flash(_("Error then save order message"), 'danger')
+
+        return redirect(url_for('admin.persons_positions'))
 
     return render_template('admin/persons/positions.j2',
                            positions=positions)
