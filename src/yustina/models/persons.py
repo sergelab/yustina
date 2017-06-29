@@ -4,7 +4,7 @@ from __future__ import absolute_import
 from slugify import Slugify, UniqueSlugify
 from sqlalchemy.ext.hybrid import hybrid_property
 
-from .mixins import DeletableMixin
+from .mixins import DeletableMixin, SlugifyMixin
 from ..init import db
 
 
@@ -36,14 +36,13 @@ class Position(db.Model, DeletableMixin):
         return query
 
 
-class Person(db.Model, DeletableMixin):
+class Person(db.Model, DeletableMixin, SlugifyMixin):
     """
     Персона
     """
     __tablename__ = 'persons'
 
     id = db.Column(db.Integer, primary_key=True)
-    _slug = db.Column('slug', db.Text, unique=True)
     surname = db.Column(db.Text)
     firstname = db.Column(db.Text)
     middlename = db.Column(db.Text)
@@ -55,15 +54,6 @@ class Person(db.Model, DeletableMixin):
                                 secondary=person_positions,
                                 lazy=True,
                                 backref=db.backref('persons'))
-
-    @hybrid_property
-    def slug(self):
-        return self._slug
-
-    @slug.setter
-    def slug(self, value):
-        slug = Slugify(to_lower=True)
-        self._slug = slug(value)
 
     @property
     def fullname(self):
