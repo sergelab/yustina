@@ -5,6 +5,7 @@ from contrib.utils.datetime import date_filter
 from flask import (current_app,
                    render_template,
                    send_from_directory)
+import textile as tx
 
 from .init import app
 
@@ -29,3 +30,8 @@ def assets(filename):
 @app.template_filter()
 def date(_date):
     return date_filter(_date)
+
+
+@app.template_filter()
+def textile(text):
+    return tx.textile(text)

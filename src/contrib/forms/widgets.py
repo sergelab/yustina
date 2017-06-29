@@ -4,7 +4,7 @@ from __future__ import absolute_import
 from cgi import escape
 from flask_babel import lazy_gettext as __
 from wtforms.compat import text_type
-from wtforms.widgets import ListWidget, Select
+from wtforms.widgets import ListWidget, Select, TextArea
 from wtforms.widgets import html_params, HTMLString
 
 
@@ -84,4 +84,37 @@ class CustomizedList(CustomizedListWidget):
             *args, **kwargs))
         if self.use_box:
             html.append('</div>')
+        return HTMLString(''.join(html))
+
+
+class TextileWidget(TextArea):
+    def __init__(self, height=350, **kwargs):
+        self.height = height
+
+    def __call__(self, field, **kwargs):
+        kwargs.setdefault('id', field.id)
+        html = list()
+        html.append(u'<div data-textile>')
+        html.append(u'<div class="uk-grid" style="height:auto;">')
+        html.append(u'<div class="uk-width-1-2">')
+        html.append(super(TextileWidget, self).__call__(field, **kwargs))
+        html.append(u'</div>')
+        html.append(u'<div class="uk-width-1-2">')
+        html.append(u'<ul class="uk-tab" data-uk-tab="{{connect:\'#{0}_tabs\'}}">'.format(field.id))
+        html.append(u'<li class="uk-active"><a href="#">{0}</a></li>'.format(__('Textile preview tab')))
+        html.append(u'<li><a href="#">{0}</a></li>'.format(__('Textile help tab')))
+        html.append(u'</ul>')
+        html.append(u'<ul id="{0}_tabs" class="uk-switcher">'.format(field.id))
+        html.append(u'<li style="padding:10px;">')
+        html.append(u'<div class="js-textile_preview" style="'
+                    u'overflow:auto;height:{0}px;" '
+                    u'class="uk-width-1-1"></div>'.format(self.height))
+        html.append(u'</li>')
+        html.append(u'<li style="padding:10px;">')
+        html.append(u'<div class="textile-help">{0}</div>'.format(__('Textile help text')))
+        html.append(u'</li>')
+        html.append(u'</ul>')
+        html.append(u'</div>')
+        html.append(u'</div>')
+        html.append(u'</div>')
         return HTMLString(''.join(html))
