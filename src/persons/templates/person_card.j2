@@ -21,7 +21,7 @@
     {%- endif %}
     {% if person.bio -%}
         <div class="person-card-bio">
-            {{ person.bio|safe }}
+            {{ person.bio|textile }}
         </div>
     {%- endif %}
     {% if workcases -%}
