@@ -69,8 +69,9 @@ class Workcase(db.Model, DeletableMixin):
 
     persons = db.relationship(Person,
                               secondary=workcase_person_association,
-                              lazy=True)
-                              # backref=db.backref('workcases'))
+                              lazy=True,
+                              backref=db.backref('workcases',
+                                                 lazy='dynamic'))
 
     @classmethod
     def admin_list(cls):
