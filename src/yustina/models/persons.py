@@ -1,6 +1,9 @@
 # coding: utf-8
 from __future__ import absolute_import
 
+from slugify import Slugify, UniqueSlugify
+from sqlalchemy.ext.hybrid import hybrid_property
+
 from .mixins import DeletableMixin
 from ..init import db
 
@@ -40,6 +43,7 @@ class Person(db.Model, DeletableMixin):
     __tablename__ = 'persons'
 
     id = db.Column(db.Integer, primary_key=True)
+    _slug = db.Column('slug', db.Text, unique=True)
     surname = db.Column(db.Text)
     firstname = db.Column(db.Text)
     middlename = db.Column(db.Text)
@@ -51,6 +55,15 @@ class Person(db.Model, DeletableMixin):
                                 secondary=person_positions,
                                 lazy=True,
                                 backref=db.backref('persons'))
+
+    @hybrid_property
+    def slug(self):
+        return self._slug
+
+    @slug.setter
+    def slug(self, value):
+        slug = Slugify(to_lower=True)
+        self._slug = slug(value)
 
     @property
     def fullname(self):
@@ -78,3 +91,12 @@ class Person(db.Model, DeletableMixin):
         query = query.order_by(cls.surname.asc(),
                                cls.firstname.asc())
         return query
+
+    @classmethod
+    def available_list(cls, with_positions=True):
+        query = cls.admin_list(with_positions=with_positions)
+        query = query.filter(cls.in_trash.is_(False))
+        return query
+
+    def available_workcases(self):
+        return self.workcases.filter_by(in_trash=False)
