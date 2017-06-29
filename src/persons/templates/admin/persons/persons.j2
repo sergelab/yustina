@@ -13,6 +13,7 @@
         <thead>
             <tr>
                 <th>{{ _('Fullname column') }}</th>
+                <th>{{ _('Person slug column') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -23,6 +24,9 @@
                             {{ render_trash_icon(person.in_trash) }}
                             <a href="{{ url_for('admin.persons_manage_person', person_id=person.id) }}">{{ person.fullname }}</a>
                             <br /><span class="uk-text-small uk-text-muted">{{ person.positions_as_text() }}</span>
+                        </td>
+                        <td>
+                            <a href="{{ url_for('persons.person_card', slug=person.slug) }}" target="_blank">{{ person.slug }}</a>&nbsp;<span class="uk-icon-external-link"></span>
                         </td>
                     </tr>
                 {%- endfor %}
