@@ -5,7 +5,7 @@
         <h2>{{ group['position'].name }}</h2>
 
         {% for person in group['persons'] -%}
-            <div class="person-list-person" style="background-image: url(/img/IMG_2671.jpg);">
+            <div class="person-list-person"{% if person.list_photo.original() %} style="background-image: url({{ url_for('public', filename=person.list_photo.original()) }});"{% endif %}>
                 <h3 class="person-list-name">
                     <a href="{{ url_for('persons.person_card', slug=person.slug) }}">{{ person.fullname }}</a>
                 </h3>
