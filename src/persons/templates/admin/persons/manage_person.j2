@@ -17,7 +17,7 @@
                     'showCaption': false,
                 {%- endif %}
                 'previewZoomSettings': false,
-                {% if person.list_photo.preview() and person.list_photo.url -%}
+                {% if person.list_photo and person.list_photo.url -%}
                     'initialPreview': [
                         '<img class="file-preview-image" src="{{ url_for('public', filename=person.list_photo.preview()) }}" alt=""><input type="hidden" name="{{ form.list_photo.id }}" value="already" />'
                     ],
@@ -36,7 +36,7 @@
                     'showCaption': false,
                 {%- endif %}
                 'previewZoomSettings': false,
-                {% if person.photo.preview() and person.photo.url -%}
+                {% if person.photo and person.photo.url -%}
                     'initialPreview': [
                         '<img class="file-preview-image" src="{{ url_for('public', filename=person.photo.preview()) }}" alt=""><input type="hidden" name="{{ form.photo.id }}" value="already" />'
                     ],
