@@ -24,4 +24,9 @@
             </div>
         {%- endif %}
 	</div>
+    {% if person.bio -%}
+        <div class="person-card-bio">
+            {{ person.bio|textile }}
+        </div>
+    {%- endif %}
 {%- endblock %}
