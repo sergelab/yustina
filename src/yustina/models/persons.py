@@ -1,8 +1,8 @@
 # coding: utf-8
 from __future__ import absolute_import
 
-from slugify import Slugify, UniqueSlugify
-from sqlalchemy.ext.hybrid import hybrid_property
+from contrib.data.attachment import Attachment
+from sqlalchemy.dialects.postgresql import JSONB
 
 from .mixins import DeletableMixin, SlugifyMixin
 from ..init import db
@@ -65,11 +65,39 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
     registry_no = db.Column(db.Text)
     specialty = db.Column(db.Text)
 
+    _photo = db.Column('photo', JSONB)
+    _video = db.Column('video', JSONB)
+    _list_photo = db.Column('list_photo', JSONB)
+
     positions = db.relationship(Position,
                                 secondary=person_positions,
                                 order_by=Position.priority.asc(),
                                 lazy=True,
                                 backref=db.backref('persons'))
+
+    @property
+    def photo(self):
+        return Attachment(self._photo)
+
+    @photo.setter
+    def photo(self, jsondict):
+        self._photo = Attachment(jsondict).as_json()
+
+    @property
+    def video(self):
+        return Attachment(self._video)
+
+    @video.setter
+    def video(self, jsondict):
+        self._video = Attachment(jsondict).as_json()
+
+    @property
+    def list_photo(self):
+        return Attachment(self._list_photo)
+
+    @list_photo.setter
+    def list_photo(self, jsondict):
+        self._list_photo = Attachment(jsondict).as_json()
 
     @property
     def fullname(self):
