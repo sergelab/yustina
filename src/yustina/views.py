@@ -27,6 +27,18 @@ def assets(filename):
     return send_from_directory(path, filename)
 
 
+@app.route('/public/<path:filename>')
+def public(filename):
+    """
+    Путь для отдачи публичных файлов.
+    * На боевом сервере эту функцию берет на себя web-сервер
+    :param filename:
+    :return:
+    """
+    path = current_app.config.get('PUBLIC_ROOT')
+    return send_from_directory(path, filename)
+
+
 @app.template_filter()
 def date(_date):
     return date_filter(_date)
