@@ -1,7 +1,7 @@
 {% extends 'admin/common.j2' %}
 
 {% block content %}
-    <form id="content-area" class="uk-form {{ 'uk-form-horizontal' if not form_not_horizontal else '' }}" action="{{ form_action }}" method="{{ form_method or 'POST' }}">
+    <form id="content-area" class="uk-form {{ 'uk-form-horizontal' if not form_not_horizontal else '' }}" action="{{ form_action }}" method="{{ form_method or 'POST' }}"{% if form_enctype %}  enctype="{{ form_enctype }}"{% endif %}>
         <div class="uk-margin uk-flex uk-flex-space-between uk-flex-wrap" data-uk-margin>
             <div class="uk-flex uk-flex-middle uk-flex-wrap" data-uk-margin>
                 <h2>{% block page_title %}{% endblock %}</h2>

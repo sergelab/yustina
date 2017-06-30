@@ -4,7 +4,7 @@ from __future__ import absolute_import
 from cgi import escape
 from flask_babel import lazy_gettext as __
 from wtforms.compat import text_type
-from wtforms.widgets import ListWidget, Select, TextArea
+from wtforms.widgets import FileInput, ListWidget, Select, TextArea
 from wtforms.widgets import html_params, HTMLString
 
 
@@ -118,3 +118,19 @@ class TextileWidget(TextArea):
         html.append(u'</div>')
         html.append(u'</div>')
         return HTMLString(''.join(html))
+
+
+class UploadInput(FileInput):
+    """
+    Виджет для работы с fileinput.js.
+    """
+    def __call__(self, field, **kwargs):
+        kwargs.setdefault('id', field.id)
+        class_ = kwargs.get('class_', '')
+        class_ = class_ + ' file-uploader' if class_ else 'file-uploader'
+        kwargs['class_'] = class_
+        return HTMLString('<input %s>' % html_params(
+            name=field.name,
+            type='file',
+            **kwargs
+        ))

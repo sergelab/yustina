@@ -2,7 +2,7 @@
 from __future__ import absolute_import
 
 from contrib.forms import Form, WidgetPrebind
-from contrib.forms.fields import RefQuerySelectMultipleField
+from contrib.forms.fields import RefQuerySelectMultipleField, UploadField
 from contrib.forms.widgets import TextileWidget
 from flask_babel import lazy_gettext as __
 from wtforms import BooleanField, StringField
@@ -103,3 +103,15 @@ class PersonForm(Form):
             class_='uk-width-1-1'
         )
     )
+    list_photo = UploadField(
+        __('Person list photo label'),
+        description=__('Person list photo description')
+    )
+    photo = UploadField(
+        __('Person card photo label'),
+        description=__('Person card photo description')
+    )
+    #video = UploadField(
+    #    __('Person video label'),
+    #    description=__('Person video description')
+    #)
