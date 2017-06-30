@@ -11,6 +11,7 @@ eggs/
 /assets
 /parts
 /node_modules
+/public
 *.mo
 *.json
 
