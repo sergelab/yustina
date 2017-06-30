@@ -1,34 +1,27 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
-    <h1>{{ person.fullname }}</h1>
-
-    <div class="person-card-photo">
-        <img src="person-large.jpg" />
-    </div>
-    <div class="person-card-position">
-        {{ person.positions_as_text() }}
-    </div>
-    {% if person.specialty -%}
-        <div class="person-card-specialization">
-            {{ person.specialty|safe }}
-        </div>
-    {%- endif %}
-    {% if person.registry_no -%}
-        <div class="person-card-id">
-            {{ person.registry_no }}
-        </div>
-    {%- endif %}
-    {% if person.bio -%}
-        <div class="person-card-bio">
-            {{ person.bio|textile }}
-        </div>
-    {%- endif %}
-    {% if workcases -%}
-        <div class="person-card-cases">
-            {% for wc in workcases -%}
-                <a href="#">{{ wc.title }}</a>{% if not loop.last %}, {% endif %}
-            {%- endfor %}
-        </div>
-    {%- endif %}
+    <div class="person-card-person" style="background-image: linear-gradient(90deg, #fff, #fff 40%, rgba(255,255,255,0) 60%, transparent ){% if person.photo.original() %}, url({{ url_for('public', filename=person.photo.original()) }});{% endif %}">
+		<h1>{{ person.fullname }}</h1>
+		<div class="person-card-position">
+			{{ person.positions_as_text() }}
+		</div>
+        {% if person.specialty -%}
+            <div class="person-card-specialization">
+                {{ person.specialty }}
+            </div>
+        {%- endif %}
+        {% if person.registry_no %}
+            <div class="person-card-id">
+                {{ person.registry_no }}
+            </div>
+        {%- endif %}
+        {% if workcases -%}
+            <div class="person-card-cases">
+                {% for wc in workcases -%}
+                    <a href="#">{{ wc.title }}</a>{% if not loop.last %}, {% endif %}
+                {%- endfor %}
+            </div>
+        {%- endif %}
+	</div>
 {%- endblock %}
