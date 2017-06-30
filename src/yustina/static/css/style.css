@@ -47,3 +47,4 @@ nav a:last-child { margin: 0 0 0 .5em; }
 .person-list-person div { margin-right: 320px; }
 
 .person-card-person { min-height: 360px; background-size: auto 360px; background-position: 100% 0; background-repeat: no-repeat; }
+.person-card-person > * { width: 50%; }
