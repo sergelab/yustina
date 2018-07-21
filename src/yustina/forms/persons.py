@@ -26,6 +26,14 @@ class PositionForm(Form):
             autofocus=True
         )
     )
+    heading = StringField(
+        __('Position heading label'),
+        validators=[DataRequired()],
+        widget=WidgetPrebind(
+            TextInput(),
+            class_='uk-width-1-1'
+        )
+    )
     public_group = BooleanField(
         __('Position public group label')
     )
