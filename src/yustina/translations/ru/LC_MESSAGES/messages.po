@@ -7,136 +7,145 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-28 00:48+0300\n"
-"PO-Revision-Date: 2017-06-07 02:34+0300\n"
+"POT-Creation-Date: 2018-07-21 23:05+0300\n"
+"PO-Revision-Date: 2018-07-21 23:06+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"X-Generator: Poedit 2.0.9\n"
 
-#: src/admin/views.py:49
+#: src/admin/views.py:50
 msgid "Persons nav option"
 msgstr "Персоны"
 
-#: src/admin/views.py:50
+#: src/admin/views.py:51
 msgid "Persons dashboard description"
 msgstr ""
 
-#: src/admin/views.py:52
+#: src/admin/views.py:53
 msgid "Positions list nav option"
 msgstr "Должности"
 
-#: src/admin/views.py:53
+#: src/admin/views.py:54
 msgid "Positions list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:55
+#: src/admin/views.py:56
 msgid "Persons list nav option"
 msgstr "Персоны"
 
-#: src/admin/views.py:56
+#: src/admin/views.py:57
 msgid "Persons list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:59
+#: src/admin/views.py:60
 msgid "Books nav option"
 msgstr "Книги"
 
-#: src/admin/views.py:60
+#: src/admin/views.py:61
 msgid "Books dashboard description"
 msgstr ""
 
-#: src/admin/views.py:62
+#: src/admin/views.py:63
 msgid "Books series list nav option"
 msgstr "Серии книг"
 
-#: src/admin/views.py:63
+#: src/admin/views.py:64
 msgid "Books series list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:65
+#: src/admin/views.py:66
 msgid "Books list nav option"
 msgstr "Книги"
 
-#: src/admin/views.py:66
+#: src/admin/views.py:67
 msgid "Books list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:69
+#: src/admin/views.py:70
 msgid "Analytics nav option"
 msgstr "Аналитика"
 
-#: src/admin/views.py:70
+#: src/admin/views.py:71
 msgid "Analytics dashboard description"
 msgstr " "
 
-#: src/admin/views.py:72
+#: src/admin/views.py:73
 msgid "Analytics themes list nav option"
 msgstr "Темы аналитических материалов"
 
-#: src/admin/views.py:73
+#: src/admin/views.py:74
 msgid "Analytics themes list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:75
+#: src/admin/views.py:76
 msgid "Analytics list nav option"
 msgstr "Аналитические материалы"
 
-#: src/admin/views.py:76
+#: src/admin/views.py:77
 msgid "Analytics list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:79
+#: src/admin/views.py:80
 msgid "Press nav option"
 msgstr "Пресс-центр"
 
-#: src/admin/views.py:80
+#: src/admin/views.py:81
 msgid "Press dashboard description"
 msgstr ""
 
-#: src/admin/views.py:82
+#: src/admin/views.py:83
 msgid "Content nav option"
 msgstr "Статьи"
 
-#: src/admin/views.py:83
+#: src/admin/views.py:84
 msgid "Content dashboard description"
 msgstr ""
 
-#: src/admin/views.py:85
+#: src/admin/views.py:86
 msgid "Workcases nav option"
 msgstr "Дела"
 
-#: src/admin/views.py:86
+#: src/admin/views.py:87
 msgid "Workcases dashboard description"
 msgstr ""
 
-#: src/admin/views.py:88
+#: src/admin/views.py:89
 msgid "Practics list nav option"
 msgstr "Практики"
 
-#: src/admin/views.py:89
+#: src/admin/views.py:90
 msgid "Practics list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:91
+#: src/admin/views.py:92
 msgid "Branches list nav option"
 msgstr "Отрасли"
 
-#: src/admin/views.py:92
+#: src/admin/views.py:93
 msgid "Branches list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:94
+#: src/admin/views.py:95
 msgid "Workcases list nav option"
 msgstr "Дела"
 
-#: src/admin/views.py:95
+#: src/admin/views.py:96
 msgid "Workcases list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:154
+msgid "Cant save settings fail message"
+msgstr ""
+
+#: src/admin/views.py:156
+msgid "Settings saved successfully message"
 msgstr ""
 
 #: src/admin/templates/admin/common.j2:4
@@ -159,37 +168,56 @@ msgstr "Показать"
 msgid "Hide"
 msgstr "Скрыть"
 
-#: src/analytics/admin.py:40 src/articles/admin.py:40 src/cases/admin.py:37
-#: src/cases/admin.py:119 src/cases/admin.py:201 src/persons/admin.py:31
+#: src/admin/templates/admin/settings/settings.j2:4
+msgid "Settings heading"
+msgstr "Настройки сайта"
+
+#: src/admin/templates/admin/settings/settings.j2:8
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:10
+#: src/analytics/templates/admin/analytics/themes.j2:11
+#: src/articles/templates/admin/articles/manage_article.j2:10
+#: src/books/templates/admin/books/manage_book.j2:10
+#: src/books/templates/admin/books/manage_series.j2:10
+#: src/cases/templates/admin/cases/branches.j2:11
+#: src/cases/templates/admin/cases/manage_case.j2:10
+#: src/cases/templates/admin/cases/practics.j2:11
+#: src/partners/templates/admin/persons/manage_person.j2:57
+#: src/partners/templates/admin/persons/positions.j2:11
+#: src/press/templates/admin/press/manage_news_article.j2:10
+msgid "Save button"
+msgstr "Сохранить"
+
+#: src/analytics/admin.py:40 src/articles/admin.py:39 src/cases/admin.py:37
+#: src/cases/admin.py:119 src/cases/admin.py:201 src/partners/admin.py:51
 #: src/press/admin.py:40
 msgid "Object not found message"
 msgstr "Объект не найден."
 
 #: src/analytics/admin.py:58 src/analytics/admin.py:144
-#: src/articles/admin.py:58 src/books/admin.py:55 src/books/admin.py:135
+#: src/articles/admin.py:57 src/books/admin.py:55 src/books/admin.py:135
 #: src/cases/admin.py:55 src/cases/admin.py:137 src/cases/admin.py:218
-#: src/persons/admin.py:49 src/persons/admin.py:129 src/press/admin.py:58
+#: src/partners/admin.py:69 src/partners/admin.py:149 src/press/admin.py:58
 msgid "Error then delete object message"
 msgstr "Не удалось удалить объект."
 
 #: src/analytics/admin.py:60 src/analytics/admin.py:146
-#: src/articles/admin.py:60 src/books/admin.py:57 src/books/admin.py:137
+#: src/articles/admin.py:59 src/books/admin.py:57 src/books/admin.py:137
 #: src/cases/admin.py:57 src/cases/admin.py:139 src/cases/admin.py:220
-#: src/persons/admin.py:51 src/persons/admin.py:131 src/press/admin.py:60
+#: src/partners/admin.py:71 src/partners/admin.py:151 src/press/admin.py:60
 msgid "Delete object successfully message"
 msgstr "Объект удален."
 
 #: src/analytics/admin.py:70 src/analytics/admin.py:156
-#: src/articles/admin.py:70 src/books/admin.py:67 src/books/admin.py:147
+#: src/articles/admin.py:69 src/books/admin.py:67 src/books/admin.py:147
 #: src/cases/admin.py:67 src/cases/admin.py:149 src/cases/admin.py:230
-#: src/persons/admin.py:61 src/persons/admin.py:141 src/press/admin.py:70
+#: src/partners/admin.py:81 src/partners/admin.py:161 src/press/admin.py:70
 msgid "Error then restore object message"
 msgstr "Не удалось восстановить объект."
 
 #: src/analytics/admin.py:72 src/analytics/admin.py:158
-#: src/articles/admin.py:72 src/books/admin.py:69 src/books/admin.py:149
+#: src/articles/admin.py:71 src/books/admin.py:69 src/books/admin.py:149
 #: src/cases/admin.py:69 src/cases/admin.py:151 src/cases/admin.py:232
-#: src/persons/admin.py:63 src/persons/admin.py:143 src/press/admin.py:72
+#: src/partners/admin.py:83 src/partners/admin.py:163 src/press/admin.py:72
 msgid "Restore object successfully message"
 msgstr "Объект восстановлен"
 
@@ -241,8 +269,8 @@ msgstr "Аналитические материалы"
 #: src/cases/templates/admin/cases/branches.j2:22
 #: src/cases/templates/admin/cases/cases.j2:8
 #: src/cases/templates/admin/cases/practics.j2:22
-#: src/persons/templates/admin/persons/persons.j2:8
-#: src/persons/templates/admin/persons/positions.j2:22
+#: src/partners/templates/admin/persons/persons.j2:8
+#: src/partners/templates/admin/persons/positions.j2:23
 #: src/press/templates/admin/press/news.j2:8
 msgid "Add button"
 msgstr "Добавить"
@@ -263,26 +291,12 @@ msgstr "Пусто"
 msgid "Add analytics heading"
 msgstr "Добавление аналитического материала"
 
-#: src/analytics/templates/admin/analytics/manage_analytics.j2:10
-#: src/analytics/templates/admin/analytics/themes.j2:11
-#: src/articles/templates/admin/articles/manage_article.j2:10
-#: src/books/templates/admin/books/manage_book.j2:10
-#: src/books/templates/admin/books/manage_series.j2:10
-#: src/cases/templates/admin/cases/branches.j2:11
-#: src/cases/templates/admin/cases/manage_case.j2:10
-#: src/cases/templates/admin/cases/practics.j2:11
-#: src/persons/templates/admin/persons/manage_person.j2:10
-#: src/persons/templates/admin/persons/positions.j2:11
-#: src/press/templates/admin/press/manage_news_article.j2:10
-msgid "Save button"
-msgstr "Сохранить"
-
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:11
 #: src/articles/templates/admin/articles/manage_article.j2:11
 #: src/books/templates/admin/books/manage_book.j2:11
 #: src/books/templates/admin/books/manage_series.j2:11
 #: src/cases/templates/admin/cases/manage_case.j2:11
-#: src/persons/templates/admin/persons/manage_person.j2:11
+#: src/partners/templates/admin/persons/manage_person.j2:58
 #: src/press/templates/admin/press/manage_news_article.j2:11
 msgid "Save and continue button"
 msgstr "Сохранить и продолжить"
@@ -295,8 +309,8 @@ msgstr "Сохранить и продолжить"
 #: src/cases/templates/admin/cases/branches.j2:15
 #: src/cases/templates/admin/cases/manage_case.j2:15
 #: src/cases/templates/admin/cases/practics.j2:15
-#: src/persons/templates/admin/persons/manage_person.j2:15
-#: src/persons/templates/admin/persons/positions.j2:15
+#: src/partners/templates/admin/persons/manage_person.j2:62
+#: src/partners/templates/admin/persons/positions.j2:15
 #: src/press/templates/admin/press/manage_news_article.j2:15
 msgid "Object in trash string"
 msgstr "Объект в корзине"
@@ -309,8 +323,8 @@ msgstr "Объект в корзине"
 #: src/cases/templates/admin/cases/branches.j2:16
 #: src/cases/templates/admin/cases/manage_case.j2:16
 #: src/cases/templates/admin/cases/practics.j2:16
-#: src/persons/templates/admin/persons/manage_person.j2:16
-#: src/persons/templates/admin/persons/positions.j2:16
+#: src/partners/templates/admin/persons/manage_person.j2:63
+#: src/partners/templates/admin/persons/positions.j2:16
 #: src/press/templates/admin/press/manage_news_article.j2:16
 msgid "Restore button"
 msgstr "Восстановить"
@@ -323,8 +337,8 @@ msgstr "Восстановить"
 #: src/cases/templates/admin/cases/branches.j2:18
 #: src/cases/templates/admin/cases/manage_case.j2:18
 #: src/cases/templates/admin/cases/practics.j2:18
-#: src/persons/templates/admin/persons/manage_person.j2:18
-#: src/persons/templates/admin/persons/positions.j2:18
+#: src/partners/templates/admin/persons/manage_person.j2:65
+#: src/partners/templates/admin/persons/positions.j2:18
 #: src/press/templates/admin/press/manage_news_article.j2:18
 msgid "Delete button"
 msgstr "Удалить"
@@ -337,8 +351,8 @@ msgstr "Удалить"
 #: src/cases/templates/admin/cases/branches.j2:18
 #: src/cases/templates/admin/cases/manage_case.j2:18
 #: src/cases/templates/admin/cases/practics.j2:18
-#: src/persons/templates/admin/persons/manage_person.j2:18
-#: src/persons/templates/admin/persons/positions.j2:18
+#: src/partners/templates/admin/persons/manage_person.j2:65
+#: src/partners/templates/admin/persons/positions.j2:18
 #: src/press/templates/admin/press/manage_news_article.j2:18
 msgid "In trash button"
 msgstr "В корзину"
@@ -351,8 +365,8 @@ msgstr "В корзину"
 #: src/cases/templates/admin/cases/branches.j2:20
 #: src/cases/templates/admin/cases/manage_case.j2:20
 #: src/cases/templates/admin/cases/practics.j2:20
-#: src/persons/templates/admin/persons/manage_person.j2:20
-#: src/persons/templates/admin/persons/positions.j2:20
+#: src/partners/templates/admin/persons/manage_person.j2:67
+#: src/partners/templates/admin/persons/positions.j2:20
 #: src/press/templates/admin/press/manage_news_article.j2:20
 msgid "Cancel button"
 msgstr "Отменить"
@@ -365,19 +379,19 @@ msgstr "Темы"
 msgid "No themes found string"
 msgstr "Пусто"
 
-#: src/articles/admin.py:87 src/press/admin.py:87
+#: src/articles/admin.py:86 src/press/admin.py:87
 msgid "Error then add new article message"
 msgstr "Не удалось добавить статью."
 
-#: src/articles/admin.py:88 src/press/admin.py:88
+#: src/articles/admin.py:87 src/press/admin.py:88
 msgid "Error then edit existing article message"
 msgstr "Не удалось отредактировать статью."
 
-#: src/articles/admin.py:90 src/press/admin.py:90
+#: src/articles/admin.py:89 src/press/admin.py:90
 msgid "Add successful new article message"
 msgstr "Статья добавлена."
 
-#: src/articles/admin.py:91 src/press/admin.py:91
+#: src/articles/admin.py:90 src/press/admin.py:91
 msgid "Safe successful existing article message"
 msgstr "Статья сохранена"
 
@@ -569,7 +583,7 @@ msgstr "Практики"
 msgid "No practics found string"
 msgstr "Пусто"
 
-#: src/contrib/forms/fields.py:41
+#: src/contrib/forms/fields.py:51
 #, python-format
 msgid "'%(value)s' is not a valid choice for this field"
 msgstr "«%(value)s» не является допустимым значением для этого поля."
@@ -578,65 +592,89 @@ msgstr "«%(value)s» не является допустимым значени�
 msgid "Date field placeholder"
 msgstr "Дата"
 
-#: src/persons/admin.py:78
+#: src/contrib/forms/widgets.py:104
+msgid "Textile preview tab"
+msgstr ""
+
+#: src/contrib/forms/widgets.py:105
+msgid "Textile help tab"
+msgstr ""
+
+#: src/contrib/forms/widgets.py:114
+msgid "Textile help text"
+msgstr ""
+
+#: src/partners/admin.py:30
+msgid "Order saved successfully message"
+msgstr ""
+
+#: src/partners/admin.py:34
+msgid "Error then save order message"
+msgstr ""
+
+#: src/partners/admin.py:98
 msgid "Error then add new position message"
 msgstr "Не удалось добавить должность."
 
-#: src/persons/admin.py:79
+#: src/partners/admin.py:99
 msgid "Error then edit existing position message"
 msgstr "Не удалось отредактировать должность."
 
-#: src/persons/admin.py:81
+#: src/partners/admin.py:101
 msgid "Add successful new position message"
 msgstr "Должность добавлена."
 
-#: src/persons/admin.py:82
+#: src/partners/admin.py:102
 msgid "Safe successful existing position message"
 msgstr "Должность сохранена"
 
-#: src/persons/admin.py:112
+#: src/partners/admin.py:132
 msgid "Person not found message"
 msgstr "Персона не найдена."
 
-#: src/persons/admin.py:158
+#: src/partners/admin.py:178
 msgid "Error then add person message"
 msgstr "Не удалось добавить персону."
 
-#: src/persons/admin.py:159
+#: src/partners/admin.py:179
 msgid "Error then modify person message"
 msgstr "Не удалось отредактировать персону."
 
-#: src/persons/admin.py:161
+#: src/partners/admin.py:181
 msgid "Person added successfully message"
 msgstr "Персона добавлена."
 
-#: src/persons/admin.py:162
+#: src/partners/admin.py:182
 msgid "Person saved successfully message"
 msgstr "Персона сохранена."
 
-#: src/persons/templates/admin/persons/manage_person.j2:6
+#: src/partners/templates/admin/persons/manage_person.j2:53
 msgid "Add person heading"
 msgstr "Добавление персоны"
 
-#: src/persons/templates/admin/persons/persons.j2:5
+#: src/partners/templates/admin/persons/persons.j2:5
 msgid "Persons list heading"
 msgstr "Персоны"
 
-#: src/persons/templates/admin/persons/persons.j2:15
+#: src/partners/templates/admin/persons/persons.j2:15
 msgid "Fullname column"
 msgstr "Полное имя"
 
-#: src/persons/templates/admin/persons/persons.j2:30
+#: src/partners/templates/admin/persons/persons.j2:16
+msgid "Person slug column"
+msgstr ""
+
+#: src/partners/templates/admin/persons/persons.j2:34
 msgid "No persons found string"
 msgstr "Пусто"
 
-#: src/persons/templates/admin/persons/positions.j2:7
+#: src/partners/templates/admin/persons/positions.j2:7
 msgid "Positions list heading"
 msgstr "Должности"
 
-#: src/persons/templates/admin/persons/positions.j2:51
-msgid "No positions found string"
-msgstr "Пусто"
+#: src/partners/templates/admin/persons/positions.j2:22
+msgid "Save order button"
+msgstr ""
 
 #: src/press/templates/admin/press/manage_news_article.j2:6
 msgid "Add news article heading"
@@ -691,7 +729,7 @@ msgid "Authors as text label"
 msgstr ""
 
 #: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
-#: src/yustina/forms/persons.py:58
+#: src/yustina/forms/persons.py:79
 msgid "Person positions label"
 msgstr "Должности"
 
@@ -751,61 +789,101 @@ msgstr "Описание дела"
 msgid "Workcase branches positions label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:18
+#: src/yustina/forms/persons.py:19
 msgid "Position name label"
 msgstr "Название должности"
 
-#: src/yustina/forms/persons.py:34
+#: src/yustina/forms/persons.py:30
+msgid "Position heading label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:38
+msgid "Position public group label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:46 src/yustina/forms/press.py:14
+msgid "Slug label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:53 src/yustina/forms/press.py:21
+msgid "Slug description"
+msgstr ""
+
+#: src/yustina/forms/persons.py:56
 msgid "Person surname label"
 msgstr "Фамилия"
 
-#: src/yustina/forms/persons.py:43
+#: src/yustina/forms/persons.py:64
 msgid "Person firstname label"
 msgstr "Имя"
 
-#: src/yustina/forms/persons.py:51
+#: src/yustina/forms/persons.py:72
 msgid "Person middlename label"
 msgstr "Отчество"
 
-#: src/yustina/forms/persons.py:63
+#: src/yustina/forms/persons.py:84
+msgid "Person short bio label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:92
 msgid "Person bio label"
 msgstr "Биография"
 
-#: src/yustina/forms/persons.py:71
+#: src/yustina/forms/persons.py:100
 msgid "Person registry no label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:78
+#: src/yustina/forms/persons.py:107
 msgid "Person specialty label"
 msgstr ""
 
-#: src/yustina/forms/press.py:14
+#: src/yustina/forms/persons.py:115
+msgid "Person list photo label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:116
+msgid "Person list photo description"
+msgstr ""
+
+#: src/yustina/forms/persons.py:119
+msgid "Person card photo label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:120
+msgid "Person card photo description"
+msgstr ""
+
+#: src/yustina/forms/press.py:24
 msgid "News article title label"
 msgstr "Заголовок новости"
 
-#: src/yustina/forms/press.py:22
+#: src/yustina/forms/press.py:32
 msgid "News article subtitle label"
 msgstr "Подзаголовок новости"
 
-#: src/yustina/forms/press.py:29
+#: src/yustina/forms/press.py:39
 msgid "News article date label"
 msgstr "Дата новости"
 
-#: src/yustina/forms/press.py:38
+#: src/yustina/forms/press.py:48
 msgid "News article annotation label"
 msgstr "Аннотация новости"
 
-#: src/yustina/forms/press.py:46
+#: src/yustina/forms/press.py:56
 msgid "News article content label"
 msgstr "Содержание новости"
 
-#: src/yustina/forms/press.py:54
+#: src/yustina/forms/press.py:64
 msgid "News article source label"
 msgstr "Источник"
 
-#: src/yustina/forms/press.py:61
+#: src/yustina/forms/press.py:71
 msgid "News article source link label"
 msgstr "Источник"
+
+#: src/yustina/forms/settings.py:38
+msgid "Total cases label"
+msgstr "Количество дел"
 
 #: src/yustina/forms/users.py:15
 msgid "Please, provide your username validation message"
@@ -831,3 +909,31 @@ msgstr "Запомнить меня"
 msgid "Invalid username or password validation message"
 msgstr "Неверное сочетание имени пользователя и пароля."
 
+#: src/yustina/templates/index.j2:6
+#, python-format
+msgid "%(num)d case"
+msgid_plural "%(num)d cases"
+msgstr[0] "<span>&emsp;&emsp;%(num)d</span> дело&emsp;<br />"
+msgstr[1] "<span>&emsp;&emsp;%(num)d</span> дела&emsp;<br />"
+msgstr[2] "<span>&emsp;&emsp;%(num)d</span> дел&emsp;<br />"
+
+#: src/yustina/templates/index.j2:7
+#, python-format
+msgid "for %(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] "за <span>%(num)d</span> год работы"
+msgstr[1] "за <span>%(num)d</span> года работы"
+msgstr[2] "за <span>%(num)d</span> лет работы"
+
+#: src/yustina/templates/index.j2:8
+msgid "Company slogan front string"
+msgstr "Профессионализм. Репутация. Опыт."
+
+#~ msgid "No positions found string"
+#~ msgstr "Пусто"
+
+#~ msgid "%(num_cases)d case"
+#~ msgid_plural "%(num_cases)d cases"
+#~ msgstr[0] "<span>&emsp;&emsp;%(num_cases)d</span> дело&emsp;<br />"
+#~ msgstr[1] ""
+#~ msgstr[2] ""
