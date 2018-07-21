@@ -8,8 +8,10 @@
         <a href="">Аналитика</a>
         <a href="book-list.html">Книги</a>
         <div>
-            <a href=""><img class="search-icon" src="" /></a>
-            <a href="">English</a>
+            <a href=""><img class="search-icon" src="{{ asset_url_for('images/search-icon.svg') }}" /></a>
+            {% for code, name in config['LANGUAGES'].items() if code != g.current_language -%}
+                <a href="{{ url_for('setlang', language=code) }}">{{ name }}</a>
+            {%- endfor %}
         </div>
     </nav>
 </header>

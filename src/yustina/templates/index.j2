@@ -3,9 +3,9 @@
 {% block content -%}
     <img id="logo" class="logo-large" src="{{ asset_url_for('images/logoblue2.svg') }}" />
 	<div class="main-header">
-		<span>&emsp;&emsp;4321</span> дело&emsp;<br />
-		за <span>24</span> года работы
-		<div class="main-subheader">Профессионализм. Репутация. Опыт.</div>
+        {{ ngettext('%(num)d case', '%(num)d cases', settings.total_cases) }}
+        {{ ngettext('for %(num)d year', '%(num)d years', full_years) }}
+		<div class="main-subheader">{{ _('Company slogan front string') }}</div>
 	</div>
 
 	<div class="hr"></div>
