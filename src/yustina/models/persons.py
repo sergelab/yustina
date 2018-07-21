@@ -28,6 +28,7 @@ class Position(db.Model, DeletableMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
+    heading = db.Column(db.Text, nullable=False)  # Для заголовка в разделе
     priority = db.Column(db.Integer, default=1)
     public_group = db.Column(db.Boolean, default=True)
 
