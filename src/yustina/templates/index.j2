@@ -1,5 +1,37 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
-    <h1>[Главная страница]</h1>
+    <img id="logo" class="logo-large" src="{{ asset_url_for('images/logoblue2.svg') }}" />
+	<div class="main-header">
+		<span>&emsp;&emsp;4321</span> дело&emsp;<br />
+		за <span>24</span> года работы
+		<div class="main-subheader">Профессионализм. Репутация. Опыт.</div>
+	</div>
+
+	<div class="hr"></div>
+	<div class="main-spacer"></div>
+	<div class="main-case main-case-1">
+		<div class="main-case-photo"><img src="/img/main1.jpg"></div>
+		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Старовойтов Сергей Вальтерович</a></div>
+		<div class="main-case-position">Управляющий партнер, адвокат</div>
+		<div class="main-case-text">Представляли интересы компании «Стройтрансгаз» по иску «Газпрома» о возврате акций стоимостью <span>более 1 млрд долларов</span></div>
+	</div>
+	<div class="main-case main-case-2">
+		<div class="main-case-photo"><img src="/img/main2.jpg"></div>
+		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Плетнев Владимир Юрьевич</a></div>
+		<div class="main-case-position">Партнер, адвокат</div>
+		<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</span></div>
+	</div>
+	<div class="main-case main-case-3">
+		<div class="main-case-photo"><img src="/img/main3.jpg"></div>
+		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Шаманский Олег Александрович</a></div>
+		<div class="main-case-position">Управляющий партнер, адвокат</div>
+		<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</div>
+	</div>
+	<div class="main-case main-case-4">
+		<div class="main-case-photo"><img src="/img/main4.jpg"></div>
+		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Туктамишев Сергей Борисович</a></div>
+		<div class="main-case-position">Руководитель корпоративной практики, старший партнер, адвокат</div>
+		<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</div>
+	</div>
 {%- endblock %}
