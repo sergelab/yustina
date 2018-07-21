@@ -8,9 +8,10 @@ from flask import Blueprint, current_app, flash, g, redirect, render_template,\
 
 from flask_babel import gettext as _, lazy_gettext as __
 from flask_login import current_user, login_required, login_user, logout_user
-from yustina.init import app, db, lm
-
+from yustina.forms.settings import SettingsForm
 from yustina.forms.users import LoginForm
+from yustina.init import app, db, lm
+from yustina.models.settings import Settings, SettingsHelper
 
 
 admin = Blueprint('admin',
@@ -95,14 +96,16 @@ def admin_before_request():
                       description=_('Workcases list dashboard description'),
                       view='admin.cases_cases')
              ]),
+        dict(title=_('Settings nav option'),
+             desciption=_('Settings dashboard description'),
+             view='admin.settings')
     ]
 
 
 @admin.route('/')
 @login_required
 def index():
-    """
-    Главная страница панели управления.
+    """ Главная страница панели управления.
     """
     return render_template('admin/index.j2')
 
@@ -110,14 +113,15 @@ def index():
 @admin.route('/logout')
 @login_required
 def logout():
+    """ Выход из панели управления.
+    """
     logout_user()
     return redirect(url_for('admin.index'))
 
 
 @admin.route('/login', methods=['GET', 'POST'])
 def login():
-    """
-    Вход в панель управления.
+    """ Вход в панель управления.
     """
     if current_user.is_authenticated:
         return redirect(url_for(entry_point))
@@ -133,4 +137,27 @@ def login():
             flash('Logging failed.')
 
     return render_template('admin/auth/login.j2',
+                           form=form)
+
+
+@admin.route('/settings', methods=['GET', 'POST'])
+def settings():
+    settings = Settings.query.all()
+    helper = SettingsHelper(settings)
+    form = SettingsForm.generate_form(settings, obj=helper)
+
+    if form.validate_on_submit():
+        print(request.form)
+        form.populate_obj(helper)
+        try:
+            db.session.commit()
+        except Exception as e:
+            db.session.rollback()
+            current_app.logger.exception(e)
+            flash(_('Can''t save settings fail message'), 'danger')
+        else:
+            flash(_('Settings saved successfully message'), 'success')
+            return redirect(url_for('admin.settings'))
+
+    return render_template('admin/settings/settings.j2',
                            form=form)
