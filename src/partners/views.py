@@ -5,11 +5,12 @@ from collections import OrderedDict
 from flask import (abort,
                    Blueprint,
                    render_template)
-from persons.admin import *
 from yustina.models.persons import Person
 
+from .admin import *
 
-bp = Blueprint('persons', __name__, template_folder='templates', url_prefix='/persons')
+
+bp = Blueprint('partners', __name__, template_folder='templates', url_prefix='/partners')
 
 
 @bp.route('/')
@@ -19,6 +20,7 @@ def persons():
         abort(404)
 
     persons = Person.available_list().all()
+    print(persons)
     if not persons:
         abort(404)
 

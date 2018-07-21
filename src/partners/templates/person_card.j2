@@ -1,32 +1,20 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
-    <div class="person-card-person" style="background-image: linear-gradient(90deg, #fff, #fff 40%, rgba(255,255,255,0) 60%, transparent ){% if person.photo.original() %}, url({{ url_for('public', filename=person.photo.original()) }});{% endif %}">
-		<h1>{{ person.fullname }}</h1>
-		<div class="person-card-position">
+    <div class="person-list-person" style="background-image: url(/img/IMG_2671.jpg);">
+		<h3 class="person-list-name">
+			<a href="{{ url_for('partners.person_card', slug=person.slug) }}">{{ person.fullname }}</a>
+		</h3>
+		<div class="person-list-position">
 			{{ person.positions_as_text() }}
 		</div>
         {% if person.specialty -%}
-            <div class="person-card-specialization">
+            <div class="person-list-specialty">
                 {{ person.specialty }}
             </div>
         {%- endif %}
-        {% if person.registry_no %}
-            <div class="person-card-id">
-                {{ person.registry_no }}
-            </div>
-        {%- endif %}
-        {% if workcases -%}
-            <div class="person-card-cases">
-                {% for wc in workcases -%}
-                    <a href="#">{{ wc.title }}</a>{% if not loop.last %}, {% endif %}
-                {%- endfor %}
-            </div>
-        {%- endif %}
+		<div class="person-list-brief-cv">
+			{{ person.bio|textile }}
+		</div>
 	</div>
-    {% if person.bio -%}
-        <div class="person-card-bio">
-            {{ person.bio|textile }}
-        </div>
-    {%- endif %}
 {%- endblock %}

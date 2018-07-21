@@ -37,7 +37,8 @@
                             <table class="uk-width-1-1">
                                 <tbody>
                                     <tr>
-                                        <td class="uk-width-9-10">{{ render_field(form.name, label=False, disabled=position.in_trash) }}</td>
+                                        <td class="uk-width-5-10">{{ render_field(form.name, label=True, disabled=position.in_trash) }}</td>
+                                        <td class="uk-width-5-10">{{ render_field(form.heading, label=True, disabled=position.in_trash) }}</td>
                                         <td class="uk-text-center uk-width-1-10">{{ render_field(form.public_group, label=False, disabled=position.in_trash) }}</td>
                                     </tr>
                                 </tbody>
@@ -54,12 +55,19 @@
                             <table class="uk-width-1-1">
                                 <tbody>
                                     <tr>
-                                        <td class="uk-width-9-10">
+                                        <td class="uk-width-5-10">
                                             {% if position_id == pos.id -%}
-                                                {{ render_field(form.name, label=False, disabled=position.in_trash) }}
+                                                {{ render_field(form.name, label=True, disabled=position.in_trash) }}
                                             {%- else -%}
                                                 {{ render_trash_icon(pos.in_trash) }}
                                                 <a href="{{ url_for('admin.persons_manage_position', position_id=pos.id) }}">{{ pos.name }}</a>
+                                            {%- endif %}
+                                        </td>
+                                        <td class="uk-width-5-10">
+                                            {% if position_id == pos.id -%}
+                                                {{ render_field(form.heading, label=True, disabled=position.in_trash) }}
+                                            {%- else -%}
+                                                {{ pos.heading }}
                                             {%- endif %}
                                         </td>
                                         <td class="uk-text-center uk-width-1-10">

@@ -2,12 +2,12 @@
 
 {% block content -%}
     {% for group in grouped_persons.values() if group['persons']|length > 0 -%}
-        <h2>{{ group['position'].name }}</h2>
+        <h2>{{ group['position'].heading }}</h2>
 
         {% for person in group['persons'] -%}
             <div class="person-list-person"{% if person.list_photo.original() %} style="background-image: url({{ url_for('public', filename=person.list_photo.original()) }});"{% endif %}>
                 <h3 class="person-list-name">
-                    <a href="{{ url_for('persons.person_card', slug=person.slug) }}">{{ person.fullname }}</a>
+                    <a href="{{ url_for('partners.person_card', slug=person.slug) }}">{{ person.fullname }}</a>
                 </h3>
                 <div class="person-list-position">
                     {{ person.positions_as_text() }}
