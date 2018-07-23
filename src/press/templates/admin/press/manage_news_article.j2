@@ -3,7 +3,7 @@
 {% from 'admin/api/forms.j2' import render_field %}
 
 {% set form_action = url_for('admin.press_manage_article', article_id=article_id) %}
-{% block page_title %}{{ _('Add news article heading') if not article_id else article.title }}{% endblock %}
+{% block page_title %}{{ _('Add news article heading') if not article_id else article.title|truncate(30, end='...') }}{% endblock %}
 
 {% block page_buttons %}
     {% if not article.in_trash -%}

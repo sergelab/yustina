@@ -1,15 +1,29 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
+    <h1 class="float-right">{{ _('Press front heading') }}</h1>
+    <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}"></a>
+    <div class="clear-both"></div>
+
+    <div class="breadcrumbs">
+        <a href="{{ url_for('press.news') }}">{{ _('Press front heading') }}</a> | {{ article.title|truncate(30, '...') }}
+    </div>
+
     <div class="press-card-date">
-		{{ article.date_publishing }}
+		{{ article.date_publishing|date }}
 	</div>
-	<h1>{{ article.title }}</h1>
-	<img src="image.jpg" />
+
+	<h2 class="press-card-title">{{ article.title }}</h2>
+
+    <div class="press-card-image">
+        <div>
+	        <img src="{# TODO #}" />
+        </div>
+    </div>
     {% if article.annotation -%}
-	    <p class="press-card-announce">{{ article.annotation|safe }}</p>
+	    <div class="press-card-announce">{{ article.annotation|safe }}</div>
     {%- endif %}
     {% if article.content -%}
-	    <p class="press-card-text">{{ article.content|safe }}</p>
+	    <div class="press-card-description">{{ article.content|textile }}</div>
     {%- endif %}
 {%- endblock %}
