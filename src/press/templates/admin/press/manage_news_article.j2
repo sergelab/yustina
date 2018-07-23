@@ -2,7 +2,54 @@
 {% from 'admin/api/base.j2' import render_trashed %}
 {% from 'admin/api/forms.j2' import render_field %}
 
+{% block js -%}
+    {{ super() }}
+    <script type="text/javascript">
+        $(function() {
+            $('#list_photo.file-uploader').fileinput({
+                'allowedFileExtensions': ['jpg', 'jpeg', 'png', 'gif'],
+                'showUpload': false,
+                'showCancel': false,
+                {% if article.in_trash -%}
+                    'showBrowse': false,
+                    'showRemove': false,
+                    'showClose': false,
+                    'showCaption': false,
+                {%- endif %}
+                'previewZoomSettings': false,
+                {% if article.list_photo and article.list_photo.url -%}
+                    'initialPreview': [
+                        '<img class="file-preview-image" src="{{ url_for('public', filename=article.list_photo.preview()) }}" alt=""><input type="hidden" name="{{ form.list_photo.id }}" value="already" />'
+                    ],
+                    'overwriteInitial': true,
+                    'initialCaption': {{ article.list_photo.original_filename|tojson if article.list_photo.original_filename else ''|tojson }},
+                {%- endif %}
+            });
+            $('#photo.file-uploader').fileinput({
+                'allowedFileExtensions': ['jpg', 'jpeg', 'png', 'gif'],
+                'showUpload': false,
+                'showCancel': false,
+                {% if article.in_trash -%}
+                    'showBrowse': false,
+                    'showRemove': false,
+                    'showClose': false,
+                    'showCaption': false,
+                {%- endif %}
+                'previewZoomSettings': false,
+                {% if article.photo and article.photo.url -%}
+                    'initialPreview': [
+                        '<img class="file-preview-image" src="{{ url_for('public', filename=article.photo.preview()) }}" alt=""><input type="hidden" name="{{ form.photo.id }}" value="already" />'
+                    ],
+                    'overwriteInitial': true,
+                    'initialCaption': {{ article.photo.original_filename|tojson if article.photo.original_filename else ''|tojson }},
+                {%- endif %}
+            });
+        });
+    </script>
+{%- endblock %}
+
 {% set form_action = url_for('admin.press_manage_article', article_id=article_id) %}
+{% set form_enctype = 'multipart/form-data' %}
 {% block page_title %}{{ _('Add news article heading') if not article_id else article.title|truncate(30, end='...') }}{% endblock %}
 
 {% block page_buttons %}

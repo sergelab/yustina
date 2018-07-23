@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 
 from contrib.forms import Form, WidgetPrebind
+from contrib.forms.fields import UploadField
 from contrib.forms.widgets import date_widget_params
 from flask_babel import lazy_gettext as __
 from wtforms import DateField, StringField
@@ -34,6 +35,14 @@ class NewsArticleForm(Form):
             TextInput(),
             class_='uk-width-1-1'
         )
+    )
+    list_photo = UploadField(
+        __('News article list photo label'),
+        description=__('News article list photo description')
+    )
+    photo = UploadField(
+        __('News article photo label'),
+        description=__('News article photo description')
     )
     date_publishing = DateField(
         __('News article date label'),

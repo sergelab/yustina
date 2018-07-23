@@ -15,11 +15,13 @@
 
 	<h2 class="press-card-title">{{ article.title }}</h2>
 
-    <div class="press-card-image">
-        <div>
-	        <img src="{# TODO #}" />
+    {% if article.photo and article.photo.original() -%}
+        <div class="press-card-image">
+            <div>
+                <img src="{{ url_for('public', filename=article.photo.original()) }}">
+            </div>
         </div>
-    </div>
+    {%- endif %}
     {% if article.annotation -%}
 	    <div class="press-card-announce">{{ article.annotation|safe }}</div>
     {%- endif %}

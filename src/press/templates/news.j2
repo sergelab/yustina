@@ -11,13 +11,17 @@
 
             {% if news_article.content -%}
                 <a href="{{ url_for('press.news_article', slug=news_article.slug) }}">
-                    {# <img src="image.jpg" /> #}
+                    {% if news_article.list_photo and news_article.list_photo.preview() -%}
+                        <img src="{{ url_for('public', filename=news_article.list_photo.preview()) }}" />
+                    {%- endif %}
                     <h2>{{ news_article.title }}</h2>
                 </a>
 
                 <div>{{ news_article.annotation|safe }}</div>
             {%- else -%}
-                {# <img src="image.jpg" /> #}
+                {% if news_article.list_photo and news_article.list_photo.preview() -%}
+                    <img src="{{ url_for('public', filename=news_article.list_photo.preview()) }}" />
+                {%- endif %}
                 <h2>{{ news_article.title }}</h2>
 
                 <div>{{ news_article.annotation|safe }}</div>
