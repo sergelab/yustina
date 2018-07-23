@@ -82,6 +82,23 @@ deploy() {
     sqitch $URI
 }
 
+makemessages() {
+    ./bin/pybabel -vv extract -F ./src/yustina/config/translate.cfg -k lazy_gettext -k __ -o ./src/yustina/translations/messages.pot .
+    for locale in ru en; do
+        if [ -f "./src/yustina/translations/$locale/LC_MESSAGES/messages.po" ]; then
+            ./bin/pybabel update -i src/yustina/translations/messages.pot -d src/yustina/translations -l $locale
+        else
+            ./bin/pybabel init -i src/yustina/translations/messages.pot -d src/yustina/translations -l $locale
+        fi
+    done
+}
+
+compilemessages() {
+    for locale in ru en; do
+        ./bin/pybabel compile -d src/yustina/translations -l $locale
+    done
+}
+
 case "$1" in
     build)
         build $2 $3
@@ -91,6 +108,12 @@ case "$1" in
         ;;
     deploy)
         deploy
+        ;;
+    makemessages)
+        makemessages
+        ;;
+    compilemessages)
+        compilemessages
         ;;
     *)
         if [ $1 ]; then
