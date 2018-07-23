@@ -1,0 +1,49 @@
+{% extends 'admin/common_layout.j2' %}
+{% from 'admin/api/base.j2' import render_bool, render_trash_icon %}
+
+{%- set form_action = url_for('admin.navigation') -%}
+{% block page_title %}{{ _('Navigation options list heading') }}{% endblock %}
+{% block page_buttons %}
+    <button class="uk-button uk-button-success" name="save_order">{{ _('Save order button') }}</button>
+    <a href="{{ url_for('admin.manage_navigation_option') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
+{% endblock %}
+
+{% block page_content -%}
+    <div class="uk-overflow-container">
+        <div class="uk-sortable" data-uk-sortable>
+            {% if nav_options -%}
+                {% for option in nav_options %}
+                    <div class="uk-margin-small-bottom">
+                        <div class="uk-panel uk-panel-box uk-width-1-1">
+                            <div class="uk-margin-small-left uk-margin-small-right">
+                                <table class="uk-width-1-1">
+                                    <tbody>
+                                        <tr>
+                                            <td class="uk-width-4-10">
+                                                {{ render_trash_icon(option.in_trash) }}
+                                                {{ render_bool(option.ru_activity) }}&emsp;
+                                                <a href="{{ url_for('admin.manage_navigation_option', option_id=option.id) }}">{{ option.ru_caption }}</a>
+                                            </td>
+                                            <td class="uk-width-4-10">
+                                                {{ render_bool(option.en_activity) }}&emsp;
+                                                <a href="{{ url_for('admin.manage_navigation_option', option_id=option.id) }}">{{ option.en_caption }}</a>
+                                            </td>
+                                            <td class="uk-width-4-10">
+                                                <a href="{{ url_for(option.route, **option.route_params) }}" target="_blank">
+                                                    {{ url_for(option.route, **option.route_params) }}
+                                                </a> <span class="uk-icon-external-link"></span>
+                                            </td>
+                                            <td class="uk-width-1-10">
+                                                <input type="hidden" name="priority" value="{{ option.id }}" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {%- endif %}
+        </div>
+    </div>
+{%- endblock %}
