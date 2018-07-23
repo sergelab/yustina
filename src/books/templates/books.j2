@@ -1,4 +1,21 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
+    <h1 class="float-right">{{ _('Books front heading') }}</h1>
+    <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}"></a>
+    <div class="clear-both"></div>
+
+    {% for book in books -%}
+        <a href="{{ url_for('books.book_card', slug=book.slug) }}">
+            <h2>{{ book.title }}</h2>
+        </a>
+        <div class="book-list-authors">
+            {{ book.authors_list(front=True) }}
+        </div>
+        <div>
+            {% if book.annotation -%}
+                {{ book.annotation|textile }}
+            {%- endif %}
+        </div>
+    {%- endfor %}
 {%- endblock %}
