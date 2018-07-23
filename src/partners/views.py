@@ -14,7 +14,7 @@ bp = Blueprint('partners', __name__, template_folder='templates', url_prefix='/p
 
 
 @bp.route('/')
-def persons():
+def partners():
     positions = Position.available_list().all()
     if not positions:
         abort(404)
@@ -55,7 +55,7 @@ def persons():
 
 
 @bp.route('/<path:slug>')
-def person_card(slug):
+def partner_card(slug):
     person_query = Person.available_list(with_positions=True)
     person_query = person_query.filter(
         Person.slug == slug
