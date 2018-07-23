@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-23 14:25+0300\n"
+"POT-Creation-Date: 2018-07-23 17:26+0300\n"
 "PO-Revision-Date: 2018-07-21 22:02+0300\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -250,7 +250,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/practics.j2:11
 #: src/partners/templates/admin/persons/manage_person.j2:57
 #: src/partners/templates/admin/persons/positions.j2:11
-#: src/press/templates/admin/press/manage_news_article.j2:10
+#: src/press/templates/admin/press/manage_news_article.j2:57
 msgid "Save button"
 msgstr ""
 
@@ -261,7 +261,7 @@ msgstr ""
 #: src/books/templates/admin/books/manage_series.j2:11
 #: src/cases/templates/admin/cases/manage_case.j2:11
 #: src/partners/templates/admin/persons/manage_person.j2:58
-#: src/press/templates/admin/press/manage_news_article.j2:11
+#: src/press/templates/admin/press/manage_news_article.j2:58
 msgid "Save and continue button"
 msgstr ""
 
@@ -276,7 +276,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/practics.j2:15
 #: src/partners/templates/admin/persons/manage_person.j2:62
 #: src/partners/templates/admin/persons/positions.j2:15
-#: src/press/templates/admin/press/manage_news_article.j2:15
+#: src/press/templates/admin/press/manage_news_article.j2:62
 msgid "Object in trash string"
 msgstr ""
 
@@ -291,7 +291,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/practics.j2:16
 #: src/partners/templates/admin/persons/manage_person.j2:63
 #: src/partners/templates/admin/persons/positions.j2:16
-#: src/press/templates/admin/press/manage_news_article.j2:16
+#: src/press/templates/admin/press/manage_news_article.j2:63
 msgid "Restore button"
 msgstr ""
 
@@ -306,7 +306,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/practics.j2:18
 #: src/partners/templates/admin/persons/manage_person.j2:65
 #: src/partners/templates/admin/persons/positions.j2:18
-#: src/press/templates/admin/press/manage_news_article.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:65
 msgid "Delete button"
 msgstr ""
 
@@ -321,7 +321,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/practics.j2:18
 #: src/partners/templates/admin/persons/manage_person.j2:65
 #: src/partners/templates/admin/persons/positions.j2:18
-#: src/press/templates/admin/press/manage_news_article.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:65
 msgid "In trash button"
 msgstr ""
 
@@ -336,7 +336,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/practics.j2:20
 #: src/partners/templates/admin/persons/manage_person.j2:67
 #: src/partners/templates/admin/persons/positions.j2:20
-#: src/press/templates/admin/press/manage_news_article.j2:20
+#: src/press/templates/admin/press/manage_news_article.j2:67
 msgid "Cancel button"
 msgstr ""
 
@@ -732,7 +732,7 @@ msgstr ""
 msgid "Press front heading"
 msgstr ""
 
-#: src/press/templates/admin/press/manage_news_article.j2:6
+#: src/press/templates/admin/press/manage_news_article.j2:53
 msgid "Add news article heading"
 msgstr ""
 
@@ -905,11 +905,11 @@ msgstr ""
 msgid "Position public group label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:46 src/yustina/forms/press.py:14
+#: src/yustina/forms/persons.py:46 src/yustina/forms/press.py:15
 msgid "Slug label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:53 src/yustina/forms/press.py:21
+#: src/yustina/forms/persons.py:53 src/yustina/forms/press.py:22
 msgid "Slug description"
 msgstr ""
 
@@ -957,31 +957,47 @@ msgstr ""
 msgid "Person card photo description"
 msgstr ""
 
-#: src/yustina/forms/press.py:24
+#: src/yustina/forms/press.py:25
 msgid "News article title label"
 msgstr ""
 
-#: src/yustina/forms/press.py:32
+#: src/yustina/forms/press.py:33
 msgid "News article subtitle label"
 msgstr ""
 
-#: src/yustina/forms/press.py:39
-msgid "News article date label"
+#: src/yustina/forms/press.py:40
+msgid "News article list photo label"
+msgstr ""
+
+#: src/yustina/forms/press.py:41
+msgid "News article list photo description"
+msgstr ""
+
+#: src/yustina/forms/press.py:44
+msgid "News article photo label"
+msgstr ""
+
+#: src/yustina/forms/press.py:45
+msgid "News article photo description"
 msgstr ""
 
 #: src/yustina/forms/press.py:48
+msgid "News article date label"
+msgstr ""
+
+#: src/yustina/forms/press.py:57
 msgid "News article annotation label"
 msgstr ""
 
-#: src/yustina/forms/press.py:56
+#: src/yustina/forms/press.py:65
 msgid "News article content label"
 msgstr ""
 
-#: src/yustina/forms/press.py:64
+#: src/yustina/forms/press.py:73
 msgid "News article source label"
 msgstr ""
 
-#: src/yustina/forms/press.py:71
+#: src/yustina/forms/press.py:80
 msgid "News article source link label"
 msgstr ""
 

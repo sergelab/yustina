@@ -7,18 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-23 14:25+0300\n"
+"POT-Creation-Date: 2018-07-23 17:26+0300\n"
 "PO-Revision-Date: 2018-07-23 14:26+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-"X-Generator: Poedit 2.0.9\n"
 
 #: src/admin/views.py:58
 msgid "Persons nav option"
@@ -252,7 +251,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/practics.j2:11
 #: src/partners/templates/admin/persons/manage_person.j2:57
 #: src/partners/templates/admin/persons/positions.j2:11
-#: src/press/templates/admin/press/manage_news_article.j2:10
+#: src/press/templates/admin/press/manage_news_article.j2:57
 msgid "Save button"
 msgstr "Сохранить"
 
@@ -263,7 +262,7 @@ msgstr "Сохранить"
 #: src/books/templates/admin/books/manage_series.j2:11
 #: src/cases/templates/admin/cases/manage_case.j2:11
 #: src/partners/templates/admin/persons/manage_person.j2:58
-#: src/press/templates/admin/press/manage_news_article.j2:11
+#: src/press/templates/admin/press/manage_news_article.j2:58
 msgid "Save and continue button"
 msgstr "Сохранить и продолжить"
 
@@ -278,7 +277,7 @@ msgstr "Сохранить и продолжить"
 #: src/cases/templates/admin/cases/practics.j2:15
 #: src/partners/templates/admin/persons/manage_person.j2:62
 #: src/partners/templates/admin/persons/positions.j2:15
-#: src/press/templates/admin/press/manage_news_article.j2:15
+#: src/press/templates/admin/press/manage_news_article.j2:62
 msgid "Object in trash string"
 msgstr "Объект в корзине"
 
@@ -293,7 +292,7 @@ msgstr "Объект в корзине"
 #: src/cases/templates/admin/cases/practics.j2:16
 #: src/partners/templates/admin/persons/manage_person.j2:63
 #: src/partners/templates/admin/persons/positions.j2:16
-#: src/press/templates/admin/press/manage_news_article.j2:16
+#: src/press/templates/admin/press/manage_news_article.j2:63
 msgid "Restore button"
 msgstr "Восстановить"
 
@@ -308,7 +307,7 @@ msgstr "Восстановить"
 #: src/cases/templates/admin/cases/practics.j2:18
 #: src/partners/templates/admin/persons/manage_person.j2:65
 #: src/partners/templates/admin/persons/positions.j2:18
-#: src/press/templates/admin/press/manage_news_article.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:65
 msgid "Delete button"
 msgstr "Удалить"
 
@@ -323,7 +322,7 @@ msgstr "Удалить"
 #: src/cases/templates/admin/cases/practics.j2:18
 #: src/partners/templates/admin/persons/manage_person.j2:65
 #: src/partners/templates/admin/persons/positions.j2:18
-#: src/press/templates/admin/press/manage_news_article.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:65
 msgid "In trash button"
 msgstr "В корзину"
 
@@ -338,7 +337,7 @@ msgstr "В корзину"
 #: src/cases/templates/admin/cases/practics.j2:20
 #: src/partners/templates/admin/persons/manage_person.j2:67
 #: src/partners/templates/admin/persons/positions.j2:20
-#: src/press/templates/admin/press/manage_news_article.j2:20
+#: src/press/templates/admin/press/manage_news_article.j2:67
 msgid "Cancel button"
 msgstr "Отменить"
 
@@ -734,7 +733,7 @@ msgstr "Должности"
 msgid "Press front heading"
 msgstr "Пресс-центр"
 
-#: src/press/templates/admin/press/manage_news_article.j2:6
+#: src/press/templates/admin/press/manage_news_article.j2:53
 msgid "Add news article heading"
 msgstr "Добавление новости"
 
@@ -907,11 +906,11 @@ msgstr ""
 msgid "Position public group label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:46 src/yustina/forms/press.py:14
+#: src/yustina/forms/persons.py:46 src/yustina/forms/press.py:15
 msgid "Slug label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:53 src/yustina/forms/press.py:21
+#: src/yustina/forms/persons.py:53 src/yustina/forms/press.py:22
 msgid "Slug description"
 msgstr ""
 
@@ -959,31 +958,47 @@ msgstr ""
 msgid "Person card photo description"
 msgstr ""
 
-#: src/yustina/forms/press.py:24
+#: src/yustina/forms/press.py:25
 msgid "News article title label"
 msgstr "Заголовок новости"
 
-#: src/yustina/forms/press.py:32
+#: src/yustina/forms/press.py:33
 msgid "News article subtitle label"
 msgstr "Подзаголовок новости"
 
-#: src/yustina/forms/press.py:39
+#: src/yustina/forms/press.py:40
+msgid "News article list photo label"
+msgstr ""
+
+#: src/yustina/forms/press.py:41
+msgid "News article list photo description"
+msgstr ""
+
+#: src/yustina/forms/press.py:44
+msgid "News article photo label"
+msgstr ""
+
+#: src/yustina/forms/press.py:45
+msgid "News article photo description"
+msgstr ""
+
+#: src/yustina/forms/press.py:48
 msgid "News article date label"
 msgstr "Дата новости"
 
-#: src/yustina/forms/press.py:48
+#: src/yustina/forms/press.py:57
 msgid "News article annotation label"
 msgstr "Аннотация новости"
 
-#: src/yustina/forms/press.py:56
+#: src/yustina/forms/press.py:65
 msgid "News article content label"
 msgstr "Содержание новости"
 
-#: src/yustina/forms/press.py:64
+#: src/yustina/forms/press.py:73
 msgid "News article source label"
 msgstr "Источник"
 
-#: src/yustina/forms/press.py:71
+#: src/yustina/forms/press.py:80
 msgid "News article source link label"
 msgstr "Источник"
 
@@ -1080,3 +1095,4 @@ msgstr "Профессионализм. Репутация. Опыт."
 #~ msgstr[0] "<span>&emsp;&emsp;%(num_cases)d</span> дело&emsp;<br />"
 #~ msgstr[1] ""
 #~ msgstr[2] ""
+
