@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-23 17:26+0300\n"
+"POT-Creation-Date: 2018-07-23 18:34+0300\n"
 "PO-Revision-Date: 2018-07-21 22:02+0300\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -510,6 +510,10 @@ msgstr ""
 msgid "Book saved successfully message"
 msgstr ""
 
+#: src/books/templates/books.j2:4
+msgid "Books front heading"
+msgstr ""
+
 #: src/books/templates/admin/books/books.j2:5
 msgid "Books list heading"
 msgstr ""
@@ -701,6 +705,10 @@ msgstr ""
 
 #: src/partners/admin.py:182
 msgid "Person saved successfully message"
+msgstr ""
+
+#: src/partners/templates/person_card.j2:19
+msgid "Biography front link"
 msgstr ""
 
 #: src/partners/templates/admin/persons/manage_person.j2:53
