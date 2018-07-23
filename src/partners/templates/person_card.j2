@@ -1,20 +1,61 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
-    <div class="person-list-person" style="background-image: url(/img/IMG_2671.jpg);">
-		<h3 class="person-list-name">
-			<a href="{{ url_for('partners.partner_card', slug=person.slug) }}">{{ person.fullname }}</a>
-		</h3>
-		<div class="person-list-position">
-			{{ person.positions_as_text() }}
-		</div>
-        {% if person.specialty -%}
-            <div class="person-list-specialty">
-                {{ person.specialty }}
+    <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}" /></a>
+	<div class="clear-both"></div>
+
+    <div class="person-card-person">
+        <video autoplay="true" loop="true" style="background-image: url({{ url_for('public', filename=person.list_photo.original() if person.list_photo else None) }});">
+            <source src="{{ url_for('public', filename=person.video.original() if person.video else None) }}" />
+        </video>
+		<h3 class="person-card-info">
+			<div>
+                <h1>{{ person.fullname }}</h1>
+                <div class="person-card-position">
+                    {{ person.positions_as_text() }}
+                </div>
+                {% if person.bio -%}
+                    <div class="bio-link">
+                        <a href="#bio">{{ _('Biography front link') }}</a>
+                    </div>
+                {%- endif %}
+                <div class="person-card-specialization">
+                    {{ person.specialty|textile }}
+                </div>
             </div>
-        {%- endif %}
-		<div class="person-list-brief-cv">
-			{{ person.bio|textile }}
+		</h3>
+	</div>
+
+    <div id="person-card-slider">
+		<div id="viewport">
+			<ul>
+				<li>
+					<p>Представлял интересы клиентов в судах всех уровней, включая Высший Арбитражный Суд Российской Федерации, Верховный суд Российской Федерации, а также в Международном коммерческом арбитражном суде при Торгово-промышленной палате РФ.</p>
+					<p><big>Дело закончено мировым соглашением.</big></p>
+				</li>
+				<li>
+					<p>Представлял интересы клиентов в судах всех уровней, включая Высший Арбитражный Суд Российской Федерации, Верховный суд Российской Федерации, а также в Международном коммерческом арбитражном суде при Торгово-промышленной палате РФ.</p>
+					<p><big>Дело закончено мировым соглашением.</big></p>
+				</li>
+				<li>
+					<p>Представлял интересы клиентов в судах всех уровней, включая Высший Арбитражный Суд Российской Федерации, Верховный суд Российской Федерации, а также в Международном коммерческом арбитражном суде при Торгово-промышленной палате РФ.</p>
+					<p><big>Дело закончено мировым соглашением.</big></p>
+				</li>
+				<li>
+					<p>Представлял интересы клиентов в судах всех уровней, включая Высший Арбитражный Суд Российской Федерации, Верховный суд Российской Федерации, а также в Международном коммерческом арбитражном суде при Торгово-промышленной палате РФ.</p>
+					<p>Представлял интересы клиентов в судах всех уровней, включая Высший Арбитражный Суд Российской Федерации, Верховный суд Российской Федерации, а также в Международном коммерческом арбитражном суде при Торгово-промышленной палате РФ.</p>
+					<p><big>Дело закончено мировым соглашением.</big></p>
+				</li>
+			</ul>
 		</div>
+	</div>
+
+    <div id="bio" class="person-card-bio">
+        {% if person.photo and person.photo.original() -%}
+		    <img src="{{ url_for('public', filename=person.photo.original()) }}">
+        {%- endif %}
+        {% if person.bio -%}
+            {{ person.bio|textile }}
+        {%- endif %}
 	</div>
 {%- endblock %}
