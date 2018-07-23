@@ -119,7 +119,8 @@ class PersonForm(Form):
         __('Person card photo label'),
         description=__('Person card photo description')
     )
-    #video = UploadField(
-    #    __('Person video label'),
-    #    description=__('Person video description')
-    #)
+    video = UploadField(
+        __('Person video label'),
+        make_preview=False,
+        description=__('Person video description')
+    )
