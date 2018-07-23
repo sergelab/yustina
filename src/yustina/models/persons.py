@@ -111,6 +111,17 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
             fio.append(self.middlename)
         return ' '.join(fio)
 
+    @property
+    def fullname_initials(self):
+        fio = []
+        if self.surname:
+            fio.append(self.surname)
+        if self.firstname:
+            fio.append(u'{0}.'.format(self.firstname[:1].capitalize()))
+        if self.middlename:
+            fio.append(u'{0}.'.format(self.middlename[:1].capitalize()))
+        return ' '.join(fio)
+
     def positions_as_text(self):
         if self.positions:
             return ', '.join([p.name for p in self.positions])
