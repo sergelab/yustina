@@ -26,7 +26,7 @@
                             <br /><span class="uk-text-small uk-text-muted">{{ person.positions_as_text() }}</span>
                         </td>
                         <td>
-                            <a href="{{ url_for('partners.person_card', slug=person.slug) }}" target="_blank">{{ person.slug }}</a>&nbsp;<span class="uk-icon-external-link"></span>
+                            <a href="{{ url_for('partners.partner_card', slug=person.slug) }}" target="_blank">{{ person.slug }}</a>&nbsp;<span class="uk-icon-external-link"></span>
                         </td>
                     </tr>
                 {%- endfor %}
