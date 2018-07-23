@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-22 04:06+0300\n"
+"POT-Creation-Date: 2018-07-23 14:25+0300\n"
 "PO-Revision-Date: 2018-07-21 22:02+0300\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -725,6 +725,11 @@ msgstr ""
 
 #: src/partners/templates/admin/persons/positions.j2:7
 msgid "Positions list heading"
+msgstr ""
+
+#: src/press/templates/news.j2:4 src/press/templates/news_article.j2:4
+#: src/press/templates/news_article.j2:9
+msgid "Press front heading"
 msgstr ""
 
 #: src/press/templates/admin/press/manage_news_article.j2:6
