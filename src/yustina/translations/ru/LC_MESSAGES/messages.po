@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-21 23:05+0300\n"
-"PO-Revision-Date: 2018-07-21 23:06+0300\n"
+"POT-Creation-Date: 2018-07-22 04:06+0300\n"
+"PO-Revision-Date: 2018-07-22 04:09+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -20,132 +20,196 @@ msgstr ""
 "Generated-By: Babel 2.3.4\n"
 "X-Generator: Poedit 2.0.9\n"
 
-#: src/admin/views.py:50
+#: src/admin/views.py:58
 msgid "Persons nav option"
 msgstr "Персоны"
 
-#: src/admin/views.py:51
+#: src/admin/views.py:59
 msgid "Persons dashboard description"
 msgstr ""
 
-#: src/admin/views.py:53
+#: src/admin/views.py:61
 msgid "Positions list nav option"
 msgstr "Должности"
 
-#: src/admin/views.py:54
+#: src/admin/views.py:62
 msgid "Positions list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:56
+#: src/admin/views.py:64
 msgid "Persons list nav option"
 msgstr "Персоны"
 
-#: src/admin/views.py:57
+#: src/admin/views.py:65
 msgid "Persons list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:60
+#: src/admin/views.py:68
 msgid "Books nav option"
 msgstr "Книги"
 
-#: src/admin/views.py:61
+#: src/admin/views.py:69
 msgid "Books dashboard description"
 msgstr ""
 
-#: src/admin/views.py:63
+#: src/admin/views.py:71
 msgid "Books series list nav option"
 msgstr "Серии книг"
 
-#: src/admin/views.py:64
+#: src/admin/views.py:72
 msgid "Books series list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:66
+#: src/admin/views.py:74
 msgid "Books list nav option"
 msgstr "Книги"
 
-#: src/admin/views.py:67
+#: src/admin/views.py:75
 msgid "Books list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:70
+#: src/admin/views.py:78
 msgid "Analytics nav option"
 msgstr "Аналитика"
 
-#: src/admin/views.py:71
+#: src/admin/views.py:79
 msgid "Analytics dashboard description"
 msgstr " "
 
-#: src/admin/views.py:73
+#: src/admin/views.py:81
 msgid "Analytics themes list nav option"
 msgstr "Темы аналитических материалов"
 
-#: src/admin/views.py:74
+#: src/admin/views.py:82
 msgid "Analytics themes list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:76
+#: src/admin/views.py:84
 msgid "Analytics list nav option"
 msgstr "Аналитические материалы"
 
-#: src/admin/views.py:77
+#: src/admin/views.py:85
 msgid "Analytics list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:80
+#: src/admin/views.py:88
 msgid "Press nav option"
 msgstr "Пресс-центр"
 
-#: src/admin/views.py:81
+#: src/admin/views.py:89
 msgid "Press dashboard description"
 msgstr ""
 
-#: src/admin/views.py:83
+#: src/admin/views.py:91
 msgid "Content nav option"
 msgstr "Статьи"
 
-#: src/admin/views.py:84
+#: src/admin/views.py:92
 msgid "Content dashboard description"
 msgstr ""
 
-#: src/admin/views.py:86
+#: src/admin/views.py:94
 msgid "Workcases nav option"
 msgstr "Дела"
 
-#: src/admin/views.py:87
+#: src/admin/views.py:95
 msgid "Workcases dashboard description"
 msgstr ""
 
-#: src/admin/views.py:89
+#: src/admin/views.py:97
 msgid "Practics list nav option"
 msgstr "Практики"
 
-#: src/admin/views.py:90
+#: src/admin/views.py:98
 msgid "Practics list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:92
+#: src/admin/views.py:100
 msgid "Branches list nav option"
 msgstr "Отрасли"
 
-#: src/admin/views.py:93
+#: src/admin/views.py:101
 msgid "Branches list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:95
+#: src/admin/views.py:103
 msgid "Workcases list nav option"
 msgstr "Дела"
 
-#: src/admin/views.py:96
+#: src/admin/views.py:104
 msgid "Workcases list dashboard description"
 msgstr ""
 
-#: src/admin/views.py:154
+#: src/admin/views.py:107
+msgid "Settings nav option"
+msgstr ""
+
+#: src/admin/views.py:108
+msgid "Settings dashboard description"
+msgstr ""
+
+#: src/admin/views.py:110
+msgid "Navigation nav option"
+msgstr ""
+
+#: src/admin/views.py:111
+msgid "Navigation dashboard description"
+msgstr ""
+
+#: src/admin/views.py:169
 msgid "Cant save settings fail message"
 msgstr ""
 
-#: src/admin/views.py:156
+#: src/admin/views.py:171
 msgid "Settings saved successfully message"
+msgstr ""
+
+#: src/admin/views.py:198
+msgid "Error the save order message"
+msgstr ""
+
+#: src/admin/views.py:200 src/partners/admin.py:30
+msgid "Order saved successfully message"
+msgstr ""
+
+#: src/admin/views.py:216
+msgid "Navigation option not found message"
+msgstr ""
+
+#: src/admin/views.py:232 src/analytics/admin.py:58 src/analytics/admin.py:144
+#: src/articles/admin.py:58 src/books/admin.py:55 src/books/admin.py:135
+#: src/cases/admin.py:55 src/cases/admin.py:137 src/cases/admin.py:218
+#: src/partners/admin.py:69 src/partners/admin.py:149 src/press/admin.py:58
+msgid "Error then delete object message"
+msgstr "Не удалось удалить объект."
+
+#: src/admin/views.py:234 src/analytics/admin.py:60 src/analytics/admin.py:146
+#: src/articles/admin.py:60 src/books/admin.py:57 src/books/admin.py:137
+#: src/cases/admin.py:57 src/cases/admin.py:139 src/cases/admin.py:220
+#: src/partners/admin.py:71 src/partners/admin.py:151 src/press/admin.py:60
+msgid "Delete object successfully message"
+msgstr "Объект удален."
+
+#: src/admin/views.py:244 src/analytics/admin.py:70 src/analytics/admin.py:156
+#: src/articles/admin.py:70 src/books/admin.py:67 src/books/admin.py:147
+#: src/cases/admin.py:67 src/cases/admin.py:149 src/cases/admin.py:230
+#: src/partners/admin.py:81 src/partners/admin.py:161 src/press/admin.py:70
+msgid "Error then restore object message"
+msgstr "Не удалось восстановить объект."
+
+#: src/admin/views.py:246 src/analytics/admin.py:72 src/analytics/admin.py:158
+#: src/articles/admin.py:72 src/books/admin.py:69 src/books/admin.py:149
+#: src/cases/admin.py:69 src/cases/admin.py:151 src/cases/admin.py:232
+#: src/partners/admin.py:83 src/partners/admin.py:163 src/press/admin.py:72
+msgid "Restore object successfully message"
+msgstr "Объект восстановлен"
+
+#: src/admin/views.py:262
+msgid "Can't save navigation option message"
+msgstr ""
+
+#: src/admin/views.py:264
+msgid "Navigation option saved successfully message"
 msgstr ""
 
 #: src/admin/templates/admin/common.j2:4
@@ -168,10 +232,15 @@ msgstr "Показать"
 msgid "Hide"
 msgstr "Скрыть"
 
-#: src/admin/templates/admin/settings/settings.j2:4
-msgid "Settings heading"
-msgstr "Настройки сайта"
+#: src/admin/templates/admin/navigation/manage_option.j2:6
+msgid "Add navigation option heading"
+msgstr ""
 
+#: src/admin/templates/admin/navigation/manage_option.j2:6
+msgid "Edit navigation option heading"
+msgstr ""
+
+#: src/admin/templates/admin/navigation/manage_option.j2:10
 #: src/admin/templates/admin/settings/settings.j2:8
 #: src/analytics/templates/admin/analytics/manage_analytics.j2:10
 #: src/analytics/templates/admin/analytics/themes.j2:11
@@ -187,39 +256,125 @@ msgstr "Настройки сайта"
 msgid "Save button"
 msgstr "Сохранить"
 
-#: src/analytics/admin.py:40 src/articles/admin.py:39 src/cases/admin.py:37
+#: src/admin/templates/admin/navigation/manage_option.j2:11
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:11
+#: src/articles/templates/admin/articles/manage_article.j2:11
+#: src/books/templates/admin/books/manage_book.j2:11
+#: src/books/templates/admin/books/manage_series.j2:11
+#: src/cases/templates/admin/cases/manage_case.j2:11
+#: src/partners/templates/admin/persons/manage_person.j2:58
+#: src/press/templates/admin/press/manage_news_article.j2:11
+msgid "Save and continue button"
+msgstr "Сохранить и продолжить"
+
+#: src/admin/templates/admin/navigation/manage_option.j2:15
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:15
+#: src/analytics/templates/admin/analytics/themes.j2:15
+#: src/articles/templates/admin/articles/manage_article.j2:15
+#: src/books/templates/admin/books/manage_book.j2:15
+#: src/books/templates/admin/books/manage_series.j2:15
+#: src/cases/templates/admin/cases/branches.j2:15
+#: src/cases/templates/admin/cases/manage_case.j2:15
+#: src/cases/templates/admin/cases/practics.j2:15
+#: src/partners/templates/admin/persons/manage_person.j2:62
+#: src/partners/templates/admin/persons/positions.j2:15
+#: src/press/templates/admin/press/manage_news_article.j2:15
+msgid "Object in trash string"
+msgstr "Объект в корзине"
+
+#: src/admin/templates/admin/navigation/manage_option.j2:16
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:16
+#: src/analytics/templates/admin/analytics/themes.j2:16
+#: src/articles/templates/admin/articles/manage_article.j2:16
+#: src/books/templates/admin/books/manage_book.j2:16
+#: src/books/templates/admin/books/manage_series.j2:16
+#: src/cases/templates/admin/cases/branches.j2:16
+#: src/cases/templates/admin/cases/manage_case.j2:16
+#: src/cases/templates/admin/cases/practics.j2:16
+#: src/partners/templates/admin/persons/manage_person.j2:63
+#: src/partners/templates/admin/persons/positions.j2:16
+#: src/press/templates/admin/press/manage_news_article.j2:16
+msgid "Restore button"
+msgstr "Восстановить"
+
+#: src/admin/templates/admin/navigation/manage_option.j2:18
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:18
+#: src/analytics/templates/admin/analytics/themes.j2:18
+#: src/articles/templates/admin/articles/manage_article.j2:18
+#: src/books/templates/admin/books/manage_book.j2:18
+#: src/books/templates/admin/books/manage_series.j2:18
+#: src/cases/templates/admin/cases/branches.j2:18
+#: src/cases/templates/admin/cases/manage_case.j2:18
+#: src/cases/templates/admin/cases/practics.j2:18
+#: src/partners/templates/admin/persons/manage_person.j2:65
+#: src/partners/templates/admin/persons/positions.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:18
+msgid "Delete button"
+msgstr "Удалить"
+
+#: src/admin/templates/admin/navigation/manage_option.j2:18
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:18
+#: src/analytics/templates/admin/analytics/themes.j2:18
+#: src/articles/templates/admin/articles/manage_article.j2:18
+#: src/books/templates/admin/books/manage_book.j2:18
+#: src/books/templates/admin/books/manage_series.j2:18
+#: src/cases/templates/admin/cases/branches.j2:18
+#: src/cases/templates/admin/cases/manage_case.j2:18
+#: src/cases/templates/admin/cases/practics.j2:18
+#: src/partners/templates/admin/persons/manage_person.j2:65
+#: src/partners/templates/admin/persons/positions.j2:18
+#: src/press/templates/admin/press/manage_news_article.j2:18
+msgid "In trash button"
+msgstr "В корзину"
+
+#: src/admin/templates/admin/navigation/manage_option.j2:20
+#: src/analytics/templates/admin/analytics/manage_analytics.j2:20
+#: src/analytics/templates/admin/analytics/themes.j2:20
+#: src/articles/templates/admin/articles/manage_article.j2:20
+#: src/books/templates/admin/books/manage_book.j2:20
+#: src/books/templates/admin/books/manage_series.j2:20
+#: src/cases/templates/admin/cases/branches.j2:20
+#: src/cases/templates/admin/cases/manage_case.j2:20
+#: src/cases/templates/admin/cases/practics.j2:20
+#: src/partners/templates/admin/persons/manage_person.j2:67
+#: src/partners/templates/admin/persons/positions.j2:20
+#: src/press/templates/admin/press/manage_news_article.j2:20
+msgid "Cancel button"
+msgstr "Отменить"
+
+#: src/admin/templates/admin/navigation/navigation.j2:5
+msgid "Navigation options list heading"
+msgstr ""
+
+#: src/admin/templates/admin/navigation/navigation.j2:7
+#: src/partners/templates/admin/persons/positions.j2:22
+msgid "Save order button"
+msgstr ""
+
+#: src/admin/templates/admin/navigation/navigation.j2:8
+#: src/analytics/templates/admin/analytics/analytics.j2:8
+#: src/analytics/templates/admin/analytics/themes.j2:22
+#: src/articles/templates/admin/articles/articles.j2:8
+#: src/books/templates/admin/books/books.j2:8
+#: src/books/templates/admin/books/books_series.j2:8
+#: src/cases/templates/admin/cases/branches.j2:22
+#: src/cases/templates/admin/cases/cases.j2:8
+#: src/cases/templates/admin/cases/practics.j2:22
+#: src/partners/templates/admin/persons/persons.j2:8
+#: src/partners/templates/admin/persons/positions.j2:23
+#: src/press/templates/admin/press/news.j2:8
+msgid "Add button"
+msgstr "Добавить"
+
+#: src/admin/templates/admin/settings/settings.j2:4
+msgid "Settings heading"
+msgstr "Настройки сайта"
+
+#: src/analytics/admin.py:40 src/articles/admin.py:40 src/cases/admin.py:37
 #: src/cases/admin.py:119 src/cases/admin.py:201 src/partners/admin.py:51
 #: src/press/admin.py:40
 msgid "Object not found message"
 msgstr "Объект не найден."
-
-#: src/analytics/admin.py:58 src/analytics/admin.py:144
-#: src/articles/admin.py:57 src/books/admin.py:55 src/books/admin.py:135
-#: src/cases/admin.py:55 src/cases/admin.py:137 src/cases/admin.py:218
-#: src/partners/admin.py:69 src/partners/admin.py:149 src/press/admin.py:58
-msgid "Error then delete object message"
-msgstr "Не удалось удалить объект."
-
-#: src/analytics/admin.py:60 src/analytics/admin.py:146
-#: src/articles/admin.py:59 src/books/admin.py:57 src/books/admin.py:137
-#: src/cases/admin.py:57 src/cases/admin.py:139 src/cases/admin.py:220
-#: src/partners/admin.py:71 src/partners/admin.py:151 src/press/admin.py:60
-msgid "Delete object successfully message"
-msgstr "Объект удален."
-
-#: src/analytics/admin.py:70 src/analytics/admin.py:156
-#: src/articles/admin.py:69 src/books/admin.py:67 src/books/admin.py:147
-#: src/cases/admin.py:67 src/cases/admin.py:149 src/cases/admin.py:230
-#: src/partners/admin.py:81 src/partners/admin.py:161 src/press/admin.py:70
-msgid "Error then restore object message"
-msgstr "Не удалось восстановить объект."
-
-#: src/analytics/admin.py:72 src/analytics/admin.py:158
-#: src/articles/admin.py:71 src/books/admin.py:69 src/books/admin.py:149
-#: src/cases/admin.py:69 src/cases/admin.py:151 src/cases/admin.py:232
-#: src/partners/admin.py:83 src/partners/admin.py:163 src/press/admin.py:72
-msgid "Restore object successfully message"
-msgstr "Объект восстановлен"
 
 #: src/analytics/admin.py:87
 msgid "Error then add new theme message"
@@ -261,20 +416,6 @@ msgstr "Аналитический материал сохранен."
 msgid "Analytics list heading"
 msgstr "Аналитические материалы"
 
-#: src/analytics/templates/admin/analytics/analytics.j2:8
-#: src/analytics/templates/admin/analytics/themes.j2:22
-#: src/articles/templates/admin/articles/articles.j2:8
-#: src/books/templates/admin/books/books.j2:8
-#: src/books/templates/admin/books/books_series.j2:8
-#: src/cases/templates/admin/cases/branches.j2:22
-#: src/cases/templates/admin/cases/cases.j2:8
-#: src/cases/templates/admin/cases/practics.j2:22
-#: src/partners/templates/admin/persons/persons.j2:8
-#: src/partners/templates/admin/persons/positions.j2:23
-#: src/press/templates/admin/press/news.j2:8
-msgid "Add button"
-msgstr "Добавить"
-
 #: src/analytics/templates/admin/analytics/analytics.j2:15
 msgid "Analytics title column"
 msgstr "Название"
@@ -291,86 +432,6 @@ msgstr "Пусто"
 msgid "Add analytics heading"
 msgstr "Добавление аналитического материала"
 
-#: src/analytics/templates/admin/analytics/manage_analytics.j2:11
-#: src/articles/templates/admin/articles/manage_article.j2:11
-#: src/books/templates/admin/books/manage_book.j2:11
-#: src/books/templates/admin/books/manage_series.j2:11
-#: src/cases/templates/admin/cases/manage_case.j2:11
-#: src/partners/templates/admin/persons/manage_person.j2:58
-#: src/press/templates/admin/press/manage_news_article.j2:11
-msgid "Save and continue button"
-msgstr "Сохранить и продолжить"
-
-#: src/analytics/templates/admin/analytics/manage_analytics.j2:15
-#: src/analytics/templates/admin/analytics/themes.j2:15
-#: src/articles/templates/admin/articles/manage_article.j2:15
-#: src/books/templates/admin/books/manage_book.j2:15
-#: src/books/templates/admin/books/manage_series.j2:15
-#: src/cases/templates/admin/cases/branches.j2:15
-#: src/cases/templates/admin/cases/manage_case.j2:15
-#: src/cases/templates/admin/cases/practics.j2:15
-#: src/partners/templates/admin/persons/manage_person.j2:62
-#: src/partners/templates/admin/persons/positions.j2:15
-#: src/press/templates/admin/press/manage_news_article.j2:15
-msgid "Object in trash string"
-msgstr "Объект в корзине"
-
-#: src/analytics/templates/admin/analytics/manage_analytics.j2:16
-#: src/analytics/templates/admin/analytics/themes.j2:16
-#: src/articles/templates/admin/articles/manage_article.j2:16
-#: src/books/templates/admin/books/manage_book.j2:16
-#: src/books/templates/admin/books/manage_series.j2:16
-#: src/cases/templates/admin/cases/branches.j2:16
-#: src/cases/templates/admin/cases/manage_case.j2:16
-#: src/cases/templates/admin/cases/practics.j2:16
-#: src/partners/templates/admin/persons/manage_person.j2:63
-#: src/partners/templates/admin/persons/positions.j2:16
-#: src/press/templates/admin/press/manage_news_article.j2:16
-msgid "Restore button"
-msgstr "Восстановить"
-
-#: src/analytics/templates/admin/analytics/manage_analytics.j2:18
-#: src/analytics/templates/admin/analytics/themes.j2:18
-#: src/articles/templates/admin/articles/manage_article.j2:18
-#: src/books/templates/admin/books/manage_book.j2:18
-#: src/books/templates/admin/books/manage_series.j2:18
-#: src/cases/templates/admin/cases/branches.j2:18
-#: src/cases/templates/admin/cases/manage_case.j2:18
-#: src/cases/templates/admin/cases/practics.j2:18
-#: src/partners/templates/admin/persons/manage_person.j2:65
-#: src/partners/templates/admin/persons/positions.j2:18
-#: src/press/templates/admin/press/manage_news_article.j2:18
-msgid "Delete button"
-msgstr "Удалить"
-
-#: src/analytics/templates/admin/analytics/manage_analytics.j2:18
-#: src/analytics/templates/admin/analytics/themes.j2:18
-#: src/articles/templates/admin/articles/manage_article.j2:18
-#: src/books/templates/admin/books/manage_book.j2:18
-#: src/books/templates/admin/books/manage_series.j2:18
-#: src/cases/templates/admin/cases/branches.j2:18
-#: src/cases/templates/admin/cases/manage_case.j2:18
-#: src/cases/templates/admin/cases/practics.j2:18
-#: src/partners/templates/admin/persons/manage_person.j2:65
-#: src/partners/templates/admin/persons/positions.j2:18
-#: src/press/templates/admin/press/manage_news_article.j2:18
-msgid "In trash button"
-msgstr "В корзину"
-
-#: src/analytics/templates/admin/analytics/manage_analytics.j2:20
-#: src/analytics/templates/admin/analytics/themes.j2:20
-#: src/articles/templates/admin/articles/manage_article.j2:20
-#: src/books/templates/admin/books/manage_book.j2:20
-#: src/books/templates/admin/books/manage_series.j2:20
-#: src/cases/templates/admin/cases/branches.j2:20
-#: src/cases/templates/admin/cases/manage_case.j2:20
-#: src/cases/templates/admin/cases/practics.j2:20
-#: src/partners/templates/admin/persons/manage_person.j2:67
-#: src/partners/templates/admin/persons/positions.j2:20
-#: src/press/templates/admin/press/manage_news_article.j2:20
-msgid "Cancel button"
-msgstr "Отменить"
-
 #: src/analytics/templates/admin/analytics/themes.j2:7
 msgid "Themes list heading"
 msgstr "Темы"
@@ -379,19 +440,19 @@ msgstr "Темы"
 msgid "No themes found string"
 msgstr "Пусто"
 
-#: src/articles/admin.py:86 src/press/admin.py:87
+#: src/articles/admin.py:87 src/press/admin.py:87
 msgid "Error then add new article message"
 msgstr "Не удалось добавить статью."
 
-#: src/articles/admin.py:87 src/press/admin.py:88
+#: src/articles/admin.py:88 src/press/admin.py:88
 msgid "Error then edit existing article message"
 msgstr "Не удалось отредактировать статью."
 
-#: src/articles/admin.py:89 src/press/admin.py:90
+#: src/articles/admin.py:90 src/press/admin.py:90
 msgid "Add successful new article message"
 msgstr "Статья добавлена."
 
-#: src/articles/admin.py:90 src/press/admin.py:91
+#: src/articles/admin.py:91 src/press/admin.py:91
 msgid "Safe successful existing article message"
 msgstr "Статья сохранена"
 
@@ -604,10 +665,6 @@ msgstr ""
 msgid "Textile help text"
 msgstr ""
 
-#: src/partners/admin.py:30
-msgid "Order saved successfully message"
-msgstr ""
-
 #: src/partners/admin.py:34
 msgid "Error then save order message"
 msgstr ""
@@ -671,10 +728,6 @@ msgstr "Пусто"
 #: src/partners/templates/admin/persons/positions.j2:7
 msgid "Positions list heading"
 msgstr "Должности"
-
-#: src/partners/templates/admin/persons/positions.j2:22
-msgid "Save order button"
-msgstr ""
 
 #: src/press/templates/admin/press/manage_news_article.j2:6
 msgid "Add news article heading"
@@ -789,6 +842,54 @@ msgstr "Описание дела"
 msgid "Workcase branches positions label"
 msgstr ""
 
+#: src/yustina/forms/navigation.py:21
+msgid "Select option"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:22
+msgid "About page option"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:23
+msgid "Contacts page option"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:24
+msgid "Partners page option"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:25
+msgid "Analytics page option"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:26
+msgid "Press page option"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:27
+msgid "Books page option"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:33
+msgid "Nav option caption (RU) label"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:41
+msgid "Nav option caption (EN) label"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:47
+msgid "Nav option activity (RU) label"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:48
+msgid "Nav option activity (EN) label"
+msgstr ""
+
+#: src/yustina/forms/navigation.py:51
+msgid "Nav option route label"
+msgstr ""
+
 #: src/yustina/forms/persons.py:19
 msgid "Position name label"
 msgstr "Название должности"
@@ -881,9 +982,37 @@ msgstr "Источник"
 msgid "News article source link label"
 msgstr "Источник"
 
-#: src/yustina/forms/settings.py:38
+#: src/yustina/forms/settings.py:51
 msgid "Total cases label"
 msgstr "Количество дел"
+
+#: src/yustina/forms/settings.py:52
+msgid "Switch languages label"
+msgstr "Отображать переключатель языка"
+
+#: src/yustina/forms/settings.py:53
+msgid "Company phone label"
+msgstr "Телефоны компании"
+
+#: src/yustina/forms/settings.py:54
+msgid "Company phone description"
+msgstr "Каждый новый телефон указывается с новой строки"
+
+#: src/yustina/forms/settings.py:55
+msgid "Company address (RU) label"
+msgstr "Адрес компании (рус)"
+
+#: src/yustina/forms/settings.py:56
+msgid "Company address (EN) label"
+msgstr "Адрес компании (англ)"
+
+#: src/yustina/forms/settings.py:57
+msgid "Legal info (RU) label"
+msgstr "Правовая информация (рус)"
+
+#: src/yustina/forms/settings.py:58
+msgid "Legal info (EN) label"
+msgstr "Правовая информация (англ)"
 
 #: src/yustina/forms/users.py:15
 msgid "Please, provide your username validation message"
@@ -908,6 +1037,15 @@ msgstr "Запомнить меня"
 #: src/yustina/forms/users.py:55
 msgid "Invalid username or password validation message"
 msgstr "Неверное сочетание имени пользователя и пароля."
+
+#: src/yustina/templates/foot.j2:8
+msgid "Driving directions link"
+msgstr "Схема проезда"
+
+#: src/yustina/templates/foot.j2:9
+#, python-format
+msgid "Copyright string %(current_year)s"
+msgstr "© 2007–%(current_year)s г."
 
 #: src/yustina/templates/index.j2:6
 #, python-format
