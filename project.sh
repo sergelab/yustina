@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 . config/.project
 
@@ -37,6 +37,16 @@ npm() {
     fi
 }
 
+sqitch() {
+    local URI="db:$1"
+    SQITCH=`which sqitch`
+    if [ -z $SQITCH ]; then
+       error "Cannot find sqitch command in your PATH $PATH"
+    fi
+    SQITCH="$SQITCH --quiet --top-dir migrations/ --engine pg"
+    $SQITCH deploy $URI > /dev/null
+}
+
 build() {
     if [ $# -lt 1 ]; then
         error "$0 build <python interpreter> <stage>"
@@ -67,6 +77,11 @@ assets() {
     $NPM run assets
 }
 
+deploy() {
+    URI=`grep 'SQLALCHEMY_DATABASE_URI' config/flask/$STAGE.cfg | awk '{print $NF}' | sed "s#'##g"`
+    sqitch $URI
+}
+
 case "$1" in
     build)
         build $2 $3
@@ -74,11 +89,14 @@ case "$1" in
     assets)
         assets $2
         ;;
-        *)
-            if [ $1 ]; then
-                echo "Invalid action: $1"
-            fi
-            echo ""
-            help
-            ;;
+    deploy)
+        deploy
+        ;;
+    *)
+        if [ $1 ]; then
+            echo "Invalid action: $1"
+        fi
+        echo ""
+        help
+        ;;
 esac
