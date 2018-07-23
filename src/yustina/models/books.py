@@ -1,6 +1,8 @@
 # coding: utf-8
 from __future__ import absolute_import
 
+from flask import url_for
+
 from ..init import db
 from .mixins import DeletableMixin
 
@@ -67,12 +69,22 @@ class Book(db.Model, DeletableMixin):
         )
         return query
 
-    def authors_list(self):
-        persons = [p.fullname for p in self.persons]
+    def authors_list(self, front=False, sort=True):
         authors = []
+        result = []
 
         if self.authors:
             authors = [p.strip() for p in self.authors.split(',') if p]
 
-        result = persons + authors
-        return ', '.join(sorted(result))
+        if front:
+            persons_ = [u'<a href="{0}">{1}</a>'.format(
+                url_for('partners.partner_card', slug=p.slug), p.fullname_initials) for p in self.persons]
+        else:
+            persons_ = [p.fullname for p in self.persons]
+
+        result = persons_ + authors
+
+        if sort:
+            return ', '.join(sorted(result))
+
+        return ', '.join(result)
