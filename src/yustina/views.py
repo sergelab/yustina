@@ -75,16 +75,19 @@ def assets(filename):
     return send_from_directory(path, filename)
 
 
+@app.route('/public')
 @app.route('/public/<path:filename>')
-def public(filename):
+def public(filename=None):
     """
     Путь для отдачи публичных файлов.
     * На боевом сервере эту функцию берет на себя web-сервер
     :param filename:
     :return:
     """
-    path = current_app.config.get('PUBLIC_ROOT')
-    return send_from_directory(path, filename)
+    if filename:
+        path = current_app.config.get('PUBLIC_ROOT')
+        return send_from_directory(path, filename)
+    abort(404)
 
 
 @app.template_filter()
