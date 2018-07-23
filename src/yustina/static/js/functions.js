@@ -39,4 +39,8 @@ $(function(){
 		$('.tabs > nav > ul > label').removeClass('active');
 		$(this).addClass('active');
 	});
+
+	$('#bio').click(function(){
+		$(this).hide(300);
+	});
 });

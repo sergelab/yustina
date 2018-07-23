@@ -54,10 +54,10 @@ img { max-width: 100%; }
 .main-subheader { font-size: 14pt; text-align: right; padding: .5em 0; }
 
 .main-case { background-size: contain; background-repeat: no-repeat; font-family: "PT Serif", serif; overflow: hidden; position: relative; }
-.main-case-1 { background-position: 80% 0; background-image: url(/folder1.jpg); height: 291px; }
-.main-case-2 { background-position: 80% 0; background-image: url(/folder2.jpg); height: 279px; }
-.main-case-3 { background-position: 92% 0; background-image: url(/folder3.jpg); height: 286px; }
-.main-case-4 { background-position: 92% 0; background-image: url(/folder4.jpg); height: 307px; }
+.main-case-1 { background-position: 80% 0; background-image: url(/assets/images/folder1.jpg); height: 291px; }
+.main-case-2 { background-position: 80% 0; background-image: url(/assets/images/folder2.jpg); height: 279px; }
+.main-case-3 { background-position: 92% 0; background-image: url(/assets/images/folder3.jpg); height: 286px; }
+.main-case-4 { background-position: 92% 0; background-image: url(/assets/images/folder4.jpg); height: 307px; }
 .main-case-photo { width: 150px; height: 150px; border: 1px solid #203c80; border-radius: 150px; position: relative; overflow: hidden; z-index: 10; background-color: #fff; }
 .main-case-photo img { width: 100%; }
 .main-case-name, .main-case-position { width: 20%; }
@@ -136,7 +136,7 @@ img { max-width: 100%; }
 
 #person-card-slider { min-height: 100px; margin: 0 0 1em 0; color: #203c80; }
 #person-card-slider ul { list-style-type: none; padding: 0; }
-#person-card-slider ul li { padding-left: 48px; background: url(/case.png) 0 20px no-repeat; }
+#person-card-slider ul li { padding-left: 48px; background: url(/assets/images/case.png) 0 20px no-repeat; }
 
 #viewport { width: 100%; display: table; position: relative; user-select: none; overflow: hidden; }
 #viewport ul { position: relative; width: calc(100% * 4); top: 0; left: 0; transition: 0.5s; transition-timing-function: ease-in-out; }
@@ -144,7 +144,7 @@ img { max-width: 100%; }
 
 .person-card-specialization { margin-top: 1em; }
 
-#bio { display: none; overflow: hidden; background: #fff url(/close.svg) calc(100% - 20px) 20px no-repeat; border: 1px solid #203c80; width: 70vw; left: 50vw; margin-left: -35vw; max-height: calc(80vh - 3.7em); overflow-y: auto; position: absolute; top: 3.7em; padding: 4em 2em 1em 2em; }
+#bio { display: none; overflow: hidden; background: #fff url(/assets/images/close.svg) calc(100% - 20px) 20px no-repeat; border: 1px solid #203c80; width: 70vw; left: 50vw; margin-left: -35vw; max-height: calc(80vh - 3.7em); overflow-y: auto; position: absolute; top: 3.7em; padding: 4em 2em 1em 2em; }
 
 big, .bio-link { font-family: 'PT Serif',serif; }
 
@@ -156,7 +156,7 @@ big, .bio-link { font-family: 'PT Serif',serif; }
 
 /* COMPETENCES */
 
-.competences { background: url(/competences.jpg) 50% 0 no-repeat; height: 681px; }
+.competences { background: url(/assets/images/competences.jpg) 50% 0 no-repeat; height: 681px; }
 .competences > div { width: 839px; margin: 0 auto; position: relative; }
 .competences-1, .competences-2, .competences-3, .competences-4 { position: absolute; }
 .competences-1 { top: 44px; left: 0px; width: 329px; }
