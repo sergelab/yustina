@@ -22,6 +22,15 @@
 
                 <div>{{ news_article.annotation|safe }}</div>
             {%- endif %}
+
+            {% if news_article.source -%}
+                <br>
+                <div>
+                    {% if news_article.source_link -%}<a href="{{ news_article.source_link }}" target="_blank">{%- endif %}
+                    {{ news_article.source }}
+                    {% if news_article.source_link -%}</a>{%- endif %}
+                </div>
+            {%- endif %}
         </div>
     {%- endfor %}
 {%- endblock %}
