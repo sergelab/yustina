@@ -1,5 +1,10 @@
 <footer>
-	<div class="foot-phone"><a href="tel:+74956953525">+7 495 695-35-25</a>, <a href="tel:+74956974353">697-43-53</a></div>
-	<div class="foot-address">Компания «Юстина»: 119002, г. Москва, Глазовский пер., д. 7. <a href="">Схема проезда</a></div>
-	<div class="foot-copyright">© 2007–{{ current_year }} г. Исключительные права на результаты интеллектуальной деятельности, размещенные на настоящем информационном ресурсе, принадлежат адвокатскому бюро «Адвокатская фирма „Юстина“» и охраняются в соответствии с законодательством РФ. Любое использование результатов интеллектуальной деятельности допускается исключительно с предварительного письменного согласия правообладателя. Несанкционированное использование влечет предусмотренную законом ответственность.</div>
+	<div class="foot-phone">
+        {% for contact in settings.company_clean_phones -%}
+            <a href="tel:{{ contact.0 }}">{{ contact.1 }}</a>{% if not loop.last %}, {% endif %}
+        {%- endfor %}
+        {# <a href="tel:+74956953525">+7 495 695-35-25</a>, <a href="tel:+74956974353">697-43-53</a>#}
+    </div>
+	<div class="foot-address">{{ settings.company_address }} <a href="{{ url_for('contacts') }}">{{ _('Driving directions link') }}</a></div>
+	<div class="foot-copyright">{{ _('Copyright string %(current_year)s', current_year=current_year) }} {{ settings.legal }}</div>
 </footer>

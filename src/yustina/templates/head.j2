@@ -1,17 +1,19 @@
 <header>
     <nav class="nav-upper">
-        {# TODO: Меню #}
-        <a href="article.html">О фирме</a>
-        <a href="">Услуги</a>
-        <a class="current" href="person-list.html">Партнеры</a>
-        <a href="{{ url_for('press.news') }}">Пресс-центр</a>
-        <a href="">Аналитика</a>
-        <a href="book-list.html">Книги</a>
+        {# TODO: Меню (выделение)
+        К href добаляется класс current
+        #}
+        {% for option in navigation -%}
+            <a href="{{ url_for(option.route, **option.route_params) }}">{{ option.caption }}</a>
+        {%- endfor %}
         <div>
+            {# request.path #}
             <a href=""><img class="search-icon" src="{{ asset_url_for('images/search-icon.svg') }}" /></a>
-            {% for code, name in config['LANGUAGES'].items() if code != g.current_language -%}
-                <a href="{{ url_for('setlang', language=code) }}">{{ name }}</a>
-            {%- endfor %}
+            {% if settings.language_switcher == True -%}
+                {% for code, name in config['LANGUAGES'].items() if code != g.current_language -%}
+                    <a href="{{ url_for('setlang', language=code) }}">{{ name }}</a>
+                {%- endfor %}
+            {%- endif %}
         </div>
     </nav>
 </header>
