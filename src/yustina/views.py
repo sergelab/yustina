@@ -10,18 +10,30 @@ from flask import (abort,
                    make_response,
                    redirect,
                    render_template,
+                   render_template_string,
                    request,
                    send_from_directory,
                    url_for)
 import textile as tx
 
 from .init import app, babel
+from .models.navigation import Navigation
 from .models.settings import Settings, SettingsHelper
 
 
 @app.route('/')
 def index():
     return render_template('index.j2')
+
+
+@app.route('/about')
+def about():
+    return render_template_string("{% extends 'common.j2' %}")
+
+
+@app.route('/contacts')
+def contacts():
+    return 'CONTACTS OK'
 
 
 @app.route('/setlang/<string:language>')
@@ -97,6 +109,10 @@ def context_processor():
 
     full_years = today.year - born.year - (int((today.month, today.day) < (born.month, born.day)))
 
+    # Меню сайта
+    navigation = Navigation.available().all()
+
     return dict(current_year=today.year,
                 full_years=full_years,
-                settings=settings_helper)
+                settings=settings_helper,
+                navigation=navigation)
