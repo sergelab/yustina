@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-23 18:34+0300\n"
+"POT-Creation-Date: 2018-07-27 19:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,186 +26,198 @@ msgid "Persons dashboard description"
 msgstr ""
 
 #: src/admin/views.py:61
-msgid "Positions list nav option"
+msgid "Partners categories list nav option"
 msgstr ""
 
 #: src/admin/views.py:62
-msgid "Positions list dashboard description"
+msgid "Partners categories list dashboard description"
 msgstr ""
 
 #: src/admin/views.py:64
-msgid "Persons list nav option"
+msgid "Positions list nav option"
 msgstr ""
 
 #: src/admin/views.py:65
-msgid "Persons list dashboard description"
+msgid "Positions list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:67
+msgid "Persons list nav option"
 msgstr ""
 
 #: src/admin/views.py:68
-msgid "Books nav option"
-msgstr ""
-
-#: src/admin/views.py:69
-msgid "Books dashboard description"
+msgid "Persons list dashboard description"
 msgstr ""
 
 #: src/admin/views.py:71
-msgid "Books series list nav option"
+msgid "Books nav option"
 msgstr ""
 
 #: src/admin/views.py:72
-msgid "Books series list dashboard description"
+msgid "Books dashboard description"
 msgstr ""
 
 #: src/admin/views.py:74
-msgid "Books list nav option"
+msgid "Books series list nav option"
 msgstr ""
 
 #: src/admin/views.py:75
-msgid "Books list dashboard description"
+msgid "Books series list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:77
+msgid "Books list nav option"
 msgstr ""
 
 #: src/admin/views.py:78
-msgid "Analytics nav option"
-msgstr ""
-
-#: src/admin/views.py:79
-msgid "Analytics dashboard description"
+msgid "Books list dashboard description"
 msgstr ""
 
 #: src/admin/views.py:81
-msgid "Analytics themes list nav option"
+msgid "Analytics nav option"
 msgstr ""
 
 #: src/admin/views.py:82
-msgid "Analytics themes list dashboard description"
+msgid "Analytics dashboard description"
 msgstr ""
 
 #: src/admin/views.py:84
-msgid "Analytics list nav option"
+msgid "Analytics themes list nav option"
 msgstr ""
 
 #: src/admin/views.py:85
-msgid "Analytics list dashboard description"
+msgid "Analytics themes list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:87
+msgid "Analytics list nav option"
 msgstr ""
 
 #: src/admin/views.py:88
-msgid "Press nav option"
-msgstr ""
-
-#: src/admin/views.py:89
-msgid "Press dashboard description"
+msgid "Analytics list dashboard description"
 msgstr ""
 
 #: src/admin/views.py:91
-msgid "Content nav option"
+msgid "Press nav option"
 msgstr ""
 
 #: src/admin/views.py:92
-msgid "Content dashboard description"
+msgid "Press dashboard description"
 msgstr ""
 
 #: src/admin/views.py:94
-msgid "Workcases nav option"
+msgid "Content nav option"
 msgstr ""
 
 #: src/admin/views.py:95
-msgid "Workcases dashboard description"
+msgid "Content dashboard description"
 msgstr ""
 
 #: src/admin/views.py:97
-msgid "Practics list nav option"
+msgid "Workcases nav option"
 msgstr ""
 
 #: src/admin/views.py:98
-msgid "Practics list dashboard description"
+msgid "Workcases dashboard description"
 msgstr ""
 
 #: src/admin/views.py:100
-msgid "Branches list nav option"
+msgid "Practics list nav option"
 msgstr ""
 
 #: src/admin/views.py:101
-msgid "Branches list dashboard description"
+msgid "Practics list dashboard description"
 msgstr ""
 
 #: src/admin/views.py:103
-msgid "Workcases list nav option"
+msgid "Branches list nav option"
 msgstr ""
 
 #: src/admin/views.py:104
-msgid "Workcases list dashboard description"
+msgid "Branches list dashboard description"
+msgstr ""
+
+#: src/admin/views.py:106
+msgid "Workcases list nav option"
 msgstr ""
 
 #: src/admin/views.py:107
-msgid "Settings nav option"
-msgstr ""
-
-#: src/admin/views.py:108
-msgid "Settings dashboard description"
+msgid "Workcases list dashboard description"
 msgstr ""
 
 #: src/admin/views.py:110
-msgid "Navigation nav option"
+msgid "Settings nav option"
 msgstr ""
 
 #: src/admin/views.py:111
+msgid "Settings dashboard description"
+msgstr ""
+
+#: src/admin/views.py:113
+msgid "Navigation nav option"
+msgstr ""
+
+#: src/admin/views.py:114
 msgid "Navigation dashboard description"
 msgstr ""
 
-#: src/admin/views.py:169
+#: src/admin/views.py:172
 msgid "Cant save settings fail message"
 msgstr ""
 
-#: src/admin/views.py:171
+#: src/admin/views.py:174
 msgid "Settings saved successfully message"
 msgstr ""
 
-#: src/admin/views.py:198
+#: src/admin/views.py:201
 msgid "Error the save order message"
 msgstr ""
 
-#: src/admin/views.py:200 src/partners/admin.py:30
+#: src/admin/views.py:203 src/partners/admin.py:30 src/partners/admin.py:132
 msgid "Order saved successfully message"
 msgstr ""
 
-#: src/admin/views.py:216
+#: src/admin/views.py:219
 msgid "Navigation option not found message"
 msgstr ""
 
-#: src/admin/views.py:232 src/analytics/admin.py:58 src/analytics/admin.py:144
+#: src/admin/views.py:235 src/analytics/admin.py:58 src/analytics/admin.py:144
 #: src/articles/admin.py:58 src/books/admin.py:55 src/books/admin.py:135
 #: src/cases/admin.py:55 src/cases/admin.py:137 src/cases/admin.py:218
-#: src/partners/admin.py:69 src/partners/admin.py:149 src/press/admin.py:58
+#: src/partners/admin.py:70 src/partners/admin.py:171 src/partners/admin.py:251
+#: src/press/admin.py:58
 msgid "Error then delete object message"
 msgstr ""
 
-#: src/admin/views.py:234 src/analytics/admin.py:60 src/analytics/admin.py:146
+#: src/admin/views.py:237 src/analytics/admin.py:60 src/analytics/admin.py:146
 #: src/articles/admin.py:60 src/books/admin.py:57 src/books/admin.py:137
 #: src/cases/admin.py:57 src/cases/admin.py:139 src/cases/admin.py:220
-#: src/partners/admin.py:71 src/partners/admin.py:151 src/press/admin.py:60
+#: src/partners/admin.py:72 src/partners/admin.py:173 src/partners/admin.py:253
+#: src/press/admin.py:60
 msgid "Delete object successfully message"
 msgstr ""
 
-#: src/admin/views.py:244 src/analytics/admin.py:70 src/analytics/admin.py:156
+#: src/admin/views.py:247 src/analytics/admin.py:70 src/analytics/admin.py:156
 #: src/articles/admin.py:70 src/books/admin.py:67 src/books/admin.py:147
 #: src/cases/admin.py:67 src/cases/admin.py:149 src/cases/admin.py:230
-#: src/partners/admin.py:81 src/partners/admin.py:161 src/press/admin.py:70
+#: src/partners/admin.py:82 src/partners/admin.py:183 src/partners/admin.py:263
+#: src/press/admin.py:70
 msgid "Error then restore object message"
 msgstr ""
 
-#: src/admin/views.py:246 src/analytics/admin.py:72 src/analytics/admin.py:158
+#: src/admin/views.py:249 src/analytics/admin.py:72 src/analytics/admin.py:158
 #: src/articles/admin.py:72 src/books/admin.py:69 src/books/admin.py:149
 #: src/cases/admin.py:69 src/cases/admin.py:151 src/cases/admin.py:232
-#: src/partners/admin.py:83 src/partners/admin.py:163 src/press/admin.py:72
+#: src/partners/admin.py:84 src/partners/admin.py:185 src/partners/admin.py:265
+#: src/press/admin.py:72
 msgid "Restore object successfully message"
 msgstr ""
 
-#: src/admin/views.py:262
+#: src/admin/views.py:265
 msgid "Can't save navigation option message"
 msgstr ""
 
-#: src/admin/views.py:264
+#: src/admin/views.py:267
 msgid "Navigation option saved successfully message"
 msgstr ""
 
@@ -247,6 +259,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/branches.j2:11
 #: src/cases/templates/admin/cases/manage_case.j2:10
 #: src/cases/templates/admin/cases/practics.j2:11
+#: src/partners/templates/admin/partners/categories.j2:11
 #: src/partners/templates/admin/persons/manage_person.j2:57
 #: src/partners/templates/admin/persons/positions.j2:11
 #: src/press/templates/admin/press/manage_news_article.j2:57
@@ -273,6 +286,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/branches.j2:15
 #: src/cases/templates/admin/cases/manage_case.j2:15
 #: src/cases/templates/admin/cases/practics.j2:15
+#: src/partners/templates/admin/partners/categories.j2:15
 #: src/partners/templates/admin/persons/manage_person.j2:62
 #: src/partners/templates/admin/persons/positions.j2:15
 #: src/press/templates/admin/press/manage_news_article.j2:62
@@ -288,6 +302,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/branches.j2:16
 #: src/cases/templates/admin/cases/manage_case.j2:16
 #: src/cases/templates/admin/cases/practics.j2:16
+#: src/partners/templates/admin/partners/categories.j2:16
 #: src/partners/templates/admin/persons/manage_person.j2:63
 #: src/partners/templates/admin/persons/positions.j2:16
 #: src/press/templates/admin/press/manage_news_article.j2:63
@@ -303,6 +318,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/branches.j2:18
 #: src/cases/templates/admin/cases/manage_case.j2:18
 #: src/cases/templates/admin/cases/practics.j2:18
+#: src/partners/templates/admin/partners/categories.j2:18
 #: src/partners/templates/admin/persons/manage_person.j2:65
 #: src/partners/templates/admin/persons/positions.j2:18
 #: src/press/templates/admin/press/manage_news_article.j2:65
@@ -318,6 +334,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/branches.j2:18
 #: src/cases/templates/admin/cases/manage_case.j2:18
 #: src/cases/templates/admin/cases/practics.j2:18
+#: src/partners/templates/admin/partners/categories.j2:18
 #: src/partners/templates/admin/persons/manage_person.j2:65
 #: src/partners/templates/admin/persons/positions.j2:18
 #: src/press/templates/admin/press/manage_news_article.j2:65
@@ -333,6 +350,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/branches.j2:20
 #: src/cases/templates/admin/cases/manage_case.j2:20
 #: src/cases/templates/admin/cases/practics.j2:20
+#: src/partners/templates/admin/partners/categories.j2:20
 #: src/partners/templates/admin/persons/manage_person.j2:67
 #: src/partners/templates/admin/persons/positions.j2:20
 #: src/press/templates/admin/press/manage_news_article.j2:67
@@ -344,6 +362,7 @@ msgid "Navigation options list heading"
 msgstr ""
 
 #: src/admin/templates/admin/navigation/navigation.j2:7
+#: src/partners/templates/admin/partners/categories.j2:22
 #: src/partners/templates/admin/persons/positions.j2:22
 msgid "Save order button"
 msgstr ""
@@ -357,6 +376,7 @@ msgstr ""
 #: src/cases/templates/admin/cases/branches.j2:22
 #: src/cases/templates/admin/cases/cases.j2:8
 #: src/cases/templates/admin/cases/practics.j2:22
+#: src/partners/templates/admin/partners/categories.j2:23
 #: src/partners/templates/admin/persons/persons.j2:8
 #: src/partners/templates/admin/persons/positions.j2:23
 #: src/press/templates/admin/press/news.j2:8
@@ -368,8 +388,8 @@ msgid "Settings heading"
 msgstr ""
 
 #: src/analytics/admin.py:40 src/articles/admin.py:40 src/cases/admin.py:37
-#: src/cases/admin.py:119 src/cases/admin.py:201 src/partners/admin.py:51
-#: src/press/admin.py:40
+#: src/cases/admin.py:119 src/cases/admin.py:201 src/partners/admin.py:52
+#: src/partners/admin.py:153 src/press/admin.py:40
 msgid "Object not found message"
 msgstr ""
 
@@ -666,48 +686,60 @@ msgstr ""
 msgid "Textile help text"
 msgstr ""
 
-#: src/partners/admin.py:34
+#: src/partners/admin.py:34 src/partners/admin.py:136
 msgid "Error then save order message"
 msgstr ""
 
-#: src/partners/admin.py:98
+#: src/partners/admin.py:99 src/partners/admin.py:200
 msgid "Error then add new position message"
 msgstr ""
 
-#: src/partners/admin.py:99
+#: src/partners/admin.py:100 src/partners/admin.py:201
 msgid "Error then edit existing position message"
 msgstr ""
 
-#: src/partners/admin.py:101
+#: src/partners/admin.py:102 src/partners/admin.py:203
 msgid "Add successful new position message"
 msgstr ""
 
-#: src/partners/admin.py:102
+#: src/partners/admin.py:103 src/partners/admin.py:204
 msgid "Safe successful existing position message"
 msgstr ""
 
-#: src/partners/admin.py:132
+#: src/partners/admin.py:234
 msgid "Person not found message"
 msgstr ""
 
-#: src/partners/admin.py:178
+#: src/partners/admin.py:280
 msgid "Error then add person message"
 msgstr ""
 
-#: src/partners/admin.py:179
+#: src/partners/admin.py:281
 msgid "Error then modify person message"
 msgstr ""
 
-#: src/partners/admin.py:181
+#: src/partners/admin.py:283
 msgid "Person added successfully message"
 msgstr ""
 
-#: src/partners/admin.py:182
+#: src/partners/admin.py:284
 msgid "Person saved successfully message"
 msgstr ""
 
-#: src/partners/templates/person_card.j2:19
+#: src/partners/templates/partners.j2:4
+msgid "Partners front heading"
+msgstr ""
+
+#: src/partners/templates/person_card.j2:22
 msgid "Biography front link"
+msgstr ""
+
+#: src/partners/templates/person_card.j2:80
+msgid "Biography front string"
+msgstr ""
+
+#: src/partners/templates/admin/partners/categories.j2:7
+msgid "Partners categories list heading"
 msgstr ""
 
 #: src/partners/templates/admin/persons/manage_person.j2:53
@@ -792,7 +824,7 @@ msgid "Authors as text label"
 msgstr ""
 
 #: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
-#: src/yustina/forms/persons.py:79
+#: src/yustina/forms/persons.py:114
 msgid "Person positions label"
 msgstr ""
 
@@ -900,68 +932,84 @@ msgstr ""
 msgid "Nav option route label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:19
-msgid "Position name label"
+#: src/yustina/forms/persons.py:18
+msgid "Partners category name (RU) label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:30
-msgid "Position heading label"
+#: src/yustina/forms/persons.py:29
+msgid "Partners category name (EN) label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:38
-msgid "Position public group label"
-msgstr ""
-
-#: src/yustina/forms/persons.py:46 src/yustina/forms/press.py:15
-msgid "Slug label"
-msgstr ""
-
-#: src/yustina/forms/persons.py:53 src/yustina/forms/press.py:22
-msgid "Slug description"
+#: src/yustina/forms/persons.py:45
+msgid "Position name (RU) label"
 msgstr ""
 
 #: src/yustina/forms/persons.py:56
+msgid "Position name (EN) label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:67
+msgid "Position public group label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:75 src/yustina/forms/press.py:15
+msgid "Slug label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:82 src/yustina/forms/press.py:22
+msgid "Slug description"
+msgstr ""
+
+#: src/yustina/forms/persons.py:85
 msgid "Person surname label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:64
+#: src/yustina/forms/persons.py:93
 msgid "Person firstname label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:72
+#: src/yustina/forms/persons.py:101
 msgid "Person middlename label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:84
-msgid "Person short bio label"
+#: src/yustina/forms/persons.py:108
+msgid "Partner category label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:92
+#: src/yustina/forms/persons.py:127
 msgid "Person bio label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:100
+#: src/yustina/forms/persons.py:135
 msgid "Person registry no label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:107
+#: src/yustina/forms/persons.py:142
 msgid "Person specialty label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:115
+#: src/yustina/forms/persons.py:150
 msgid "Person list photo label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:116
+#: src/yustina/forms/persons.py:151
 msgid "Person list photo description"
 msgstr ""
 
-#: src/yustina/forms/persons.py:119
+#: src/yustina/forms/persons.py:154
 msgid "Person card photo label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:120
+#: src/yustina/forms/persons.py:155
 msgid "Person card photo description"
+msgstr ""
+
+#: src/yustina/forms/persons.py:158
+msgid "Person video label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:160
+msgid "Person video description"
 msgstr ""
 
 #: src/yustina/forms/press.py:25
@@ -1071,6 +1119,10 @@ msgstr ""
 #: src/yustina/templates/foot.j2:9
 #, python-format
 msgid "Copyright string %(current_year)s"
+msgstr ""
+
+#: src/yustina/templates/head.j2:28
+msgid "Search front placeholder"
 msgstr ""
 
 #: src/yustina/templates/index.j2:6
