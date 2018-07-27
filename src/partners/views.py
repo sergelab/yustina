@@ -83,6 +83,12 @@ def partner_card(slug):
             next_partner = people[idx + 1] if idx < len(people) - 1 else people[0]
             break
 
+    if prev_partner.id == person.id:
+        prev_partner = None
+
+    if next_partner.id == person.id:
+        next_partner = None
+
     # workcases = person.available_workcases().all()
     workcases = []
 
