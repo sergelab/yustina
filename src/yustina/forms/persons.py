@@ -6,17 +6,16 @@ from contrib.forms.fields import RefQuerySelectMultipleField, UploadField
 from contrib.forms.widgets import TextileWidget
 from flask_babel import lazy_gettext as __
 from wtforms import BooleanField, StringField
+from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from wtforms.validators import DataRequired
 from wtforms.widgets import TextArea, TextInput
 
-from ..models.persons import Position
+from ..models.persons import PartnersCategory, Position
 
 
-class PositionForm(Form):
-    """ Должность
-    """
-    name = StringField(
-        __('Position name label'),
+class PartnersCategoryForm(Form):
+    ru_name = StringField(
+        __('Partners category name (RU) label'),
         validators=[
             DataRequired()
         ],
@@ -26,12 +25,42 @@ class PositionForm(Form):
             autofocus=True
         )
     )
-    heading = StringField(
-        __('Position heading label'),
-        validators=[DataRequired()],
+    en_name = StringField(
+        __('Partners category name (EN) label'),
+        validators=[
+            DataRequired()
+        ],
         widget=WidgetPrebind(
             TextInput(),
-            class_='uk-width-1-1'
+            class_='uk-width-1-1',
+            autofocus=True
+        )
+    )
+
+
+class PositionForm(Form):
+    """ Должность
+    """
+    ru_name = StringField(
+        __('Position name (RU) label'),
+        validators=[
+            DataRequired()
+        ],
+        widget=WidgetPrebind(
+            TextInput(),
+            class_='uk-width-1-1',
+            autofocus=True
+        )
+    )
+    en_name = StringField(
+        __('Position name (EN) label'),
+        validators=[
+            DataRequired()
+        ],
+        widget=WidgetPrebind(
+            TextInput(),
+            class_='uk-width-1-1',
+            autofocus=True
         )
     )
     public_group = BooleanField(
@@ -75,19 +104,25 @@ class PersonForm(Form):
             class_='uk-width-1-2'
         )
     )
+    category = QuerySelectField(
+        __('Partner category label'),
+        query_factory=lambda: PartnersCategory.admin_list(),
+        validators=[DataRequired()],
+        get_label='name'
+    )
     positions = RefQuerySelectMultipleField(
         __('Person positions label'),
         query_factory=lambda: Position.admin_list(),
         get_label='name',
     )
-    short_bio = StringField(
-        __('Person short bio label'),
-        widget=WidgetPrebind(
-            TextileWidget(),
-            class_='uk-width-1-1',
-            rows=20
-        )
-    )
+    # short_bio = StringField(
+    #     __('Person short bio label'),
+    #     widget=WidgetPrebind(
+    #         TextileWidget(),
+    #         class_='uk-width-1-1',
+    #         rows=20
+    #     )
+    # )
     bio = StringField(
         __('Person bio label'),
         widget=WidgetPrebind(
