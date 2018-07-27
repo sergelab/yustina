@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; font: 12pt/1.1 'PT Sans', sans-serif; font-weight: 300; background: #fff; color: #000; }
-body { top: 0; left: 0; position: relative; }
-header { width: 100%; padding: 1em 0; background: #203c80; }
+body { top: 0; left: 0; position: relative; padding-top: 3.7em; }
+header { width: 100%; padding: 1em 0; background: #203c80; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
 .mobile { display: none; }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'PT Serif', serif; font-weight: normal; margin: 1em 0 0.5em 0; }
@@ -49,7 +49,7 @@ img { max-width: 100%; }
 
 .main-spacer { margin-bottom: 5em; }
 
-.main-header { font: 28pt/1.5 'PT Serif', serif; margin: 0 auto; display: table; white-space: nowrap; }
+.main-header { font: 28pt/1.5 'PT Serif', serif; margin: 1em auto 0; display: table; white-space: nowrap; }
 .main-header span { font-size: 64pt; line-height: 0; }
 .main-subheader { font-size: 14pt; text-align: right; padding: .5em 0; }
 
@@ -125,18 +125,52 @@ img { max-width: 100%; }
 
 .person-list-person div { margin-right: 320px; }
 
+.person-grid { display: flex; flex-flow: row wrap; justify-content: space-between; }
+.person-grid-person { text-align: center; margin-bottom: 4em; display: flex; flex-flow: column nowrap; justify-content: flex-start; }
+.person-grid-spacer { display: flex; }
+.person-grid-person img { width: 100%; height: auto; min-height: 1px; /* IE fix */ }
+.person-grid-person, .person-grid-spacer { max-width: 300px; width: 17%; }
+
+@media screen and (max-width: 1300px){
+	.person-grid-person, .person-grid-spacer { width: 22%; }
+}
+
+@media screen and (max-width: 1000px){
+	.person-grid-person, .person-grid-spacer { width: 29%; }
+}
+
+@media screen and (max-width: 640px){
+	.person-grid-person, .person-grid-spacer { width: 47%; }
+}
+
+@media screen and (max-width: 400px){
+	.person-grid-person, .person-grid-spacer { width: 100%; }
+}
+
 /* PERSON CARD */
 
-.person-card-person { min-height: calc(33.75vw - 23.75em); margin: -10em 0 3.75em 0; }
+/*.person-card-person { margin: -5.667em -1em 4em 0; position: relative; }*/
+.person-card-person { margin: -2em -1em 1em 0; position: relative; }
 
-.person-card-person video { position: absolute; top: 3.75em; right: 0; width: 60vw; height: auto; }
-.person-card-info { background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%); position: relative; top: 3.75em; left: 0; right: 0; bottom: 0; height: 33.75vw; width: 60%; padding-right: 10%; padding-top: 14em; }
+/*.person-card-person #logo { top: 3.667em; }*/
+
+/*.person-card-person video { position: absolute; top: 3.7em; right: 0; width: 60vw; height: auto; }*/
+.person-card-person video { position: absolute; top: 0; right: 0; width: 60vw; height: auto; }
+.person-card-info { background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%); height: 34vw; width: 60%; display: flex; flex-direction: column; justify-content: space-between; position: absolute; }
+.person-card-info-spacer { height: 34vw; }
+.person-card-info { padding-top: 2em; }
 .person-card-info h1 { font-family: 'PT Serif', serif; font-size: 20pt; }
-.person-card-info > div { position: relative; }
+.person-card-info > div { padding-right: 10%; padding-left: 3em; flex-grow: 1; display: flex; justify-content: center; flex-direction: column; }
+.person-card-info > div:first-child { flex-grow: 0; display: block; padding-left: 0; }
+.person-card-info > div > * { max-width: 600px; }
+
+.person-card-prev, .person-card-next { position: absolute; top: 50%; width: 3em; height: 3em; display: block; background-repeat: no-repeat; background-size: contain; background-position: 50% 50%; }
+.person-card-prev { left: -.5em; background-image: url(/assets/images/arrow-left.svg); }
+.person-card-next { right: .5em; background-image: url(/assets/images/arrow-right.svg); }
 
 #person-card-slider { min-height: 100px; margin: 0 0 1em 0; color: #203c80; }
 #person-card-slider ul { list-style-type: none; padding: 0; }
-#person-card-slider ul li { padding-left: 48px; background: url(/assets/images/case.png) 0 20px no-repeat; }
+#person-card-slider ul li { padding-left: 48px; background: url(/assets/images/case.svg) 0 0 no-repeat; background-size: 36px; }
 
 #viewport { width: 100%; display: table; position: relative; user-select: none; overflow: hidden; }
 #viewport ul { position: relative; width: calc(100% * 4); top: 0; left: 0; transition: 0.5s; transition-timing-function: ease-in-out; }
@@ -144,7 +178,7 @@ img { max-width: 100%; }
 
 .person-card-specialization { margin-top: 1em; }
 
-#bio { display: none; overflow: hidden; background: #fff url(/assets/images/close.svg) calc(100% - 20px) 20px no-repeat; border: 1px solid #203c80; width: 70vw; left: 50vw; margin-left: -35vw; max-height: calc(80vh - 3.7em); overflow-y: auto; position: absolute; top: 3.7em; padding: 4em 2em 1em 2em; }
+#bio { display: none; overflow: hidden; background: #fff url(/assets/images/close.svg) calc(100% - 20px) 20px no-repeat; border: 1px solid #203c80; width: 70vw; left: 50vw; margin-left: -35vw; max-height: calc(80vh - 3.7em); overflow-y: auto; position: absolute; top: 3.7em; padding: 4em 2em 1em 2em; z-index: 1; }
 
 big, .bio-link { font-family: 'PT Serif',serif; }
 
@@ -153,6 +187,10 @@ big, .bio-link { font-family: 'PT Serif',serif; }
 .person-card-bio h2 { clear: both; }
 
 .person-card-bio span, .person-card-bio h2 { font-family: 'PT Serif', serif; font-size: 120%; color: #203c80; }
+
+#circles { text-align: center; }
+#circles > div { display: inline-block; border: 1px solid #203c80; width: 1em; height: 1em; border-radius: 1em; margin: .1em; }
+#circles > div.current { background: #203c80; }
 
 /* COMPETENCES */
 
@@ -172,8 +210,8 @@ ymaps { max-height: 75vh ! important; }
 
 /* MOBILE */
 
-@media screen and (max-width: 600px){
-	#logo { position: absolute; top: 4px; left: .5em; height: 60px; }
+@media screen and (max-width: 900px){
+	#logo { position: fixed; top: 4px; left: .5em; height: 60px; z-index: 101; }
 	#logo.logo-large { height: 60px; }
 
 	header { background: #fff; border-bottom: 1px solid #888; color: #203c80; height: 4.5em; }
@@ -186,10 +224,39 @@ ymaps { max-height: 75vh ! important; }
 
 	label.mobile { display: block; position: absolute; top: 3px; right: 10px; height: 60px; }
 
+	footer { border-top: none; background: #203c80; }
+	footer, footer h2, footer a, .foot-copyright, .foot-address, .foot-phone a { color: #fff; }
+
 	.float-right, .float-left { float: none; text-align: center; margin-left: 0; margin-right: 0; }
 
 	.book-card-cover-info, .press-card-image { display: block; }
 	.book-card-info { padding: 1em 0; text-align: center; }
 	.book-card-info div { margin: 0 auto; }
 
+	.book-list-item, .press-list-item-with-image { min-height: 0; }
+	.book-list-item img, .press-list-item-with-image img { min-width: 20vw; max-width: 80vw; position: initial; margin: 0 auto; display: block; }
+	.book-list-item div, .book-list-item h2, .press-list-item-with-image div, .press-list-item-with-image h2 { padding-left: 0; }
+	.book-list-item h2, .book-list-authors { text-align: center; }
+
+	.competences { background-image: none; height: auto; padding: 0 1em; }
+	.competences > div { width: auto; }
+	.competences > div > div { margin-bottom: 2em; }
+	.competences-1, .competences-2, .competences-3, .competences-4 { position: initial; width: auto; }
+
+	.person-card-specialization { display: none; }
+	.person-card-person > video { display: none; }
+	.person-card-info { height: auto; width: 100%; position: initial; }
+	.person-card-info video.mobile { display: block; width: calc(100% + 1em); position: initial; margin-top: 1em; margin-left: -1em; }
+	.person-card-info > div { padding: 0; }
+	.person-card-info > div > * { max-width: unset; }
+	.person-card-info-spacer { display: none; }
+	.person-card-prev, .person-card-next { top: 66.67%; }
+}
+
+@media screen and (max-width: 1000px) {
+	/*.person-grid:after, .person-grid-person { width: 44%; }*/
+}
+
+@media screen and (max-width: 640px) {
+	/*.person-grid:after, .person-grid-person { width: 100%; }*/
 }
