@@ -11,7 +11,7 @@ from wtforms.widgets import TextInput
 class OptionType(object):
     About = 'about'
     Contacts = 'contacts'
-    Partners = 'partners.partners',
+    Partners = 'partners.partners'
     Analytics = 'analytics.analytics'
     Press = 'press.news'
     Books = 'books.books'
