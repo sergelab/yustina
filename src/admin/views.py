@@ -58,6 +58,9 @@ def admin_before_request():
         dict(title=_('Persons nav option'),
              description=_('Persons dashboard description'),
              subitems=[
+                 dict(title=_('Partners categories list nav option'),
+                      description=_('Partners categories list dashboard description'),
+                      view='admin.partners_categories'),
                  dict(title=_('Positions list nav option'),
                       description=_('Positions list dashboard description'),
                       view='admin.persons_positions'),
