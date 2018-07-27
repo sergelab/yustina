@@ -2,35 +2,35 @@
 {% from 'admin/api/base.j2' import render_trash_icon, render_bool %}
 {% from 'admin/api/forms.j2' import render_field %}
 
-{% set form_action = url_for('admin.persons_manage_position', position_id=position_id) if position else url_for('admin.persons_positions') %}
+{% set form_action = url_for('admin.partners_manage_category', category_id=category_id) if category else url_for('admin.partners_categories') %}
 {% set form_not_horizontal = True %}
-{% block page_title %}{{ _('Positions list heading') }}{% endblock %}
+{% block page_title %}{{ _('Partners categories list heading') }}{% endblock %}
 {% block page_buttons %}
-    {% if position %}
-        {% if not position.in_trash -%}
+    {% if category %}
+        {% if not category.in_trash -%}
             <button class="uk-button uk-button-primary" name="save">{{ _('Save button') }}</button>
         {%- endif %}
-        {% if position and position_id %}
-            {% if position.in_trash -%}
+        {% if category and category_id %}
+            {% if category.in_trash -%}
                 <span>{{ _('Object in trash string') }}</span>
                 <button class="uk-button uk-button-success" name="restore">{{ _('Restore button') }}</button>
             {%- endif %}
-            <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') if position.in_trash else _('In trash button') }}</button>
+            <button class="uk-button uk-button-danger" name="delete">{{ _('Delete button') if category.in_trash else _('In trash button') }}</button>
         {% endif %}
-        <a href="{{ url_for('admin.persons_positions') }}" class="uk-button">{{ _('Cancel button') }}</a>
+        <a href="{{ url_for('admin.partners_categories') }}" class="uk-button">{{ _('Cancel button') }}</a>
     {% else %}
         <button class="uk-button uk-button-success" name="save_order">{{ _('Save order button') }}</button>
-        <a href="{{ url_for('admin.persons_manage_position') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
+        <a href="{{ url_for('admin.partners_manage_category') }}" class="uk-button uk-button-primary">{{ _('Add button') }}</a>
     {% endif %}
 {% endblock %}
 {% block page_content %}
-    {% if position %}
+    {% if category %}
         {{ form.hidden_tag() }}
     {% endif %}
 
     <div class="uk-overflow-container">
         <div class="uk-sortable" data-uk-sortable>
-            {% if position and not position_id %}
+            {% if category and not category_id %}
                 <div class="uk-margin-small-bottom">
                     <div class="uk-panel uk-panel-box uk-width-1-1">
                         <div class="uk-margin-small-left uk-margin-small-right">
@@ -39,7 +39,6 @@
                                     <tr>
                                         <td class="uk-width-5-10">{{ render_field(form.ru_name, label=True, disabled=position.in_trash) }}</td>
                                         <td class="uk-width-5-10">{{ render_field(form.en_name, label=True, disabled=position.in_trash) }}</td>
-                                        <td class="uk-text-center uk-width-1-10">{{ render_field(form.public_group, label=False, disabled=position.in_trash) }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -48,7 +47,7 @@
                 </div>
             {% endif %}
 
-            {% for pos in positions -%}
+            {% for category in categories -%}
                 <div class="uk-margin-small-bottom">
                     <div class="uk-panel uk-panel-box uk-width-1-1">
                         <div class="uk-margin-small-left uk-margin-small-right">
@@ -56,31 +55,24 @@
                                 <tbody>
                                     <tr>
                                         <td class="uk-width-5-10">
-                                            {% if position_id == pos.id -%}
-                                                {{ render_field(form.ru_name, label=True, disabled=position.in_trash) }}
+                                            {% if category_id == category.id -%}
+                                                {{ render_field(form.ru_name, label=True, disabled=category.in_trash) }}
                                             {%- else -%}
-                                                {{ render_trash_icon(pos.in_trash) }}
-                                                <a href="{{ url_for('admin.persons_manage_position', position_id=pos.id) }}">{{ pos.ru_name }}</a>
+                                                {{ render_trash_icon(category.in_trash) }}
+                                                <a href="{{ url_for('admin.partners_manage_category', category_id=category.id) }}">{{ category.ru_name }}</a>
                                             {%- endif %}
                                         </td>
                                         <td class="uk-width-5-10">
-                                            {% if position_id == pos.id -%}
-                                                {{ render_field(form.en_name, label=True, disabled=position.in_trash) }}
+                                            {% if category_id == category.id -%}
+                                                {{ render_field(form.en_name, label=True, disabled=category.in_trash) }}
                                             {%- else -%}
-                                                <a href="{{ url_for('admin.persons_manage_position', position_id=pos.id) }}">{{ pos.en_name }}</a>
-                                            {%- endif %}
-                                        </td>
-                                        <td class="uk-text-center uk-width-1-10">
-                                            {% if position_id == pos.id -%}
-                                                {{ render_field(form.public_group, label=False, disabled=position.in_trash) }}
-                                            {%- else -%}
-                                                {{ render_bool(pos.public_group) }}
+                                                <a href="{{ url_for('admin.partners_manage_category', category_id=category.id) }}">{{ category.en_name }}</a>
                                             {%- endif %}
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <input type="hidden" name="priority" value="{{ pos.id }}">
+                            <input type="hidden" name="priority" value="{{ category.id }}">
                         </div>
                     </div>
                 </div>

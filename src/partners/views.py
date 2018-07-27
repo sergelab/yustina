@@ -5,7 +5,7 @@ from collections import OrderedDict
 from flask import (abort,
                    Blueprint,
                    render_template)
-from yustina.models.persons import Person
+from yustina.models.persons import PartnersCategory, Person
 
 from .admin import *
 
@@ -15,47 +15,40 @@ bp = Blueprint('partners', __name__, template_folder='templates', url_prefix='/p
 
 @bp.route('/')
 def partners():
-    positions = Position.available_list().all()
-    if not positions:
+    """
+    Страница «Партнеры»
+    """
+    categories = PartnersCategory.available().all()
+
+    if not categories:
         abort(404)
 
-    persons = Person.available_list().all()
-    print(persons)
-    if not persons:
+    partners_query = Person.available_list()
+    people_query = partners_query.order_by(False)  # Уберем существующую сортировку
+    partners_query = partners_query.order_by(
+        Person.surname.asc(), Person.firstname.asc(), Person.middlename.asc()
+    )
+
+    partners_cards = partners_query.all()
+
+    if not partners_cards:
         abort(404)
 
-    grouped_persons = OrderedDict()
-    already_added_persons_ids = list()
+    grouped_partners = {pc.id: {'category': pc,
+                                'partners': []} for pc in categories}
+    for person in partners_cards:
+        if person.category_id in grouped_partners.keys():
+            grouped_partners[person.category_id]['partners'].append(person)
 
-    """
-    {'pos.id': {
-        'position': pos,
-        'persons': [person, person, ...]
-     },
-     {pos.id': {
-        'position': pos,
-        'persons': [person, ...]
-    }}
-    """
-
-    for position in positions:
-        grouped_persons.setdefault(position.id, dict(
-            position=position,
-            persons=list()
-        ))
-        for person in persons:
-            if position in person.positions:
-                if person.id not in already_added_persons_ids:
-                    grouped_persons[position.id]['persons'].append(person)
-                    already_added_persons_ids.append(person.id)
-
-    return render_template('persons_list.j2',
-                           persons=persons,
-                           grouped_persons=grouped_persons)
+    return render_template('partners.j2',
+                           grouped_partners=grouped_partners)
 
 
 @bp.route('/<path:slug>')
 def partner_card(slug):
+    """
+    Страница «Карточка партнера»
+    """
     person_query = Person.available_list(with_positions=True)
     person_query = person_query.filter(
         Person.slug == slug
@@ -65,8 +58,36 @@ def partner_card(slug):
     if not person:
         abort(404)
 
-    workcases = person.available_workcases().all()
+    partners_query = Person.available_list()
+    partners_query = partners_query.order_by(False)  # Уберем существующую сортировку
+    partners_query = partners_query.join(Person.category)
+    partners_query = partners_query.order_by(
+        PartnersCategory.priority.asc(),
+        Person.surname.asc(),
+        Person.firstname.asc(),
+        Person.middlename.asc()
+    )
+    partners_query = partners_query.options(
+        db.lazyload('*'),
+        db.load_only('id', 'slug'))
+
+    people = partners_query.all()
+
+    prev_partner = None
+    next_partner = None
+
+    for idx, p in enumerate(people):
+        if p.id == person.id:
+            # Если текущая персона
+            prev_partner = people[idx - 1] if idx > 0 else people[len(people) - 1]
+            next_partner = people[idx + 1] if idx < len(people) - 1 else people[0]
+            break
+
+    # workcases = person.available_workcases().all()
+    workcases = []
 
     return render_template('person_card.j2',
                            person=person,
+                           prev_partner=prev_partner,
+                           next_partner=next_partner,
                            workcases=workcases)

@@ -1,14 +1,17 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
-    <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}" /></a>
-	<div class="clear-both"></div>
-
     <div class="person-card-person">
-        <video autoplay="true" loop="true" style="background-image: url({{ url_for('public', filename=person.list_photo.original() if person.list_photo else None) }});">
-            <source src="{{ url_for('public', filename=person.video.original() if person.video else None) }}" />
+        <video playsinline autoplay="autoplay" loop="loop"{% if person.photo and person.photo.original() %} poster="{{ url_for('public', filename=person.photo.original()) }}"{% endif %}>
+            {%- if person.video and person.video.original() -%}
+                <source src="{{ url_for('public', filename=person.video.original()) }}" />
+            {%- endif -%}
         </video>
-		<h3 class="person-card-info">
+
+		<div class="person-card-info">
+            <div>
+                <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}" /></a>
+            </div>
 			<div>
                 <h1>{{ person.fullname }}</h1>
                 <div class="person-card-position">
@@ -19,11 +22,19 @@
                         <a href="#bio">{{ _('Biography front link') }}</a>
                     </div>
                 {%- endif %}
+                <video class="mobile" playsinline autoplay="autoplay" loop="loop"{% if person.photo and person.photo.original() %} poster="{{ url_for('public', filename=person.photo.original()) }}"{% endif %}>
+					{%- if person.video and person.video.original() -%}
+                        <source src="{{ url_for('public', filename=person.video.original()) }}" />
+                    {%- endif -%}
+				</video>
                 <div class="person-card-specialization">
                     {{ person.specialty|textile }}
                 </div>
             </div>
-		</h3>
+		</div>
+        <div class="person-card-info-spacer"></div>
+        {% if prev_partner -%}<a href="{{ url_for('partners.partner_card', slug=prev_partner.slug) }}" class="person-card-prev"></a>{%- endif  %}
+        {% if next_partner -%}<a href="{{ url_for('partners.partner_card', slug=next_partner.slug) }}" class="person-card-next"></a>{%- endif %}
 	</div>
 
     <div id="person-card-slider">
@@ -48,13 +59,25 @@
 				</li>
 			</ul>
 		</div>
+        <div id="circles">
+            <div data-slide="0" class="current"></div>
+            <div data-slide="1"></div>
+            <div data-slide="2"></div>
+            <div data-slide="3"></div>
+        </div>
 	</div>
 
     <div id="bio" class="person-card-bio">
-        {% if person.photo and person.photo.original() -%}
-		    <img src="{{ url_for('public', filename=person.photo.original()) }}">
+        {% if person.list_photo and person.list_photo.original() -%}
+		    <img src="{{ url_for('public', filename=person.list_photo.original()) }}">
         {%- endif %}
+
+        {%- set positions = person.positions_as_text() %}
+        <p><span>{{ person.fullname }}</span>{% if positions %} — {{ positions|lower() }}{% endif %}</p>
+        {% if person.registry_no %}<p>{{ person.registry_no }}</p>{% endif %}
+
         {% if person.bio -%}
+            <p>{{ _('Biography front string') }}</p>
             {{ person.bio|textile }}
         {%- endif %}
 	</div>

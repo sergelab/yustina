@@ -1,28 +1,30 @@
 {% extends 'common.j2' %}
 
 {% block content -%}
-    {% for group in grouped_persons.values() if group['persons']|length > 0 -%}
-        <h2>{{ group['position'].heading }}</h2>
+    <h1 class="float-right">{{ _('Partners front heading') }}</h1>
+	<a href="/"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}" /></a>
+	<div class="clear-both"></div>
 
-        {% for person in group['persons'] -%}
-            <div class="person-list-person"{% if person.list_photo.original() %} style="background-image: url({{ url_for('public', filename=person.list_photo.original()) }});"{% endif %}>
-                <h3 class="person-list-name">
-                    <a href="{{ url_for('partners.partner_card', slug=person.slug) }}">{{ person.fullname }}</a>
-                </h3>
-                <div class="person-list-position">
-                    {{ person.positions_as_text() }}
+    <div class="">
+        {% for info in grouped_partners.values() -%}
+            {% if info.partners -%}
+                <h2>{{ info.category.name }}</h2>
+                <div class="person-grid">
+                    {% for person in info.partners -%}
+                        <a href="{{ url_for('partners.partner_card', slug=person.slug) }}" class="person-grid-person">
+                            {% if person.list_photo and person.list_photo.original() -%}
+                                <img src="{{ url_for('public', filename=person.list_photo.original()) }}" />
+                            {%- endif %}
+                            <h3 class="person-grid-name">{{ person.fullname|replace(' ', '<br />', 1) }}</h3>
+                        </a>
+                    {%- endfor %}
+                    <div class="person-grid-spacer"></div>
+                    <div class="person-grid-spacer"></div>
+                    <div class="person-grid-spacer"></div>
+                    <div class="person-grid-spacer"></div>
+                    <div class="person-grid-spacer"></div>
                 </div>
-                {% if person.specialty -%}
-                    <div class="person-list-specialty">
-                        {{ person.specialty }}
-                    </div>
-                {%- endif %}
-                {% if person.short_bio -%}
-                    <div class="person-list-brief-cv">
-                        {{ person.short_bio|textile }}
-                    </div>
-                {%- endif %}
-            </div>
+            {%- endif %}
         {%- endfor %}
-    {%- endfor %}
+    </div>
 {%- endblock %}
