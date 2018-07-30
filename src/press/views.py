@@ -18,7 +18,7 @@ def news():
     """ Страница новостей.
     """
     news_list = NewsArticle.available_list().limit(
-        current_app.config.get('NEWS_LOADING_LIMIT'))
+        current_app.config.get('NEWS_LOADING_LIMIT')).all()
 
     return render_template('news.j2',
                            news=news_list)
