@@ -36,6 +36,11 @@ def contacts():
     return 'CONTACTS OK'
 
 
+@app.route('/search')
+def search():
+    return 'OK'
+
+
 @app.route('/setlang/<string:language>')
 def setlang(language):
     if language not in current_app.config.get('LANGUAGES', {}).keys():
@@ -44,6 +49,11 @@ def setlang(language):
     response = make_response(redirect(request.referrer or url_for('index')))
     response.set_cookie('lang', language)
     return response
+
+
+@app.errorhandler(404)
+def error_404(error):
+    return render_template('404.j2', error=error)
 
 
 @babel.localeselector
