@@ -20,6 +20,11 @@ class AnalyticsTheme(db.Model, DeletableMixin):
         query = query.order_by(cls.name.asc())
         return query
 
+    @classmethod
+    def available(cls):
+        query = cls.admin_list()
+        return query
+
 
 """ Ассоциация аналитики и авторов (персон)
 """
@@ -44,7 +49,8 @@ class Analytics(db.Model, DeletableMixin):
     theme = db.relationship(AnalyticsTheme, lazy='joined')
     persons = db.relationship('Person',
                               secondary=analytics_persons_association,
-                              lazy=True)
+                              lazy=True,
+                              backref=db.backref('analytics', lazy=True))
 
     @classmethod
     def admin_list(cls, with_persons=True):
@@ -53,8 +59,13 @@ class Analytics(db.Model, DeletableMixin):
         if with_persons:
             query = query.options(db.subqueryload(cls.persons))
 
-        query = query.order_by(cls.title.asc())
+        query = query.order_by(cls.id.asc())
 
+        return query
+
+    @classmethod
+    def available(cls, with_persons=True):
+        query = cls.admin_list(with_persons=with_persons)
         return query
 
     def authors_list(self):
