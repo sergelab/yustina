@@ -3,7 +3,7 @@
 {% from 'admin/api/forms.j2' import render_field %}
 
 {% set form_action = url_for('admin.analytics_manage_analytics', analytics_id=analytics_id) %}
-{% block page_title %}{{ _('Add analytics heading') if not analytics_id else analytics.title }}{% endblock %}
+{% block page_title %}{{ _('Add analytics heading') if not analytics_id else analytics.title|truncate(100, end='...') }}{% endblock %}
 
 {% block page_buttons %}
     {% if not analytics.in_trash -%}

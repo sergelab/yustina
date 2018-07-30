@@ -1,0 +1,8 @@
+<div>
+    <h2>
+        <a href="{{ url_for('analytics.analytics_card', analytics_id=analytics.id) }}" class="analytics-list-title">{{ analytics.title }}</a>
+    </h2>
+    {% if analytics.annotation -%}
+        {{ analytics.annotation }}
+    {%- endif %}
+</div>

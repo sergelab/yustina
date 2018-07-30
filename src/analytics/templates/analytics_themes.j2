@@ -1,0 +1,31 @@
+{% extends 'common.j2' %}
+
+{% block content -%}
+    <h1 class="float-right">{{ _('Analytics front heading') }}</h1>
+    <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}" /></a>
+
+    <div class="tabs">
+        <nav>
+            <ul>
+                <a href="{{ url_for('analytics.analytics') }}"><li>{{ _('All analytics front tabname') }}</li></a>
+                <a href="{{ url_for('analytics.analytics_by_authors') }}"><li>{{ _('Authors analytics front tabname') }}</li></a>
+                <a href="{{ url_for('analytics.analytics_by_themes') }}"{% if not theme %}  class="active"{% endif %}><li>{{ _('Themes analytics front tabname') }}</li></a>
+            </ul>
+        </nav>
+
+        <div class="tab">
+            {% if theme -%}
+                <h2>{{ _('Analytics by %(theme)s', theme=theme.name) }}</h2>
+                {% for analytics in analytics_list -%}
+                    {% include 'analytics_all_row.j2' %}
+                {%- endfor %}
+                <div class="ajax-insertion-point" data-url="{{ url_for('analytics.loading', theme_id=theme.id) }}"></div>
+            {%- else -%}
+                {% for theme in themes -%}
+                    <a href="{{ url_for('analytics.analytics_by_themes', theme_id=theme.id) }}" class="authors-list">{{ theme.name }}</a>
+                    {% if not loop.last %}<br />{% endif %}
+                {%- endfor %}
+            {%- endif %}
+        </div>
+    </div>
+{%- endblock %}

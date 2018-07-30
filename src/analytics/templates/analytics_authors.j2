@@ -1,0 +1,33 @@
+{% extends 'common.j2' %}
+
+{% block content -%}
+    <h1 class="float-right">{{ _('Analytics front heading') }}</h1>
+    <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}" /></a>
+
+    <div class="tabs">
+        <nav>
+            <ul>
+                <a href="{{ url_for('analytics.analytics') }}"><li>{{ _('All analytics front tabname') }}</li></a>
+                <a href="{{ url_for('analytics.analytics_by_authors') }}"{% if not author %}  class="active"{% endif %}><li>{{ _('Authors analytics front tabname') }}</li></a>
+                <a href="{{ url_for('analytics.analytics_by_themes') }}"><li>{{ _('Themes analytics front tabname') }}</li></a>
+            </ul>
+        </nav>
+
+        <div class="tab">
+            {% if author -%}
+                <h2>{{ _('Analytics by %(author)s', author=author.fullname_initials) }}</h2>
+                {% for analytics in analytics_list -%}
+                    {% include 'analytics_all_row.j2' %}
+                {%- endfor %}
+                <div class="ajax-insertion-point" data-url="{{ url_for('analytics.loading', author_slug=author.slug) }}"></div>
+            {%- else -%}
+                <div class="columns">
+                    {% for person in authors -%}
+                        <a href="{{ url_for('analytics.analytics_by_authors', author_slug=person.slug) }}" class="authors-list">{{ person.fullname_initials }}</a>
+                        {% if not loop.last %}<br />{% endif %}
+                    {%- endfor %}
+                </div>
+            {%- endif %}
+        </div>
+    </div>
+{%- endblock %}

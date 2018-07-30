@@ -22,7 +22,7 @@
                     <tr>
                         <td>
                             {{ render_trash_icon(analytics.in_trash) }}
-                            <a href="{{ url_for('admin.analytics_manage_analytics', analytics_id=analytics.id) }}">{{ analytics.title }}</a>
+                            <a href="{{ url_for('admin.analytics_manage_analytics', analytics_id=analytics.id) }}">{{ analytics.title|truncate(100, end='...') }}</a>
                             <br /><span class="uk-text-small uk-text-muted">{{ analytics.authors_list() }}</span>
                         </td>
                         <td>
