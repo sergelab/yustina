@@ -1,0 +1,40 @@
+<div class="press-list-item{% if news_article.list_photo_url %} press-list-item-with-image{% endif %}">
+    {% if news_article.list_photo_url -%}<p class="press-list-date">{% else %}<div class="press-list-date">{% endif %}
+        {{ news_article.date_publishing|date }}
+    {% if news_article.list_photo_url -%}</p>{% else %}</div>{% endif %}
+
+    {% if news_article.content -%}
+        <a href="{{ url_for('press.news_article', slug=news_article.slug) }}">
+            {% if news_article.list_photo_url -%}
+                <img src="{{ url_for('public', filename=news_article.list_photo_url) }}" />
+            {%- endif %}
+            <h2>{{ news_article.title }}</h2>
+        </a>
+
+        <div>
+            {{ news_article.annotation|safe }}
+            {% if news_article.source -%}<br />
+                {% if news_article.source_link -%}<a href="{{ news_article.source_link }}" target="_blank">{%- endif %}
+                {{ news_article.source }}
+                {% if news_article.source_link -%}</a>{%- endif %}
+            {%- endif %}
+        </div>
+    {%- else -%}
+        <a href="{{ url_for('press.news_article', slug=news_article.slug) }}">
+            {% if news_article.list_photo_url -%}
+                <img src="{{ url_for('public', filename=news_article.list_photo_url) }}" />
+            {%- endif %}
+        </a>
+
+        <h2>{{ news_article.title }}</h2>
+
+        <p>
+            {{ news_article.annotation|safe }}
+            {% if news_article.source -%}<br />
+                {% if news_article.source_link -%}<a href="{{ news_article.source_link }}" target="_blank">{%- endif %}
+                {{ news_article.source }}
+                {% if news_article.source_link -%}</a>{%- endif %}
+            {%- endif %}
+        </p>
+    {%- endif %}
+</div>

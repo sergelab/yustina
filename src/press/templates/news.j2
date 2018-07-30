@@ -5,36 +5,10 @@
     <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}"></a>
     <div class="clear-both"></div>
 
-    {% for news_article in news -%}
-        <div class="press-list-item press-list-item-with-image">
-            <div class="press-list-date">{{ news_article.date_publishing|date }}</div>
-
-            {% if news_article.content -%}
-                <a href="{{ url_for('press.news_article', slug=news_article.slug) }}">
-                    {% if news_article.list_photo and news_article.list_photo.preview() -%}
-                        <img src="{{ url_for('public', filename=news_article.list_photo.preview()) }}" />
-                    {%- endif %}
-                    <h2>{{ news_article.title }}</h2>
-                </a>
-
-                <div>{{ news_article.annotation|safe }}</div>
-            {%- else -%}
-                {% if news_article.list_photo and news_article.list_photo.preview() -%}
-                    <img src="{{ url_for('public', filename=news_article.list_photo.preview()) }}" />
-                {%- endif %}
-                <h2>{{ news_article.title }}</h2>
-
-                <div>{{ news_article.annotation|safe }}</div>
-            {%- endif %}
-
-            {% if news_article.source -%}
-                <br>
-                <div>
-                    {% if news_article.source_link -%}<a href="{{ news_article.source_link }}" target="_blank">{%- endif %}
-                    {{ news_article.source }}
-                    {% if news_article.source_link -%}</a>{%- endif %}
-                </div>
-            {%- endif %}
-        </div>
-    {%- endfor %}
+    <div>
+        {% for news_article in news -%}
+            {%- include 'article_content.j2' with context -%}
+        {%- endfor %}
+        <div class="ajax-insertion-point" data-url="{{ url_for('press.news_loading') }}"></div>
+    </div>
 {%- endblock %}
