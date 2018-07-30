@@ -7,7 +7,7 @@
         {%- endfor %}
         <div>
             {# request.path #}
-            <a href=""><img class="search-icon" src="{{ asset_url_for('images/search-icon.svg') }}" /></a>
+            <a href="" class="search-button"><img class="search-icon" src="{{ asset_url_for('images/search-icon.svg') }}" /></a>
             {% if settings.language_switcher == True -%}
                 {% for code, name in config['LANGUAGES'].items() if code != g.current_language -%}
                     <a href="{{ url_for('setlang', language=code) }}">{{ name }}</a>
@@ -25,7 +25,21 @@
                 <a href="{{ url_for('setlang', language=code) }}">{{ name }}</a>
             {%- endfor %}
         {%- endif %}
-        <div><img src="{{ asset_url_for('images/search-icon-mobile.svg') }}"><input type="text" name="search" placeholder="{{ _('Search front placeholder') }}" /></div>
+        <div>
+            <form action="{{ url_for('search') }}" method="get">
+                <img src="{{ asset_url_for('images/search-icon-mobile.svg') }}" /><input type="text" name="query" placeholder="{{ _('Search front placeholder') }}" />
+            </form>
+        </div>
     </nav>
     <label for="menu" class="mobile"><img src="{{ asset_url_for('images/hamburger.svg') }}"></label>
+    <div class="header-search-form">
+        <form action="{{ url_for('search') }}" method="get">
+            <table>
+                <tr>
+                    <td><input type="text" name="query" placeholder="{{ _('Search front placeholder') }}" /></td>
+                    <td><input type="submit" value="{{ _('Search front button') }}"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </header>
