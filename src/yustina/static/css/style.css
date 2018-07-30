@@ -92,12 +92,15 @@ img { max-width: 100%; }
 /* ANALYTICS */
 
 .tabs > nav > ul { width: 100%; display: flex; margin-right: -1px; list-style: none; padding: 0; }
-.tabs > nav > ul > label > li { background: #ccc; margin-right: 1px; padding: .6667em; font-size: 120%; }
-.tabs > nav > ul > label { flex-grow: 1; text-align: center; font-family: 'PT Serif', serif; color: #203c80; cursor: pointer; }
-.tabs > nav > ul > label.active { cursor: default; }
+.tabs > nav > ul > label > li,
+.tabs > nav > ul > a > li { background: #ccc; margin-right: 1px; padding: .6667em; font-size: 120%; }
+.tabs > nav > ul > label,
+.tabs > nav > ul > a { flex-grow: 1; text-align: center; font-family: 'PT Serif', serif; color: #203c80; cursor: pointer; text-decoration: none; }
+.tabs > nav > ul > label.active,
+.tabs > nav > ul > a.active { cursor: default; }
 
-.tabs .tab, .tabs .tab-switch { display: none; }
-.tabs .tab-switch:checked + .tab { display: block; }
+/*.tabs .tab, .tabs .tab-switch { display: none; }*/
+.tabs .tab { display: block; }
 
 .tabs nav ul .active li { color: #fff; background: #203c80; }
 
