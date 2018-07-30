@@ -1,0 +1,21 @@
+{% extends 'common.j2' %}
+
+{% block content -%}
+    <h1 class="float-right"> </h1>
+    <a href="{{ url_for('index') }}"><img id="logo" src="{{ asset_url_for('images/logoblue2.svg') }}" /></a>
+    <div class="clear-both"></div>
+{% endblock %}
+
+{% block body_content -%}
+    <div class="error">
+		<div>
+			<div class="error-1">
+				<h2>{{ _('404 Front heading') }}</h2>
+			</div>
+			<div class="error-2">
+				<h3>{{ _('404 Front subheader') }}</h3>
+				<p>{{ _('404 Front body %(info_email)s', info_email='some@mail.ru') }}</p>
+			</div>
+		</div>
+	</div>
+{%- endblock %}
