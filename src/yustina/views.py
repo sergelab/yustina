@@ -14,6 +14,7 @@ from flask import (abort,
                    request,
                    send_from_directory,
                    url_for)
+from flask_babel import gettext as _
 import textile as tx
 
 from .init import app, babel
@@ -28,12 +29,30 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template_string("{% extends 'common.j2' %}")
+    nav = Navigation.available().filter(
+        Navigation.route == 'about'
+    ).first()
+
+    page_heading = _('About page heading')
+
+    if nav:
+        page_heading = nav.caption
+
+    return render_template('about.j2', page_heading=page_heading)
 
 
 @app.route('/contacts')
 def contacts():
-    return 'CONTACTS OK'
+    nav = Navigation.available().filter(
+        Navigation.route == 'contacts'
+    ).first()
+
+    page_heading = _('Contacts page heading')
+
+    if nav:
+        page_heading = nav.caption
+
+    return render_template('contacts.j2', page_heading=page_heading)
 
 
 @app.route('/search')
