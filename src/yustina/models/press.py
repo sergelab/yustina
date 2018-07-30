@@ -52,3 +52,9 @@ class NewsArticle(db.Model, DeletableMixin, SlugifyMixin):
     @list_photo.setter
     def list_photo(self, jsondict):
         self._list_photo = Attachment(jsondict).as_json()
+
+    @property
+    def list_photo_url(self):
+        if self.list_photo and self.list_photo.preview():
+            return self.list_photo.preview()
+        return None
