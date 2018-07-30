@@ -54,10 +54,10 @@ $(function(){
 		toSlide(parseInt($(this).attr('data-slide')));
 	});
 
-	$('.tabs > nav > ul > label').on('click', function(e){
-		$('.tabs > nav > ul > label').removeClass('active');
-		$(this).addClass('active');
-	});
+	// $('.tabs > nav > ul > label').on('click', function(e){
+	// 	$('.tabs > nav > ul > label').removeClass('active');
+	// 	$(this).addClass('active');
+	// });
 
 	function ajaxLoad(){
 		var ins = $('.ajax-insertion-point');
