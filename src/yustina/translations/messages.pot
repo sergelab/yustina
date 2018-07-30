@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-27 19:01+0300\n"
+"POT-Creation-Date: 2018-07-30 16:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1112,6 +1112,19 @@ msgstr ""
 msgid "Invalid username or password validation message"
 msgstr ""
 
+#: src/yustina/templates/404.j2:13
+msgid "404 Front heading"
+msgstr ""
+
+#: src/yustina/templates/404.j2:16
+msgid "404 Front subheader"
+msgstr ""
+
+#: src/yustina/templates/404.j2:17
+#, python-format
+msgid "404 Front body %(info_email)s"
+msgstr ""
+
 #: src/yustina/templates/foot.j2:8
 msgid "Driving directions link"
 msgstr ""
@@ -1121,8 +1134,12 @@ msgstr ""
 msgid "Copyright string %(current_year)s"
 msgstr ""
 
-#: src/yustina/templates/head.j2:28
+#: src/yustina/templates/head.j2:30 src/yustina/templates/head.j2:39
 msgid "Search front placeholder"
+msgstr ""
+
+#: src/yustina/templates/head.j2:40
+msgid "Search front button"
 msgstr ""
 
 #: src/yustina/templates/index.j2:6

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-27 19:01+0300\n"
-"PO-Revision-Date: 2018-07-27 19:22+0300\n"
+"POT-Creation-Date: 2018-07-30 16:29+0300\n"
+"PO-Revision-Date: 2018-07-30 16:30+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -1146,6 +1146,22 @@ msgstr "Запомнить меня"
 msgid "Invalid username or password validation message"
 msgstr "Неверное сочетание имени пользователя и пароля."
 
+#: src/yustina/templates/404.j2:13
+msgid "404 Front heading"
+msgstr "Ошибка 404"
+
+#: src/yustina/templates/404.j2:16
+msgid "404 Front subheader"
+msgstr "Страница не найдена!"
+
+#: src/yustina/templates/404.j2:17
+#, python-format
+msgid "404 Front body %(info_email)s"
+msgstr ""
+"Возможно, документ был перенесен, или в адресной строке допущена ошибка. Вы "
+"можете сообщить о случившемся по адресу <a href=“mailto:%(info_email)s”>"
+"%(info_email)s</a> или просто продолжить просмотр сайта."
+
 #: src/yustina/templates/foot.j2:8
 msgid "Driving directions link"
 msgstr "Схема проезда"
@@ -1155,9 +1171,13 @@ msgstr "Схема проезда"
 msgid "Copyright string %(current_year)s"
 msgstr "© 2007–%(current_year)s г."
 
-#: src/yustina/templates/head.j2:28
+#: src/yustina/templates/head.j2:30 src/yustina/templates/head.j2:39
 msgid "Search front placeholder"
-msgstr ""
+msgstr "поиск"
+
+#: src/yustina/templates/head.j2:40
+msgid "Search front button"
+msgstr "Найти"
 
 #: src/yustina/templates/index.j2:6
 #, python-format
@@ -1187,6 +1207,3 @@ msgstr "Профессионализм. Репутация. Опыт."
 #~ msgstr[0] "<span>&emsp;&emsp;%(num_cases)d</span> дело&emsp;<br />"
 #~ msgstr[1] ""
 #~ msgstr[2] ""
-
-#~ msgid "Position name label"
-#~ msgstr "Название должности"
