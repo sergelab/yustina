@@ -11,6 +11,7 @@ from wtforms.widgets import TextInput
 class OptionType(object):
     About = 'about'
     Contacts = 'contacts'
+    Competences = 'competences.competences'
     Partners = 'partners.partners'
     Analytics = 'analytics.analytics'
     Press = 'press.news'
@@ -21,6 +22,7 @@ routes = [
     ('', __('Select option')),
     (OptionType.About, __('About page option')),
     (OptionType.Contacts, __('Contacts page option')),
+    (OptionType.Competences, __('Competences page option')),
     (OptionType.Partners, __('Partners page option')),
     (OptionType.Analytics, __('Analytics page option')),
     (OptionType.Press, __('Press page option')),
