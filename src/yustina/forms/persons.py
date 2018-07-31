@@ -5,12 +5,12 @@ from contrib.forms import Form, WidgetPrebind
 from contrib.forms.fields import RefQuerySelectMultipleField, UploadField
 from contrib.forms.widgets import TextileWidget
 from flask_babel import lazy_gettext as __
-from wtforms import BooleanField, StringField
+from wtforms import BooleanField, SelectField, StringField
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from wtforms.validators import DataRequired
 from wtforms.widgets import TextArea, TextInput
 
-from ..models.persons import PartnersCategory, Position
+from ..models.persons import PartnersCategory, Person, Position
 
 
 class PartnersCategoryForm(Form):
@@ -103,6 +103,11 @@ class PersonForm(Form):
             TextInput(),
             class_='uk-width-1-2'
         )
+    )
+    gender = SelectField(
+        __('Person gender label'),
+        choices=[(Person.MALE, __('Person gender male option')),
+                 (Person.FEMALE, __('Person gender female option'))]
     )
     category = QuerySelectField(
         __('Partner category label'),

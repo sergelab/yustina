@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-31 20:12+0300\n"
+"POT-Creation-Date: 2018-07-31 22:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -872,7 +872,7 @@ msgid "Authors as text label"
 msgstr ""
 
 #: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
-#: src/yustina/forms/persons.py:114
+#: src/yustina/forms/persons.py:119
 msgid "Person positions label"
 msgstr ""
 
@@ -1025,42 +1025,54 @@ msgid "Person middlename label"
 msgstr ""
 
 #: src/yustina/forms/persons.py:108
+msgid "Person gender label"
+msgstr ""
+
+#: src/yustina/forms/persons.py:109
+msgid "Person gender male option"
+msgstr ""
+
+#: src/yustina/forms/persons.py:110
+msgid "Person gender female option"
+msgstr ""
+
+#: src/yustina/forms/persons.py:113
 msgid "Partner category label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:127
+#: src/yustina/forms/persons.py:132
 msgid "Person bio label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:135
+#: src/yustina/forms/persons.py:140
 msgid "Person registry no label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:142
+#: src/yustina/forms/persons.py:147
 msgid "Person specialty label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:150
+#: src/yustina/forms/persons.py:155
 msgid "Person list photo label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:151
+#: src/yustina/forms/persons.py:156
 msgid "Person list photo description"
 msgstr ""
 
-#: src/yustina/forms/persons.py:154
+#: src/yustina/forms/persons.py:159
 msgid "Person card photo label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:155
+#: src/yustina/forms/persons.py:160
 msgid "Person card photo description"
 msgstr ""
 
-#: src/yustina/forms/persons.py:158
+#: src/yustina/forms/persons.py:163
 msgid "Person video label"
 msgstr ""
 
-#: src/yustina/forms/persons.py:160
+#: src/yustina/forms/persons.py:165
 msgid "Person video description"
 msgstr ""
 

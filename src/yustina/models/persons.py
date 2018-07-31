@@ -105,6 +105,9 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
     """
     Персона
     """
+    MALE = 'male'
+    FEMALE = 'female'
+
     __tablename__ = 'persons'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -118,6 +121,8 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
     category_id = db.Column(db.Integer,
                             db.ForeignKey('persons_categories.id'),
                             nullable=False)
+    gender = db.Column(db.Enum(MALE, FEMALE, name='persons_genders'),
+                       default=MALE, nullable=False)
 
     _photo = db.Column('photo', JSONB)
     _video = db.Column('video', JSONB)
@@ -159,6 +164,9 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
     def front_list_photo_url(self):
         if self.list_photo and self.list_photo.original():
             return url_for('public', filename=self.list_photo.original())
+
+        if self.gender == self.FEMALE:
+            return webpack.asset_url_for(os.path.join('images', 'no_photo_female.jpg'))
 
         return webpack.asset_url_for(os.path.join('images', 'no_photo_male.jpg'))
 
