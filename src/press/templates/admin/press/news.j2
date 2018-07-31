@@ -27,7 +27,7 @@
                         </td>
                         <td class="uk-text-center">{{ article.date_publishing|date }}</td>
                         <td>
-                            {{ article.annotation|truncate(200) }}
+                            {% if article.annotation -%}{{ article.annotation|truncate(200) }}{%- endif %}
                         </td>
                     </tr>
                 {%- endfor %}
