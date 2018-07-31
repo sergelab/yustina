@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-31 02:18+0300\n"
-"PO-Revision-Date: 2018-07-31 02:20+0300\n"
+"POT-Creation-Date: 2018-07-31 20:12+0300\n"
+"PO-Revision-Date: 2018-07-31 20:13+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -434,28 +434,26 @@ msgstr "Аналитический материал сохранен."
 
 #: src/analytics/templates/analytics.j2:4
 #: src/analytics/templates/analytics_authors.j2:4
-#: src/analytics/templates/analytics_base.j2:4
+#: src/analytics/templates/analytics_card.j2:4
+#: src/analytics/templates/analytics_card.j2:9
 #: src/analytics/templates/analytics_themes.j2:4
 msgid "Analytics front heading"
 msgstr "Аналитика"
 
 #: src/analytics/templates/analytics.j2:10
 #: src/analytics/templates/analytics_authors.j2:10
-#: src/analytics/templates/analytics_base.j2:10
 #: src/analytics/templates/analytics_themes.j2:10
 msgid "All analytics front tabname"
 msgstr "Вся"
 
 #: src/analytics/templates/analytics.j2:11
 #: src/analytics/templates/analytics_authors.j2:11
-#: src/analytics/templates/analytics_base.j2:11
 #: src/analytics/templates/analytics_themes.j2:11
 msgid "Authors analytics front tabname"
 msgstr "Авторы"
 
 #: src/analytics/templates/analytics.j2:12
 #: src/analytics/templates/analytics_authors.j2:12
-#: src/analytics/templates/analytics_base.j2:12
 #: src/analytics/templates/analytics_themes.j2:12
 msgid "Themes analytics front tabname"
 msgstr "Темы"
@@ -706,6 +704,10 @@ msgstr "Практики"
 msgid "No practics found string"
 msgstr "Пусто"
 
+#: src/competences/templates/competences.j2:4
+msgid "Competences front heading"
+msgstr "Компетенции"
+
 #: src/contrib/forms/fields.py:51
 #, python-format
 msgid "'%(value)s' is not a valid choice for this field"
@@ -867,6 +869,14 @@ msgstr "Аннотация новости"
 msgid "No news articles found string"
 msgstr "Пусто"
 
+#: src/yustina/views.py:36
+msgid "About page heading"
+msgstr ""
+
+#: src/yustina/views.py:50
+msgid "Contacts page heading"
+msgstr ""
+
 #: src/yustina/forms/analytics.py:20
 msgid "Theme name label"
 msgstr "Название темы"
@@ -956,51 +966,55 @@ msgstr "Описание дела"
 msgid "Workcase branches positions label"
 msgstr ""
 
-#: src/yustina/forms/navigation.py:21
+#: src/yustina/forms/navigation.py:22
 msgid "Select option"
 msgstr "Выбрать …"
 
-#: src/yustina/forms/navigation.py:22
+#: src/yustina/forms/navigation.py:23
 msgid "About page option"
 msgstr "О фирме"
 
-#: src/yustina/forms/navigation.py:23
+#: src/yustina/forms/navigation.py:24
 msgid "Contacts page option"
 msgstr "Контакты"
 
-#: src/yustina/forms/navigation.py:24
+#: src/yustina/forms/navigation.py:25
+msgid "Competences page option"
+msgstr "Компетенции"
+
+#: src/yustina/forms/navigation.py:26
 msgid "Partners page option"
 msgstr "Партнёры"
 
-#: src/yustina/forms/navigation.py:25
+#: src/yustina/forms/navigation.py:27
 msgid "Analytics page option"
 msgstr "Аналитика"
 
-#: src/yustina/forms/navigation.py:26
+#: src/yustina/forms/navigation.py:28
 msgid "Press page option"
 msgstr "Пресс-центр"
 
-#: src/yustina/forms/navigation.py:27
+#: src/yustina/forms/navigation.py:29
 msgid "Books page option"
 msgstr "Книги"
 
-#: src/yustina/forms/navigation.py:33
+#: src/yustina/forms/navigation.py:35
 msgid "Nav option caption (RU) label"
 msgstr "Заголовок (рус)"
 
-#: src/yustina/forms/navigation.py:41
+#: src/yustina/forms/navigation.py:43
 msgid "Nav option caption (EN) label"
 msgstr "Заголовок (англ)"
 
-#: src/yustina/forms/navigation.py:47
+#: src/yustina/forms/navigation.py:49
 msgid "Nav option activity (RU) label"
 msgstr "Используется на сайте"
 
-#: src/yustina/forms/navigation.py:48
+#: src/yustina/forms/navigation.py:50
 msgid "Nav option activity (EN) label"
 msgstr "Используется на сайте"
 
-#: src/yustina/forms/navigation.py:51
+#: src/yustina/forms/navigation.py:53
 msgid "Nav option route label"
 msgstr "Раздел"
 
