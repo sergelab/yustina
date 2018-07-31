@@ -10,28 +10,62 @@
 
 	<div class="hr"></div>
 	<div class="main-spacer"></div>
-	<div class="main-case main-case-1">
-		<div class="main-case-photo"><img src="/img/main1.jpg"></div>
-		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Старовойтов Сергей Вальтерович</a></div>
-		<div class="main-case-position">Управляющий партнер, адвокат</div>
-		<div class="main-case-text">Представляли интересы компании «Стройтрансгаз» по иску «Газпрома» о возврате акций стоимостью <span>более 1 млрд долларов</span></div>
-	</div>
-	<div class="main-case main-case-2">
-		<div class="main-case-photo"><img src="/img/main2.jpg"></div>
-		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Плетнев Владимир Юрьевич</a></div>
-		<div class="main-case-position">Партнер, адвокат</div>
-		<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</span></div>
-	</div>
-	<div class="main-case main-case-3">
-		<div class="main-case-photo"><img src="/img/main3.jpg"></div>
-		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Шаманский Олег Александрович</a></div>
-		<div class="main-case-position">Управляющий партнер, адвокат</div>
-		<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</div>
-	</div>
-	<div class="main-case main-case-4">
-		<div class="main-case-photo"><img src="/img/main4.jpg"></div>
-		<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Туктамишев Сергей Борисович</a></div>
-		<div class="main-case-position">Руководитель корпоративной практики, старший партнер, адвокат</div>
-		<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</div>
+
+    <div class="main">
+		<div>
+			<div class="main-case">
+				<div class="main-case-left">
+					<div class="main-case-photo"><img src="{{ asset_url_for('images/main1.jpg') }}"></div>
+					<div class="main-case-info">
+						<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Старовойтов Сергей Вальтерович</a></div>
+						<div class="main-case-position">Управляющий партнер, адвокат</div>
+					</div>
+				</div>
+				<div class="main-case-right main-case-1">
+					<img src="{{ asset_url_for('images/folder1.jpg') }}" />
+					<div class="main-case-text">Представляли интересы компании «Стройтрансгаз» по иску «Газпрома» о возврате акций стоимостью <span>более 1 млрд долларов</span></div>
+				</div>
+			</div>
+			<div class="main-case">
+				<div class="main-case-left">
+					<div class="main-case-photo"><img src="{{ asset_url_for('images/main2.jpg') }}"></div>
+					<div class="main-case-info">
+						<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Плетнев Владимир Юрьевич</a></div>
+						<div class="main-case-position">Управляющий партнер, адвокат</div>
+					</div>
+				</div>
+				<div class="main-case-right main-case-2">
+					<img src="{{ asset_url_for('images/folder2.jpg') }}" />
+					<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</span></div>
+				</div>
+			</div>
+			<div class="main-case">
+				<div class="main-case-left">
+					<div class="main-case-photo"><img src="{{ asset_url_for('images/main3.jpg') }}"></div>
+					<div class="main-case-info">
+						<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Шаманский Олег Александрович</a></div>
+						<div class="main-case-position">Управляющий партнер, адвокат</div>
+					</div>
+				</div>
+				<div class="main-case-right main-case-3">
+					<img src="{{ asset_url_for('images/folder3.jpg') }}" />
+					<div class="main-case-text">Представляли интересы компании «Стройтрансгаз» по иску «Газпрома» о возврате акций стоимостью <span>более 1 млрд долларов</span></div>
+				</div>
+			</div>
+			<div class="main-case">
+				<div class="main-case-left">
+					<div class="main-case-photo"><img src="{{ asset_url_for('images/main4.jpg') }}"></div>
+					<div class="main-case-info">
+						<div class="main-case-name">Дело вел <br /><a href="/person-card.html">Туктамишев Сергей Борисович</a></div>
+						<div class="main-case-position">Управляющий партнер, адвокат</div>
+					</div>
+				</div>
+				<div class="main-case-right main-case-4">
+					<img src="{{ asset_url_for('images/folder4.jpg') }}" />
+					<div class="main-case-text">Для группы «ГАЗ» мы решили вопрос о возмещении НДС в связи с поставкой товаров в страны СНГ <span>на сумму более 16 млн долларов</span></div>
+				</div>
+			</div>
+ 			<div class="ajax-insertion-point" data-url="/ajax-index.html"></div>
+		</div>
 	</div>
 {%- endblock %}
