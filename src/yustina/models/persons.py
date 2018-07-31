@@ -1,12 +1,15 @@
 # coding: utf-8
 from __future__ import absolute_import
 
+import os
+
 from contrib.data.attachment import Attachment
 from contrib.utils.language import get_current_language
+from flask import url_for
 from sqlalchemy.dialects.postgresql import JSONB
 
 from .mixins import DeletableMixin, SlugifyMixin
-from ..init import db
+from ..init import db, webpack
 
 
 class PartnersCategory(db.Model, DeletableMixin):
@@ -151,6 +154,13 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
     @list_photo.setter
     def list_photo(self, jsondict):
         self._list_photo = Attachment(jsondict).as_json()
+
+    @property
+    def front_list_photo_url(self):
+        if self.list_photo and self.list_photo.original():
+            return url_for('public', filename=self.list_photo.original())
+
+        return webpack.asset_url_for(os.path.join('images', 'no_photo_male.jpg'))
 
     @property
     def fullname(self):

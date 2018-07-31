@@ -12,9 +12,7 @@
                 <div class="person-grid">
                     {% for person in info.partners -%}
                         <a href="{{ url_for('partners.partner_card', slug=person.slug) }}" class="person-grid-person">
-                            {% if person.list_photo and person.list_photo.original() -%}
-                                <img src="{{ url_for('public', filename=person.list_photo.original()) }}" />
-                            {%- endif %}
+                            <img src="{{ person.front_list_photo_url }}" />
                             <h3 class="person-grid-name">{{ person.fullname|replace(' ', '<br />', 1) }}</h3>
                         </a>
                     {%- endfor %}
