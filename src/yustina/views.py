@@ -27,6 +27,12 @@ def index():
     return render_template('index.j2')
 
 
+@app.route('/a/loading')
+def index_loading():
+    result = ''
+    return result
+
+
 @app.route('/about')
 def about():
     nav = Navigation.available().filter(
