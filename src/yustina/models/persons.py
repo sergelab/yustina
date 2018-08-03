@@ -194,7 +194,7 @@ class Person(db.Model, DeletableMixin, SlugifyMixin):
 
     def positions_as_text(self):
         if self.positions:
-            return ', '.join([p.name for p in self.positions])
+            return ', '.join([p.name for p in self.positions if p is not None])
         return ''
 
     @classmethod
