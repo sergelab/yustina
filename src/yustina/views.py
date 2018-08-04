@@ -1,5 +1,5 @@
 # coding: utf-8
-from __future__ import absolute_import
+from __future__ import absolute_import, division
 
 import datetime
 
@@ -17,20 +17,44 @@ from flask import (abort,
 from flask_babel import gettext as _
 import textile as tx
 
-from .init import app, babel
+from .init import app, babel, db
 from .models.navigation import Navigation
 from .models.settings import Settings, SettingsHelper
+from .models.cases import Workcase
 
 
 @app.route('/')
 def index():
-    return render_template('index.j2')
+    cases = Workcase.available(for_index=True).limit(
+        current_app.config.get('INDEX_CASES_LIMIT')).all()
+
+    return render_template('index.j2',
+                           cases=cases)
 
 
 @app.route('/a/loading')
 def index_loading():
-    result = ''
-    return result
+    skip = request.args.get('skip', type=int) or None
+    data = []
+
+    if skip:
+        cases = Workcase.available(for_index=True).offset(skip).limit(
+            current_app.config.get('INDEX_CASES_LIMIT')).all()
+
+        if cases:
+            for i, c in enumerate(cases, start=1):
+                print('===> i = ', i)
+                if i % 4 == 0:
+                    idx = 4
+                elif i % 3 == 0:
+                    idx = 3
+                elif i % 2 == 0 and i % 4 != 0:
+                    idx = 2
+                else:
+                    idx = 1
+                data.append(render_template('workcase_row.j2', case=c, idx=idx))
+
+    return u'\n'.join(data)
 
 
 @app.route('/about')

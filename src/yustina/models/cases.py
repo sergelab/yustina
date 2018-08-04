@@ -39,41 +39,37 @@ class Practic(db.Model, DeletableMixin):
         return query
 
 
-workcase_branch_association = db.Table(
-    'workcase_branch_association',
-    db.Column('workcase_id', db.Integer, db.ForeignKey('workcases.id'), primary_key=True),
-    db.Column('branch_id', db.Integer, db.ForeignKey('practices.id'), primary_key=True)
-)
-
-
-workcase_person_association = db.Table(
-    'workcase_person_association',
-    db.Column('workcase_id', db.Integer, db.ForeignKey('workcases.id'), primary_key=True),
-    db.Column('person_id', db.Integer, db.ForeignKey('persons.id'), primary_key=True)
-)
-
-
-class Workcase(db.Model, DeletableMixin):
-    """
-    Юридические дела
-    """
+class Workcase(DeletableMixin, db.Model):
     __tablename__ = 'workcases'
 
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.Text)
-    description = db.Column(db.Text)
 
-    branches = db.relationship(Practic,
-                               secondary=workcase_branch_association,
-                               lazy=True)
+    # Краткое описание дела
+    short_description = db.Column(db.Text)
 
-    persons = db.relationship(Person,
-                              secondary=workcase_person_association,
-                              lazy=True,
-                              backref=db.backref('workcases',
-                                                 lazy='dynamic'))
+    # Показывать на главной странице
+    show_index = db.Column(db.Boolean, default=False)
+
+    # Результат работы
+    result = db.Column(db.Text)
+
+    person_id = db.Column(db.Integer,
+                          db.ForeignKey('persons.id'),
+                          nullable=False)
+
+    person = db.relationship('Person', lazy='joined',
+                             backref=db.backref('cases'))
 
     @classmethod
     def admin_list(cls):
         query = cls.query
+        return query
+
+    @classmethod
+    def available(cls, for_index=None):
+        query = cls.admin_list()
+
+        if for_index is not None:
+            query = query.filter(cls.show_index.is_(for_index))
+
         return query

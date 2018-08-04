@@ -1,0 +1,14 @@
+{%- set img_name = 'images/folder%s.jpg'|format(idx) -%}
+<div class="main-case">
+    <div class="main-case-left">
+        <div class="main-case-photo"><img src="{{ case.person.front_list_photo_url }}"></div>
+        <div class="main-case-info">
+            <div class="main-case-name">{{ _('Male business conducted front string') if case.person.gender == 'male' else _('Female business conducted front string') }}<br /><a href="{{ url_for('partners.partner_card', slug=case.person.slug) }}">{{ case.person.fullname }}</a></div>
+            <div class="main-case-position">{{ case.person.positions_as_text() }}</div>
+        </div>
+    </div>
+    <div class="main-case-right main-case-{{ idx }}">
+        <img src="{{ asset_url_for(img_name) }}" />
+        <div class="main-case-text">{{ case.short_description|safe }}</div>
+    </div>
+</div>

@@ -6,6 +6,7 @@ from flask import (abort,
                    Blueprint,
                    render_template)
 from yustina.models.persons import PartnersCategory, Person
+from yustina.models.cases import Workcase
 
 from .admin import *
 
@@ -24,10 +25,11 @@ def partners():
         abort(404)
 
     partners_query = Person.available_list()
-    people_query = partners_query.order_by(False)  # Уберем существующую сортировку
+    partners_query = partners_query.order_by(False)  # Уберем существующую сортировку
     partners_query = partners_query.order_by(
         Person.surname.asc(), Person.firstname.asc(), Person.middlename.asc()
     )
+
 
     partners_cards = partners_query.all()
 
@@ -89,8 +91,8 @@ def partner_card(slug):
     if next_partner.id == person.id:
         next_partner = None
 
-    # workcases = person.available_workcases().all()
-    workcases = []
+    workcases = Workcase.available(for_index=False).filter(
+        Workcase.person_id == person.id).all()
 
     return render_template('person_card.j2',
                            person=person,
