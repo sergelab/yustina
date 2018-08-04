@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-31 22:16+0300\n"
-"PO-Revision-Date: 2018-07-31 22:16+0300\n"
+"POT-Creation-Date: 2018-08-04 15:31+0300\n"
+"PO-Revision-Date: 2018-08-04 15:34+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.1\n"
 
 #: src/admin/views.py:58
 msgid "Persons nav option"
@@ -124,29 +124,13 @@ msgstr "Дела"
 msgid "Workcases dashboard description"
 msgstr ""
 
-#: src/admin/views.py:100
-msgid "Practics list nav option"
-msgstr "Практики"
-
-#: src/admin/views.py:101
-msgid "Practics list dashboard description"
-msgstr ""
-
-#: src/admin/views.py:103
-msgid "Branches list nav option"
-msgstr "Отрасли"
-
-#: src/admin/views.py:104
-msgid "Branches list dashboard description"
-msgstr ""
-
 #: src/admin/views.py:106
 msgid "Workcases list nav option"
 msgstr "Дела"
 
 #: src/admin/views.py:107
 msgid "Workcases list dashboard description"
-msgstr ""
+msgstr "Дела"
 
 #: src/admin/views.py:110
 msgid "Settings nav option"
@@ -678,23 +662,23 @@ msgstr "Пусто"
 
 #: src/cases/templates/admin/cases/cases.j2:5
 msgid "Workcases list heading"
-msgstr ""
+msgstr "Дела"
 
 #: src/cases/templates/admin/cases/cases.j2:15
-msgid "Workcase title column"
-msgstr ""
+msgid "Workcase short description column"
+msgstr "Краткое описание дела"
 
 #: src/cases/templates/admin/cases/cases.j2:16
-msgid "Workcase description column"
-msgstr ""
+msgid "Workcase show index column"
+msgstr "На главной"
 
-#: src/cases/templates/admin/cases/cases.j2:33
+#: src/cases/templates/admin/cases/cases.j2:34
 msgid "No workcases found string"
-msgstr ""
+msgstr "Нет дел"
 
 #: src/cases/templates/admin/cases/manage_case.j2:6
 msgid "Add workcase heading"
-msgstr ""
+msgstr "Новое дело"
 
 #: src/cases/templates/admin/cases/practics.j2:7
 msgid "Practics list heading"
@@ -808,7 +792,7 @@ msgstr "Партнёры"
 msgid "Biography front link"
 msgstr "Биография"
 
-#: src/partners/templates/person_card.j2:80
+#: src/partners/templates/person_card.j2:70
 msgid "Biography front string"
 msgstr "Краткая биография"
 
@@ -869,11 +853,11 @@ msgstr "Аннотация новости"
 msgid "No news articles found string"
 msgstr "Пусто"
 
-#: src/yustina/views.py:36
+#: src/yustina/views.py:66
 msgid "About page heading"
 msgstr ""
 
-#: src/yustina/views.py:50
+#: src/yustina/views.py:80
 msgid "Contacts page heading"
 msgstr ""
 
@@ -905,8 +889,7 @@ msgstr "Содержание"
 msgid "Authors as text label"
 msgstr ""
 
-#: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
-#: src/yustina/forms/persons.py:119
+#: src/yustina/forms/analytics.py:74 src/yustina/forms/persons.py:119
 msgid "Person positions label"
 msgstr "Должности"
 
@@ -955,16 +938,24 @@ msgid "Branch practic label"
 msgstr ""
 
 #: src/yustina/forms/cases.py:45
-msgid "Workcase title label"
-msgstr "Название дела"
+msgid "Workcase short description label"
+msgstr "Краткое описание"
 
-#: src/yustina/forms/cases.py:53
-msgid "Workcase description label"
-msgstr "Описание дела"
+#: src/yustina/forms/cases.py:54
+msgid "Workcase result label"
+msgstr "Результат"
 
 #: src/yustina/forms/cases.py:61
-msgid "Workcase branches positions label"
-msgstr ""
+msgid "Workcase show index label"
+msgstr "Показывать это дело на главной"
+
+#: src/yustina/forms/cases.py:64
+msgid "Person label"
+msgstr "Дело вел"
+
+#: src/yustina/forms/cases.py:67
+msgid "Select person option ..."
+msgstr "Выбрать персону …"
 
 #: src/yustina/forms/navigation.py:22
 msgid "Select option"
@@ -1263,6 +1254,14 @@ msgstr[2] "за <span>%(num)d</span> лет работы"
 msgid "Company slogan front string"
 msgstr "Профессионализм. Репутация. Опыт."
 
+#: src/yustina/templates/workcase_row.j2:6
+msgid "Male business conducted front string"
+msgstr "Дело вел"
+
+#: src/yustina/templates/workcase_row.j2:6
+msgid "Female business conducted front string"
+msgstr "Дело вела"
+
 #~ msgid "No positions found string"
 #~ msgstr "Пусто"
 
@@ -1271,3 +1270,12 @@ msgstr "Профессионализм. Репутация. Опыт."
 #~ msgstr[0] "<span>&emsp;&emsp;%(num_cases)d</span> дело&emsp;<br />"
 #~ msgstr[1] ""
 #~ msgstr[2] ""
+
+#~ msgid "Branches list nav option"
+#~ msgstr "Практики"
+
+#~ msgid "Workcase title label"
+#~ msgstr "Отрасли"
+
+#~ msgid "Workcase description label"
+#~ msgstr "Название дела"

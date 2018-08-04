@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-31 22:16+0300\n"
+"POT-Creation-Date: 2018-08-04 15:31+0300\n"
 "PO-Revision-Date: 2018-07-21 22:02+0300\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -120,22 +120,6 @@ msgstr ""
 
 #: src/admin/views.py:98
 msgid "Workcases dashboard description"
-msgstr ""
-
-#: src/admin/views.py:100
-msgid "Practics list nav option"
-msgstr ""
-
-#: src/admin/views.py:101
-msgid "Practics list dashboard description"
-msgstr ""
-
-#: src/admin/views.py:103
-msgid "Branches list nav option"
-msgstr ""
-
-#: src/admin/views.py:104
-msgid "Branches list dashboard description"
 msgstr ""
 
 #: src/admin/views.py:106
@@ -679,14 +663,14 @@ msgid "Workcases list heading"
 msgstr ""
 
 #: src/cases/templates/admin/cases/cases.j2:15
-msgid "Workcase title column"
+msgid "Workcase short description column"
 msgstr ""
 
 #: src/cases/templates/admin/cases/cases.j2:16
-msgid "Workcase description column"
+msgid "Workcase show index column"
 msgstr ""
 
-#: src/cases/templates/admin/cases/cases.j2:33
+#: src/cases/templates/admin/cases/cases.j2:34
 msgid "No workcases found string"
 msgstr ""
 
@@ -775,7 +759,7 @@ msgstr ""
 msgid "Biography front link"
 msgstr ""
 
-#: src/partners/templates/person_card.j2:80
+#: src/partners/templates/person_card.j2:70
 msgid "Biography front string"
 msgstr ""
 
@@ -836,11 +820,11 @@ msgstr ""
 msgid "No news articles found string"
 msgstr ""
 
-#: src/yustina/views.py:36
+#: src/yustina/views.py:66
 msgid "About page heading"
 msgstr ""
 
-#: src/yustina/views.py:50
+#: src/yustina/views.py:80
 msgid "Contacts page heading"
 msgstr ""
 
@@ -872,8 +856,7 @@ msgstr ""
 msgid "Authors as text label"
 msgstr ""
 
-#: src/yustina/forms/analytics.py:74 src/yustina/forms/cases.py:67
-#: src/yustina/forms/persons.py:119
+#: src/yustina/forms/analytics.py:74 src/yustina/forms/persons.py:119
 msgid "Person positions label"
 msgstr ""
 
@@ -922,15 +905,23 @@ msgid "Branch practic label"
 msgstr ""
 
 #: src/yustina/forms/cases.py:45
-msgid "Workcase title label"
+msgid "Workcase short description label"
 msgstr ""
 
-#: src/yustina/forms/cases.py:53
-msgid "Workcase description label"
+#: src/yustina/forms/cases.py:54
+msgid "Workcase result label"
 msgstr ""
 
 #: src/yustina/forms/cases.py:61
-msgid "Workcase branches positions label"
+msgid "Workcase show index label"
+msgstr ""
+
+#: src/yustina/forms/cases.py:64
+msgid "Person label"
+msgstr ""
+
+#: src/yustina/forms/cases.py:67
+msgid "Select person option ..."
 msgstr ""
 
 #: src/yustina/forms/navigation.py:22
@@ -1225,6 +1216,14 @@ msgstr[1] "for <span>%(num)d</span> years of work"
 msgid "Company slogan front string"
 msgstr "Professionalism. Reputation. An experience."
 
+#: src/yustina/templates/workcase_row.j2:6
+msgid "Male business conducted front string"
+msgstr ""
+
+#: src/yustina/templates/workcase_row.j2:6
+msgid "Female business conducted front string"
+msgstr ""
+
 #~ msgid "Position name label"
 #~ msgstr ""
 
@@ -1235,5 +1234,32 @@ msgstr "Professionalism. Reputation. An experience."
 #~ msgstr ""
 
 #~ msgid "404 Front body"
+#~ msgstr ""
+
+#~ msgid "Practics list nav option"
+#~ msgstr ""
+
+#~ msgid "Practics list dashboard description"
+#~ msgstr ""
+
+#~ msgid "Branches list nav option"
+#~ msgstr ""
+
+#~ msgid "Branches list dashboard description"
+#~ msgstr ""
+
+#~ msgid "Workcase title column"
+#~ msgstr ""
+
+#~ msgid "Workcase description column"
+#~ msgstr ""
+
+#~ msgid "Workcase title label"
+#~ msgstr ""
+
+#~ msgid "Workcase description label"
+#~ msgstr ""
+
+#~ msgid "Workcase branches positions label"
 #~ msgstr ""
 
