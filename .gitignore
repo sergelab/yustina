@@ -13,6 +13,5 @@ eggs/
 /node_modules
 /public
 *.mo
-*.json
-
-
+ru.json
+en.json
