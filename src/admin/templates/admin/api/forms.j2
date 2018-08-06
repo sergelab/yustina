@@ -6,12 +6,30 @@
     {%- endif %}
 {%- endmacro %}
 
-{% macro render_field(field, label=True, wrapper=True, disabled=False) -%}
+{% macro render_field(field, label=True, wrapper=True, disabled=False, obj=None) -%}
     {% if field.widget.input_type == 'checkbox' -%}
         <span class="uk-form-label"></span>
         <div class="uk-form-controls uk-form-controls-text">
             {{ field(disabled="disabled") if disabled else field() }}
             {% if field.label.text and label -%}{{ render_required(field.flags.required) }}<label for="{{ field.id }}">{{ field.label.text }}</label>{%- endif %}
+        </div>
+    {%- elif field.type == 'UploadField' -%}
+        {% if label and field.label.text -%}
+            <label class="uk-form-label" for="{{ field.id }}">{{ field.label.text }}</label>
+        {%- endif %}
+        <div class="image-wrapper">
+            <div id="{{ field.id }}_container" class="image-loader">
+                {%- set img_field = getattr(obj, field.name) -%}
+                {% if not img_field.original() -%}
+                    <button class="uk-button file-upload-button" data-id="{{ field.id }}">{{ _('Add button') }}</button>
+                    {{ field }}
+                {%- else -%}
+                    <img src="{{ url_for('public', filename=img_field.original()) }}" class="file-upload" data-id="{{ field.id }}_container" />
+                    {{ field }}
+                    <input id="{{ field.id }}_already" type="hidden" name="{{ field.name }}" value="already" />
+                {%- endif %}
+
+            </div>
         </div>
     {%- else -%}
         {% if label and field.label.text -%}
