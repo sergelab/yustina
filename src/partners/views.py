@@ -91,8 +91,7 @@ def partner_card(slug):
     if next_partner.id == person.id:
         next_partner = None
 
-    workcases = Workcase.available(for_index=False).filter(
-        Workcase.person_id == person.id).all()
+    workcases = Workcase.available().filter(Workcase.person_id == person.id).all()
 
     return render_template('person_card.j2',
                            person=person,
