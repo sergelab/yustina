@@ -188,4 +188,5 @@ def context_processor():
     return dict(current_year=today.year,
                 full_years=full_years,
                 settings=settings_helper,
-                navigation=navigation)
+                navigation=navigation,
+                getattr=getattr)
