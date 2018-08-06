@@ -1,52 +1,6 @@
 {% extends 'admin/common_layout.j2' %}
 {% from 'admin/api/base.j2' import render_trashed %}
-{% from 'admin/api/forms.j2' import render_field %}
-
-{% block js -%}
-    {{ super() }}
-    <script type="text/javascript">
-        $(function() {
-            $('#list_photo.file-uploader').fileinput({
-                'allowedFileExtensions': ['jpg', 'jpeg', 'png', 'gif'],
-                'showUpload': false,
-                'showCancel': false,
-                {% if person.in_trash -%}
-                    'showBrowse': false,
-                    'showRemove': false,
-                    'showClose': false,
-                    'showCaption': false,
-                {%- endif %}
-                'previewZoomSettings': false,
-                {% if person.list_photo and person.list_photo.url -%}
-                    'initialPreview': [
-                        '<img class="file-preview-image" src="{{ url_for('public', filename=person.list_photo.preview()) }}" alt=""><input type="hidden" name="{{ form.list_photo.id }}" value="already" />'
-                    ],
-                    'overwriteInitial': true,
-                    'initialCaption': {{ person.list_photo.original_filename|tojson if person.list_photo.original_filename else ''|tojson }},
-                {%- endif %}
-            });
-            $('#photo.file-uploader').fileinput({
-                'allowedFileExtensions': ['jpg', 'jpeg', 'png', 'gif'],
-                'showUpload': false,
-                'showCancel': false,
-                {% if person.in_trash -%}
-                    'showBrowse': false,
-                    'showRemove': false,
-                    'showClose': false,
-                    'showCaption': false,
-                {%- endif %}
-                'previewZoomSettings': false,
-                {% if person.photo and person.photo.url -%}
-                    'initialPreview': [
-                        '<img class="file-preview-image" src="{{ url_for('public', filename=person.photo.preview()) }}" alt=""><input type="hidden" name="{{ form.photo.id }}" value="already" />'
-                    ],
-                    'overwriteInitial': true,
-                    'initialCaption': {{ person.photo.original_filename|tojson if person.photo.original_filename else ''|tojson }},
-                {%- endif %}
-            });
-        });
-    </script>
-{%- endblock %}
+{% from 'admin/api/forms.j2' import render_field with context %}
 
 {% set form_action = url_for('admin.persons_manage_person', person_id=person_id) %}
 {% set form_enctype = 'multipart/form-data' %}
@@ -72,7 +26,7 @@
 
     {% for field in form if field.widget.input_type != 'hidden' -%}
         <div class="uk-form-row">
-            {{ render_field(field, disabled=person.in_trash) }}
+            {{ render_field(field, disabled=person.in_trash, obj=person) }}
         </div>
     {%- endfor %}
 {% endblock %}
