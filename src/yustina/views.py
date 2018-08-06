@@ -13,6 +13,7 @@ from flask import (abort,
                    render_template_string,
                    request,
                    send_from_directory,
+                   session,
                    url_for)
 from flask_babel import gettext as _
 import textile as tx
@@ -25,8 +26,12 @@ from .models.cases import Workcase
 
 @app.route('/')
 def index():
-    cases = Workcase.available(for_index=True).limit(
+    session['main_workcases'] = []
+
+    cases = Workcase.available(for_index=True).order_by(db.func.random()).limit(
         current_app.config.get('INDEX_CASES_LIMIT')).all()
+
+    session['main_workcases'] = [c.id for c in cases]
 
     return render_template('index.j2',
                            cases=cases)
@@ -38,12 +43,15 @@ def index_loading():
     data = []
 
     if skip:
-        cases = Workcase.available(for_index=True).offset(skip).limit(
+        main_workcases = session.get('main_workcases', []) or []
+
+        cases = Workcase.available(for_index=True).filter(
+            ~Workcase.id.in_(main_workcases)
+        ).order_by(db.func.random()).offset(skip).limit(
             current_app.config.get('INDEX_CASES_LIMIT')).all()
 
         if cases:
             for i, c in enumerate(cases, start=1):
-                print('===> i = ', i)
                 if i % 4 == 0:
                     idx = 4
                 elif i % 3 == 0:
@@ -52,7 +60,10 @@ def index_loading():
                     idx = 2
                 else:
                     idx = 1
+                main_workcases.append(c.id)
                 data.append(render_template('workcase_row.j2', case=c, idx=idx))
+
+        session['main_workcases'] = main_workcases
 
     return u'\n'.join(data)
 
