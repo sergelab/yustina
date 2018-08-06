@@ -8,6 +8,7 @@ import 'uikit';
 import 'uikit/dist/js/components/datepicker.min';
 import 'uikit/dist/js/components/sortable.min';
 import 'fileinput';
+import "imgs";
 
 import textile from 'textile-js';
 global.textile = textile;

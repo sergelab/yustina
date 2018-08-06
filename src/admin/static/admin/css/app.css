@@ -3,6 +3,7 @@
 @import "~uikit/dist/css/components/datepicker.min.css";
 @import "fileinput.css";
 @import "textile-widget.css";
+@import "imgs.css";
 
 .file-input > .file-preview {
     float: left;
