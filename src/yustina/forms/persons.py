@@ -2,13 +2,16 @@
 from __future__ import absolute_import
 
 from contrib.forms import Form, WidgetPrebind
-from contrib.forms.fields import RefQuerySelectMultipleField, UploadField
+from contrib.forms.fields import (
+    RefQuerySelectMultipleField,
+    UploadField
+)
 from contrib.forms.widgets import TextileWidget
 from flask_babel import lazy_gettext as __
 from wtforms import BooleanField, SelectField, StringField
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from wtforms.validators import DataRequired
-from wtforms.widgets import TextArea, TextInput
+from wtforms.widgets import FileInput, TextArea, TextInput
 
 from ..models.persons import PartnersCategory, Person, Position
 
@@ -120,14 +123,6 @@ class PersonForm(Form):
         query_factory=lambda: Position.admin_list(),
         get_label='name',
     )
-    # short_bio = StringField(
-    #     __('Person short bio label'),
-    #     widget=WidgetPrebind(
-    #         TextileWidget(),
-    #         class_='uk-width-1-1',
-    #         rows=20
-    #     )
-    # )
     bio = StringField(
         __('Person bio label'),
         widget=WidgetPrebind(
@@ -153,14 +148,28 @@ class PersonForm(Form):
     )
     list_photo = UploadField(
         __('Person list photo label'),
-        description=__('Person list photo description')
+        description=__('Person list photo description'),
+        widget=WidgetPrebind(
+            FileInput(),
+            accept='image/png,image/jpeg',
+            class_='js-image-upload'
+        )
     )
     photo = UploadField(
-        __('Person card photo label'),
-        description=__('Person card photo description')
+        __('Partner card photo label'),
+        widget=WidgetPrebind(
+            FileInput(),
+            accept='image/png,image/jpeg',
+            class_='js-image-upload'
+        )
     )
     video = UploadField(
         __('Person video label'),
         make_preview=False,
-        description=__('Person video description')
+        description=__('Person video description'),
+        widget=WidgetPrebind(
+            FileInput(),
+            accept='video/mp4,video/quicktime',
+            class_='js-image-upload'
+        )
     )
